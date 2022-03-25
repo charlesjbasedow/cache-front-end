@@ -16,12 +16,18 @@ import AddGoal from './pages/AddGoal/AddGoal'
 const App = () => {
   const [incomes, setIncomes] = useState([])
   const [goals, setGoals] = useState([])
+  const [expenses, setExpenses] = useState([])
   const [budgets, setBudgets] = useState([])
+
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
 
   const handleAddIncome = newIncomeData => {
     setIncomes([...incomes, newIncomeData])
+  } 
+
+  const handleAddExpense = newExpenseData => {
+    setExpenses([...expenses, newExpenseData])
   } 
 
   const handleAddGoal = newGoalData => {
@@ -66,6 +72,8 @@ const App = () => {
         <Route path="/add" element={<AddIncomeExpense />}/>
 
         <Route path='/add-income' element={<AddIncome handleAddIncome={handleAddIncome} />} />
+        <Route path='/add-expense' element={<AddExpense handleAddExpense={handleAddExpense} />} />   
+        <Route path='/add-budget' element={<AddBudget />} />
         <Route path='/add-expense' element={<AddExpense />} />   
         <Route path='/add-budget' element={<AddBudget handleAddBudget={handleAddBudget} />} />
         <Route path='/add-goal' element={<AddGoal handleAddGoal={handleAddGoal} />} />   

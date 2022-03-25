@@ -37,7 +37,7 @@ const AddIncome = (props) => {
 						type="text"
 						className="form-control"
 						id="category-input"
-						name="category"
+						name="name"
             value={formData.category}
             onChange={handleChange}
 						required

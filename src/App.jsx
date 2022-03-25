@@ -27,7 +27,8 @@ const App = () => {
   const navigate = useNavigate()
 
   const handleAddIncome = newIncomeData => {
-    setIncomes([...incomes, newIncomeData])
+    incomeService.create(newIncomeData)
+    .then(newIncome => setIncomes([...incomes, newIncome]))
   } 
 
   const handleAddExpense = newExpenseData => {

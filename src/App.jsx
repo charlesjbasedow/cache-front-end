@@ -8,6 +8,8 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import AddIncomeExpense from './pages/AddIncomeExpense/AddIncomeExpense'
+import AddIncome from './pages/AddIncome/AddIncome'
+import AddExpense from './pages/AddExpense/AddExpense'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -45,7 +47,10 @@ const App = () => {
           element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" />}
         />
         <Route path="/add" element={<AddIncomeExpense />}/>
-      </Routes>
+
+        <Route path='/add-income' element={<AddIncome />} />
+        <Route path='/add-expense' element={<AddExpense />} />      
+        </Routes>
     </>
   )
 }

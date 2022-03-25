@@ -12,6 +12,10 @@ import AddIncome from './pages/AddIncome/AddIncome'
 import AddExpense from './pages/AddExpense/AddExpense'
 import AddBudget from './pages/AddBudget/AddBudget'
 import AddGoal from './pages/AddGoal/AddGoal'
+import * as goalService from './services/goals'
+import * as expensesService from './services/expenses'
+import * as budgetService from './services/budgets'
+import * as incomeService from './services/incomes'
 
 const App = () => {
   const [incomes, setIncomes] = useState([])

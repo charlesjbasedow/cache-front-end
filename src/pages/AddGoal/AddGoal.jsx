@@ -18,10 +18,10 @@ function AddGoal(props) {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-		const goalFormData = new FormData()
-    goalFormData.append('name', formData.name)
-    goalFormData.append('amount', formData.amount)
-    props.handleAddGoal(goalFormData)
+		// const goalFormData = new FormData()
+    // goalFormData.append('name', formData.name)
+    // goalFormData.append('amount', formData.amount)
+    props.handleAddGoal(formData)
   }
 
   return (

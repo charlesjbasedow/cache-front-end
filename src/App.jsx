@@ -73,7 +73,6 @@ const App = () => {
 
         <Route path='/add-income' element={<AddIncome handleAddIncome={handleAddIncome} />} />
         <Route path='/add-expense' element={<AddExpense handleAddExpense={handleAddExpense} />} />   
-        <Route path='/add-budget' element={<AddBudget />} />
         <Route path='/add-expense' element={<AddExpense />} />   
         <Route path='/add-budget' element={<AddBudget handleAddBudget={handleAddBudget} />} />
         <Route path='/add-goal' element={<AddGoal handleAddGoal={handleAddGoal} />} />   

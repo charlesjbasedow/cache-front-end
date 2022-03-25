@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const AddIncome = () => {
+const AddIncome = (props) => {
   const formElement = useRef()
 
   const [validForm, setValidForm] = useState(false)
@@ -11,7 +11,10 @@ const AddIncome = () => {
     date: new Date().toLocaleDateString()
   })
 
-  
+  const handleSubmit = evt => {
+    evt.preventDefault()
+    props.handleAddIncome(formData)
+  }
 
   useEffect(() => {
 		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
@@ -25,7 +28,7 @@ const AddIncome = () => {
     <>
     <h1>Add Income</h1>
     
-    <form autoComplete="off" ref={formElement} >
+    <form autoComplete="off" ref={formElement} onSubmit={handleSubmit} >
 				<div className="form-group mb-3">
 					<label htmlFor="category-input" className="form-label">
 						Category

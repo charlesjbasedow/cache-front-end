@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
@@ -24,7 +24,13 @@ const App = () => {
   const [budgets, setBudgets] = useState([])
 
   const [user, setUser] = useState(authService.getUser())
+
   const navigate = useNavigate()
+
+  useEffect(() => {
+    incomeService.getAll()
+    .then(allIncomes => setIncomes(allIncomes))
+  }, [])
 
   const handleAddIncome = newIncomeData => {
     incomeService.create(newIncomeData)

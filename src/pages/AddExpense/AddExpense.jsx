@@ -1,54 +1,77 @@
-const AddExpense = () => {
+import { useState, useRef, useEffect } from 'react'
+
+const AddExpense = (props) => {
+    const formElement = useRef()
+    const [validForm, setValidForm] = useState(false)
+    const [formData, setFormData] = useState({
+      category: '',
+      amount: 0, 
+      date: new Date().toLocaleDateString()
+    })
   
-    return ( 
-        <>
-            <h1>Add Expense</h1>
-            <form autoComplete="off">
-				<div className="form-group mb-3">
-                <label for="category-select">Category:</label>
-                    <select name="category" id="category-select">
-                    <option value="HOU" selected>Housing</option>
-                    <option value="FOD">Food</option>
-                    <option value="BIL">Bills</option>
-                    <option value="HLT">Health</option>
-                    <option value="ENT">Entertainment</option>
-                    <option value="SHP">Shopping</option>
-                    <option value="TRV">Travel</option>
-                    <option value="OTH">Other</option>
-                    </select>
-				</div>
-				<div className="form-group mb-3">
-					<label htmlFor="breed-input" className="form-label">
-						Amount(required)
-					</label>
-					<input 
-						type="text"
-						className="form-control"
-						id="amount-input"
-						name="amount"
-						required
-					/>
-				</div>
-				<div className="form-group mb-4">
-					<label htmlFor="date-input" className="form-label">
-						Date
-					</label>
-					<input 
-						type="number"
-						className="form-control"
-						id="age-input"
-						name="age"
-					/>
-				</div>
-				<div className="d-grid">
-					<button
-						type="submit"
-						className="btn btn-primary btn-fluid"
-					>
-						Add Expense
-					</button>
-				</div>
-			</form>
+    useEffect(() => {
+		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
+	}, [formData])
+
+    const handleChange = evt => {
+    setFormData({...formData, [evt.target.name]: evt.target.value})
+     }
+
+     const handleSubmit = evt => {
+         evt.preventDefault()
+         props.handleAddExpense(formData)
+     }
+  
+
+return ( 
+  <>
+    <h1>Add Expense</h1>
+    <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
+	    <div className="form-group mb-3">
+        <label htmlFor="category-select">Category:</label>
+        <select name="category" value={formData.category} onChange={handleChange} id="category-select">
+            <option name="HOU">Housing</option>
+            <option name="FOD">Food</option>
+            <option name="BIL">Bills</option>
+            <option name="HLT">Health</option>
+            <option name="ENT">Entertainment</option>
+            <option name="SHP">Shopping</option>
+            <option name="TRV">Travel</option>
+            <option name="OTH">Other</option>
+         </select>
+		</div>
+		<div className="form-group mb-3">
+		<label htmlFor="amount-input" className="form-label">
+			Amount(required)
+		</label>
+		<input 
+		    type="text"
+			className="form-control"
+			id="amount-input"
+			name="amount"
+            value={formData.amount}
+            onChange={handleChange}
+			required
+		/>
+		</div>
+		<div className="form-group mb-4">
+		<label htmlFor="date-input" className="form-label">
+			Date
+		</label>
+		<input 
+			type="date"
+			className="form-control"
+			id="date-input"
+			name="date"
+            value={formData.Date}
+            onChange={handleChange}
+            required
+		/>
+		</div>
+		<div className="d-grid">
+		<button type="submit" className="btn btn-primary btn-fluid" disabled={!validForm}>Add Expense</button>
+		</div>
+		</form>
         </>
 
      );

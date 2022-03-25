@@ -15,12 +15,12 @@ const AddExpense = (props) => {
 
     const handleChange = evt => {
     setFormData({...formData, [evt.target.name]: evt.target.value})
-     }
+    }
 
-     const handleSubmit = evt => {
-         evt.preventDefault()
-         props.handleAddExpense(formData)
-     }
+    const handleSubmit = evt => {
+        evt.preventDefault()
+        props.handleAddExpense(formData)
+    }
   
 
 return ( 
@@ -38,14 +38,14 @@ return (
             <option name="SHP">Shopping</option>
             <option name="TRV">Travel</option>
             <option name="OTH">Other</option>
-         </select>
+        </select>
 		</div>
 		<div className="form-group mb-3">
 		<label htmlFor="amount-input" className="form-label">
 			Amount(required)
 		</label>
 		<input 
-		    type="text"
+		  type="text"
 			className="form-control"
 			id="amount-input"
 			name="amount"
@@ -74,7 +74,7 @@ return (
 		</form>
         </>
 
-     );
+    );
 }
- 
+
 export default AddExpense;

@@ -11,6 +11,7 @@ import AddIncomeExpense from './pages/AddIncomeExpense/AddIncomeExpense'
 import AddIncome from './pages/AddIncome/AddIncome'
 import AddExpense from './pages/AddExpense/AddExpense'
 import AddBudget from './pages/AddBudget/AddBudget'
+import AddGoal from './pages/AddGoal/AddGoal'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -51,7 +52,8 @@ const App = () => {
 
         <Route path='/add-income' element={<AddIncome />} />
         <Route path='/add-expense' element={<AddExpense />} />   
-        <Route path='/add-budget' element={<AddBudget />} />   
+        <Route path='/add-budget' element={<AddBudget />} />
+        <Route path='/add-goal' element={<AddGoal />} />   
 
         </Routes>
     </>

@@ -1,19 +1,47 @@
-const AddBudget = () => {
+import { useState, useRef, useEffect } from "react";
+
+const AddBudget = (props) => {
+
+  const [validForm, setValidForm] = useState(false)
+
+  const [formData, setFormData] = useState({
+		category: '',
+		categoryLimit: 0,
+		totalLimit: 0
+	})
+
+  const handleChange = evt => {
+		setFormData({ ...formData, [evt.target.name]: evt.target.value })
+	}
+
+  const formElement = useRef()
+
+	useEffect(() => {
+		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
+	}, [formData])
+
+	const handleSubmit = evt => {
+		evt.preventDefault()
+		props.handleAddBudget(formData)
+	}
+
+
   return( 
     <>
+
       <h1>Add Budget</h1>
-			<form autoComplete="off">
+			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 				<div className="form-group mb-3">
 					<label htmlFor="budget-input" className="form-label">
 						Budget Category (required)
 					</label>
-					<select name="category">
-            <option value="Health">Health</option>
-            <option value="Housing">Housing</option>
-            <option value="Grocery">Grocery</option>
-            <option value="Bills">Bills</option>
-            <option value="Travel">Travel</option>
-            <option value="Other">Other</option>
+					<select name="category" value={formData.category} onChange={handleChange}>
+            <option name="Health">Health</option>
+            <option name="Housing">Housing</option>
+            <option name="Grocery">Grocery</option>
+            <option name="Bills">Bills</option>
+            <option name="Travel">Travel</option>
+            <option name="Other">Other</option>
           </select>
 				</div>
 				<div className="form-group mb-3">
@@ -25,6 +53,8 @@ const AddBudget = () => {
 						className="form-control"
 						id="categorytotal-input"
 						name="categoryLimit"
+            value={formData.categoryLimit}
+            onChange={handleChange}
 						required
 					/>
 				</div>
@@ -37,12 +67,15 @@ const AddBudget = () => {
 						className="form-control"
 						id="total-input"
 						name="totalLimit"
+            value={formData.totalLimit}
+            onChange={handleChange}
 					/>
 				</div>
         <div className="d-grid">
 					<button
 						type="submit"
 						className="btn btn-primary btn-fluid"
+            disabled={!validForm}
 					>
 						Add Budget
 					</button>

@@ -6,7 +6,7 @@ const AddIncome = (props) => {
   const [validForm, setValidForm] = useState(false)
 
   const [formData, setFormData] = useState({
-    category: '',
+    name: '',
     amount: 0, 
     date: new Date().toLocaleDateString()
   })

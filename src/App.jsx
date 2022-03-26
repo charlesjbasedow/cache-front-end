@@ -40,6 +40,11 @@ const App = () => {
 
   }
 
+  const handleDeleteGoal = id => {
+    goalService.deleteOne(id)
+    .then(deletedGoal => setGoals(goals.filter(goal => goal._id !== deletedGoal._id)))
+  }
+
   useEffect(() => {
     incomeService.getAll()
     .then(allIncomes => setIncomes(allIncomes))
@@ -53,6 +58,11 @@ const App = () => {
   useEffect(() => {
     budgetService.getAll()
     .then(allBudgets => setBudgets(allBudgets))
+  }, [])
+
+  useEffect(() => {
+    goalService.getAll()
+    .then(allGoals => setGoals(allGoals))
   }, [])
 
   const handleAddIncome = newIncomeData => {

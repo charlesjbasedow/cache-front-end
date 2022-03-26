@@ -59,6 +59,7 @@ const App = () => {
   }, [])
 
   useEffect(() => {
+    console.log(budgetService.getAll())
     budgetService.getAll()
     .then(allBudgets => setBudgets(allBudgets))
   }, [])

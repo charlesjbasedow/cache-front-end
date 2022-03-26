@@ -6,7 +6,7 @@ const BudgetPage = (props) => {
     <h1>Budget Page</h1>
       <div>
         {props.budgets.map(budget => (
-          <BudgetCard key={budget._id} budget={budget} />
+          <BudgetCard key={budget._id} budget={budget} handleDeleteBudget={props.handleDeleteBudget} />
         ))}
       </div>
     </>

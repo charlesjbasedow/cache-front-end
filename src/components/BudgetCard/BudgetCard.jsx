@@ -1,4 +1,4 @@
-function BudgetCard({budget, handleDeleteIncome}) {
+function BudgetCard({budget, handleDeleteBudget}) {
   return (  
     <>
     <h1>Budget Card</h1>
@@ -6,7 +6,7 @@ function BudgetCard({budget, handleDeleteIncome}) {
       <h3>{budget.category}</h3>
       <p>{budget.categoryLimit}</p>
       <p>{budget.totalLimit}</p>
-      {/* <button onClick={() => handleDeleteIncome(income._id)} >X</button> */}
+      <button onClick={() => handleDeleteBudget(budget._id)} >X</button>
     </div>
     </>
   );

@@ -30,14 +30,12 @@ return (
 	    <div className="form-group mb-3">
         <label htmlFor="category-select">Category:</label>
         <select name="category" value={formData.category} onChange={handleChange} id="category-select">
-            <option name="HOU">Housing</option>
-            <option name="FOD">Food</option>
-            <option name="BIL">Bills</option>
-            <option name="HLT">Health</option>
-            <option name="ENT">Entertainment</option>
-            <option name="SHP">Shopping</option>
-            <option name="TRV">Travel</option>
-            <option name="OTH">Other</option>
+            <option name="Health">Health</option>
+            <option name="Housing">Housing</option>
+            <option name="Grocery">Grocery</option>
+            <option name="Bills">Bills</option>
+            <option name="Travel">Travel</option>
+            <option name="Other">Other</option>
         </select>
 		</div>
 		<div className="form-group mb-3">

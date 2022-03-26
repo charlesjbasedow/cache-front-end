@@ -6,7 +6,7 @@ const Transactions = (props) => {
     <h1>Transactions</h1>
     <div>
       {props.incomes.map(income => (
-        <IncomeCard key={income._id} income={income} />
+        <IncomeCard key={income._id} income={income} handleDeleteIncome={props.handleDeleteIncome} />
       ))}
     </div>
     </>

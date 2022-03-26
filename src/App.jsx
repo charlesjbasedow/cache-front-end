@@ -25,8 +25,6 @@ const App = () => {
   const [goals, setGoals] = useState([])
   const [expenses, setExpenses] = useState([])
   const [budgets, setBudgets] = useState([])
-
-
   const [user, setUser] = useState(authService.getUser())
 
   const navigate = useNavigate()

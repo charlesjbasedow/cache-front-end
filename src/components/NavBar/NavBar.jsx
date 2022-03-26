@@ -20,6 +20,7 @@ const NavBar = ({ user, handleLogout }) => {
             <li><Link to="/add">Add Income/ Expense</Link></li>
             <li><Link to="/add-budget">Add Budget</Link></li>
             <li><Link to="/add-goal">Add Goal</Link></li>
+            <li><Link to="/transactions">Transactions</Link></li>
           </ul>
         </nav>
       }

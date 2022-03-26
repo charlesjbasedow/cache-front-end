@@ -16,6 +16,7 @@ import * as goalService from './services/goals'
 import * as expensesService from './services/expenses'
 import * as budgetService from './services/budgets'
 import * as incomeService from './services/incomes'
+import Transactions from './pages/Transactions/Transactions'
 
 const App = () => {
   const [incomes, setIncomes] = useState([])
@@ -86,6 +87,7 @@ const App = () => {
         <Route path='/add-expense' element={<AddExpense handleAddExpense={handleAddExpense} />} />  
         <Route path='/add-budget' element={<AddBudget handleAddBudget={handleAddBudget} />} />
         <Route path='/add-goal' element={<AddGoal handleAddGoal={handleAddGoal} />} />   
+        <Route path='/transactions' element={<Transactions incomes={incomes} />} />  
 
         </Routes>
     </>

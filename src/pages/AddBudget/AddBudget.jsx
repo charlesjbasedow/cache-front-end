@@ -10,21 +10,20 @@ const AddBudget = (props) => {
 		totalLimit: 0
 	})
 
-  const handleChange = evt => {
-		setFormData({ ...formData, [evt.target.name]: evt.target.value })
-	}
-
   const formElement = useRef()
 
+  const handleSubmit = evt => {
+		evt.preventDefault()
+		props.handleAddBudget(formData)
+	}
+  
 	useEffect(() => {
 		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
 	}, [formData])
 
-	const handleSubmit = evt => {
-		evt.preventDefault()
-		props.handleAddBudget(formData)
+  const handleChange = evt => {
+		setFormData({ ...formData, [evt.target.name]: evt.target.value })
 	}
-
 
   return( 
     <>

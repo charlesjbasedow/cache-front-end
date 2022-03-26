@@ -15,5 +15,6 @@ function getAll() {
 }
 
 export {
-	create
+	create,
+  getAll,
 }

@@ -28,6 +28,12 @@ const App = () => {
 
   const navigate = useNavigate()
 
+  const handleDeleteIncome = id => {
+    incomeService.deleteOne(id)
+    .then(deletedIncome => setIncomes(incomes.filter(income => income._id !== deletedIncome._id)))
+    
+  }
+
   useEffect(() => {
     incomeService.getAll()
     .then(allIncomes => setIncomes(allIncomes))
@@ -87,7 +93,7 @@ const App = () => {
         <Route path='/add-expense' element={<AddExpense handleAddExpense={handleAddExpense} />} />  
         <Route path='/add-budget' element={<AddBudget handleAddBudget={handleAddBudget} />} />
         <Route path='/add-goal' element={<AddGoal handleAddGoal={handleAddGoal} />} />   
-        <Route path='/transactions' element={<Transactions incomes={incomes} />} />  
+        <Route path='/transactions' element={<Transactions incomes={incomes} handleDeleteIncome={handleDeleteIncome} />} />  
 
         </Routes>
     </>

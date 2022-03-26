@@ -33,19 +33,22 @@ const App = () => {
 
   const handleDeleteIncome = id => {
     incomeService.deleteOne(id)
-    .then(deletedIncome => setIncomes(incomes.filter(income => income._id !== deletedIncome._id)))
-    
+    .then(deletedIncome => setIncomes(incomes.filter(income => income._id !== deletedIncome._id))) 
   }
 
   const handleDeleteExpense = id => {
     expenseService.deleteOne(id)
     .then(deletedExpense => setExpenses(expenses.filter(expense => expense._id !== deletedExpense._id)))
-
   }
 
   const handleDeleteGoal = id => {
     goalService.deleteOne(id)
     .then(deletedGoal => setGoals(goals.filter(goal => goal._id !== deletedGoal._id)))
+  }
+
+  const handleDeleteBudget = id => {
+    budgetService.deleteOne(id)
+    .then(deletedBudget => setBudgets(budgets.filter(budget => budget._id !== deletedBudget._id)))
   }
 
   useEffect(() => {
@@ -132,7 +135,7 @@ const App = () => {
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
         expenses={expenses} handleDeleteExpense={handleDeleteExpense}/>} 
         />  
-        <Route path='/budgetspage' element={<BudgetPage budgets={budgets}/>} 
+        <Route path='/budgetspage' element={<BudgetPage budgets={budgets} handleDeleteBudget={handleDeleteBudget}/>} 
         /> 
 
         </Routes>

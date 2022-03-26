@@ -4,7 +4,7 @@ const AddExpense = (props) => {
     const formElement = useRef()
     const [validForm, setValidForm] = useState(false)
     const [formData, setFormData] = useState({
-      category: '',
+      category: 'Health',
       amount: 0, 
       date: new Date().toLocaleDateString()
     })
@@ -40,15 +40,15 @@ return (
 		</div>
 		<div className="form-group mb-3">
 		<label htmlFor="amount-input" className="form-label">
-			Amount(required)
+			Amount
 		</label>
 		<input 
-		  type="text"
+		  type="number"
 			className="form-control"
 			id="amount-input"
 			name="amount"
-            value={formData.amount}
-            onChange={handleChange}
+      value={formData.amount}
+      onChange={handleChange}
 			required
 		/>
 		</div>
@@ -61,18 +61,17 @@ return (
 			className="form-control"
 			id="date-input"
 			name="date"
-            value={formData.Date}
-            onChange={handleChange}
-            required
+      value={formData.Date}
+      onChange={handleChange}
+      
 		/>
 		</div>
 		<div className="d-grid">
 		<button type="submit" className="btn btn-primary btn-fluid" disabled={!validForm}>Add Expense</button>
 		</div>
 		</form>
-        </>
-
-    );
+    </>
+  );
 }
 
 export default AddExpense;

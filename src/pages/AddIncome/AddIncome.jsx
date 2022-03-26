@@ -48,7 +48,7 @@ const AddIncome = (props) => {
 						Amount
 					</label>
 					<input 
-						type="text"
+						type="number"
 						className="form-control"
 						id="amount-input"
 						name="amount"

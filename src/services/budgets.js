@@ -19,8 +19,18 @@ function deleteOne(id) {
   .then(res => res.json())
 }
 
+function update(budget) {
+  return fetch(`${BASE_URL}/${budget._id}`, {
+    method: 'PUT',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify(budget)
+  })
+	.then(res => res.json())
+}
+
 export {
 	create,
   getAll,
   deleteOne,
+  update
 }

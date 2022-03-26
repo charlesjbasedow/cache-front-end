@@ -18,7 +18,7 @@ import * as budgetService from './services/budgets'
 import * as incomeService from './services/incomes'
 import Transactions from './pages/Transactions/Transactions'
 import BudgetPage from './pages/BudgetPage/BudgetPage'
-
+import EditBudget from './pages/EditBudget/EditBudget'
 
 const App = () => {
   const [incomes, setIncomes] = useState([])
@@ -51,6 +51,16 @@ const App = () => {
     .then(deletedBudget => setBudgets(budgets.filter(budget => budget._id !== deletedBudget._id)))
   }
 
+  const handleUpdateBudget = updatedBudgetData => {
+    budgetService.update(updatedBudgetData)
+    .then(updatedBudget => {
+      const newBudgetsArray = budgets.map(budget => 
+        budget._id === updatedBudget._id ? updatedBudget : budget
+      )
+      setBudgets(newBudgetsArray)
+      navigate('/budgetspage')
+    })
+  }
   useEffect(() => {
     incomeService.getAll()
     .then(allIncomes => setIncomes(allIncomes))
@@ -137,6 +147,7 @@ const App = () => {
         />  
         <Route path='/budgetspage' element={<BudgetPage budgets={budgets} handleDeleteBudget={handleDeleteBudget}/>} 
         /> 
+        <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget}/>} /> 
 
         </Routes>
     </>

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function BudgetCard({budget, handleDeleteBudget}) {
   return (  
     <>
@@ -6,7 +8,14 @@ function BudgetCard({budget, handleDeleteBudget}) {
       <h3>{budget.category}</h3>
       <p>{budget.categoryLimit}</p>
       <p>{budget.totalLimit}</p>
-      <button onClick={() => handleDeleteBudget(budget._id)} >X</button>
+      <Link
+          className='btn btn-sm btn-warning'
+          to='/editbudget'
+          state={{budget}}
+      >
+        Edit
+      </Link>
+      <button onClick={() => handleDeleteBudget(budget._id)} >Delete</button>
     </div>
     </>
   );

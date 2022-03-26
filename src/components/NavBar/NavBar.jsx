@@ -21,6 +21,7 @@ const NavBar = ({ user, handleLogout }) => {
             <li><Link to="/add-budget">Add Budget</Link></li>
             <li><Link to="/add-goal">Add Goal</Link></li>
             <li><Link to="/transactions">Transactions</Link></li>
+            <li><Link to="/budgetspage">Budget Page</Link></li>
           </ul>
         </nav>
       }

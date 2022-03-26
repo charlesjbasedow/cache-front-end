@@ -17,6 +17,8 @@ import * as expenseService from './services/expenses'
 import * as budgetService from './services/budgets'
 import * as incomeService from './services/incomes'
 import Transactions from './pages/Transactions/Transactions'
+import BudgetPage from './pages/BudgetPage/BudgetPage'
+
 
 const App = () => {
   const [incomes, setIncomes] = useState([])
@@ -56,10 +58,10 @@ const App = () => {
     .then(allExpenses => setExpenses(allExpenses))
   }, [])
 
-  // useEffect(() => {
-  //   budgetService.getAll()
-  //   .then(allBudgets => setBudgets(allBudgets))
-  // }, [])
+  useEffect(() => {
+    budgetService.getAll()
+    .then(allBudgets => setBudgets(allBudgets))
+  }, [])
 
   useEffect(() => {
     goalService.getAll()
@@ -129,6 +131,8 @@ const App = () => {
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
         expenses={expenses} handleDeleteExpense={handleDeleteExpense}/>} 
         />  
+        <Route path='/budgetspage' element={<BudgetPage budgets={budgets}/>} 
+        /> 
 
         </Routes>
     </>

@@ -24,6 +24,7 @@ const App = () => {
   const [expenses, setExpenses] = useState([])
   const [budgets, setBudgets] = useState([])
 
+
   const [user, setUser] = useState(authService.getUser())
 
   const navigate = useNavigate()
@@ -50,10 +51,10 @@ const App = () => {
     .then(allExpenses => setExpenses(allExpenses))
   }, [])
 
-  useEffect(() => {
-    budgetService.getAll()
-    .then(allBudgets => setBudgets(allBudgets))
-  }, [])
+  // useEffect(() => {
+  //   budgetService.getAll()
+  //   .then(allBudgets => setBudgets(allBudgets))
+  // }, [])
 
   const handleAddIncome = newIncomeData => {
     incomeService.create(newIncomeData)
@@ -71,7 +72,8 @@ const App = () => {
 
   const handleAddBudget = newBudgetData => {
     budgetService.create(newBudgetData)
-    .then(newBudget => setBudgets([...budgets, newBudgetData]))
+    .then(newBudget => 
+      setBudgets([...budgets, newBudget]))
   } 
 
   const handleLogout = () => {

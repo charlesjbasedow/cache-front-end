@@ -77,8 +77,9 @@ const App = () => {
   } 
 
   const handleAddGoal = newGoalData => {
-    setGoals([...goals, newGoalData])
-  } 
+    goalService.create(newGoalData)
+    .then(newGoal => setGoals([...goals, newGoal]))
+  }
 
   const handleAddBudget = newBudgetData => {
     budgetService.create(newBudgetData)

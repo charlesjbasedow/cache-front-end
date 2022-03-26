@@ -39,6 +39,11 @@ const App = () => {
     .then(allIncomes => setIncomes(allIncomes))
   }, [])
 
+  useEffect(() => {
+    budgetService.getAll()
+    .then(allBudgets => setBudgets(allBudgets))
+  }, [])
+
   const handleAddIncome = newIncomeData => {
     incomeService.create(newIncomeData)
     .then(newIncome => setIncomes([...incomes, newIncome]))

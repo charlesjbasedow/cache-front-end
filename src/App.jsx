@@ -47,7 +47,8 @@ const App = () => {
   } 
 
   const handleAddBudget = newBudgetData => {
-    setBudgets([...budgets, newBudgetData])
+    budgetService.create(newBudgetData)
+    .then(newBudget => setBudgets([...budgets, newBudgetData]))
   } 
 
   const handleLogout = () => {

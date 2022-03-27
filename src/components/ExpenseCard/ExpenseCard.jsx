@@ -1,12 +1,13 @@
+import '../IncomeCard/IncomeExpenseCard.css'
+
 function ExpenseCard({expense, handleDeleteExpense}) {
   return (  
     <>
-    <h1>Expense Card</h1>
-    <div>
-      <h3>{expense.category}</h3>
-      <p>{expense.amount}</p>
-      <p>{expense.date}</p>
-      <button onClick={() => handleDeleteExpense(expense._id)} >X</button>
+    <div className='card'>
+      <p className='category'>{expense.category}</p>
+      <p className='amount'>- ${expense.amount}</p>
+      <p className='date'>{expense.date}</p>
+      <button className='delete-btn' onClick={() => handleDeleteExpense(expense._id)} >X</button>
     </div>
     </>
   );

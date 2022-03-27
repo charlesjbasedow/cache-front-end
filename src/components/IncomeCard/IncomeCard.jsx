@@ -1,13 +1,17 @@
+import './IncomeExpenseCard.css'
+import PaidIcon from '@mui/icons-material/Paid';
+
 function IncomeCard({income, handleDeleteIncome, user}) {
   return (  
     <>
-    <h1>Income Card</h1>
     {income.owner._id === user.profile ?
-    <div>
-      <h3>{income.name}</h3>
-      <p>{income.amount}</p>
-      <p>{income.date}</p>
-      <button onClick={() => handleDeleteIncome(income._id)} >X</button>
+    <div className='card'>
+      {/* <h3>income card</h3> */}
+      <PaidIcon fontSize="large" className='icon' />
+      <p className='name'>{income.name}</p>
+      <p className='amount'>+ ${income.amount}</p>
+      <p className='date'>{income.date}</p>
+      <button className='delete-btn' onClick={() => handleDeleteIncome(income._id)} >X</button>
     </div>
     :
     <p></p>

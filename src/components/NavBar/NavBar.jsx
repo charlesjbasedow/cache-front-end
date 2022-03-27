@@ -1,28 +1,31 @@
 import { Link } from 'react-router-dom'
+import './NavBar.css'
+import AddCircleSharpIcon from '@mui/icons-material/AddCircleSharp';
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import StarIcon from '@mui/icons-material/Star';
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ?
         <nav>
-          <ul>
-            <li>Welcome, {user.name}</li>
-            <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
-            <li><Link to="/changePassword">Change Password</Link></li>
-          <li><Link to="/add">Add Income/ Expense</Link></li>
-          <li><Link to="/add-budget">Add Budget</Link></li>
-          <li><Link to="/add-goal">Add Goal</Link></li>
-          <li><Link to="/transactions">Transactions</Link></li>
-          <li><Link to="/budgetspage">Budget Page</Link></li>
-          <li><Link to="/goal-page">Goal Page</Link></li>
-          </ul>
+          {/* Welcome, {user.name} */}
+          {/* <Link to="/profiles">Profiles</Link> */}
+          <Link to="" onClick={handleLogout}>LOG OUT</Link>
+          {/* <Link to="/changePassword">Change Password</Link> */}
+          <Link className='add' to="/add"><AddCircleSharpIcon fontSize='large' /></Link>
+          {/* <Link to="/add-budget">Add Budget</Link> */}
+          {/* <Link to="/add-goal">Add Goal</Link> */}
+          <Link className='transactions' to="/transactions"><CompareArrowsIcon fontSize='large'/></Link>
+          <Link className='budget' to="/budgetspage"><BarChartIcon fontSize='large' /></Link>
+          <Link className='goals' to="/goal-page"><StarIcon fontSize='large' /></Link>
         </nav>
       :
         <nav>
           <ul>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
+            <Link to="/login">Log In</Link>
+            <Link to="/signup">Sign Up</Link>
           </ul>
         </nav>
       }

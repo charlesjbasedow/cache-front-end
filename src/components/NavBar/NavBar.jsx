@@ -15,7 +15,6 @@ const NavBar = ({ user, handleLogout }) => {
           <Link to="" onClick={handleLogout}>LOG OUT</Link>
           {/* <Link to="/changePassword">Change Password</Link> */}
           <Link className='add' to="/add"><AddCircleSharpIcon fontSize='large' /></Link>
-          {/* <Link to="/add-budget">Add Budget</Link> */}
           <Link className='transactions' to="/transactions"><CompareArrowsIcon fontSize='large'/></Link>
           <Link className='budget' to="/budgetspage"><BarChartIcon fontSize='large' /></Link>
           <Link className='goals' to="/goals-page"><StarIcon fontSize='large' /></Link>

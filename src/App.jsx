@@ -69,7 +69,7 @@ const App = () => {
         goal._id === updatedGoal._id ? updatedGoal : goal
       )
       setGoals(newGoalsArray)
-      navigate('/goal-page')
+      navigate('/goals-page')
     })
   }
 
@@ -159,7 +159,7 @@ const App = () => {
         <Route path='/budgetspage' element={<BudgetPage budgets={budgets} handleDeleteBudget={handleDeleteBudget}/>} 
         /> 
         <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget}/>} /> 
-        <Route path='/goal-page' element={<GoalPage goals={goals} handleDeleteGoal={handleDeleteGoal}/>} />
+        <Route path='/goals-page' element={<GoalPage goals={goals} handleDeleteGoal={handleDeleteGoal}/>} />
         <Route path='/edit-goal' element={<EditGoal handleUpdateGoal={handleUpdateGoal}/>} />
         </Routes>
     </>

@@ -10,7 +10,7 @@ const GoalPage = (props) => {
     </div>
     <div>
       {props.goals.map(goal => (
-        <GoalCard key={goal._id} goal={goal} handleDeleteGoal={props.handleDeleteGoal} />
+        <GoalCard user={props.user} key={goal._id} goal={goal} handleDeleteGoal={props.handleDeleteGoal} />
       ))}
     </div>
     </>

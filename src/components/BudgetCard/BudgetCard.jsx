@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom'
 function BudgetCard({budget, handleDeleteBudget}) {
   return (  
     <>
-    <h1>Budget Card</h1>
     <div>
-      <h3>{budget.category}</h3>
-      <p>{budget.categoryLimit}</p>
-      <p>{budget.totalLimit}</p>
+      <p>total limit: {budget.totalLimit}</p>
+      <p>category: {budget.category}</p>
+      <p>category limit: {budget.categoryLimit}</p>
       <Link
           className='btn btn-sm btn-warning'
           to='/editbudget'

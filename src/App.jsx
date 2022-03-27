@@ -98,22 +98,26 @@ const App = () => {
   const handleAddIncome = newIncomeData => {
     incomeService.create(newIncomeData)
     .then(newIncome => setIncomes([...incomes, newIncome]))
+    navigate('/transactions')
   } 
 
   const handleAddExpense = newExpenseData => {
     expenseService.create(newExpenseData)
     .then(newExpense => setExpenses([...expenses, newExpense]))
+    navigate('/transactions')
   } 
 
   const handleAddGoal = newGoalData => {
     goalService.create(newGoalData)
     .then(newGoal => setGoals([...goals, newGoal]))
+    navigate('/goals-page')
   }
 
   const handleAddBudget = newBudgetData => {
     budgetService.create(newBudgetData)
     .then(newBudget => 
       setBudgets([...budgets, newBudget]))
+      navigate('/budgetspage')
   } 
 
   const handleLogout = () => {
@@ -166,9 +170,9 @@ const App = () => {
         /> 
         <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget} user={user} />} 
         /> 
-        <Route path='/goals-page' element={<GoalPage goals={goals} handleDeleteGoal={handleDeleteGoal}/>} 
+        <Route path='/goals-page' element={<GoalPage goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/>} 
         />
-        <Route path='/edit-goal' element={<EditGoal handleUpdateGoal={handleUpdateGoal}/>} 
+        <Route path='/edit-goal' element={<EditGoal  user={user} handleUpdateGoal={handleUpdateGoal}/>} 
         />
         </Routes>
     </>

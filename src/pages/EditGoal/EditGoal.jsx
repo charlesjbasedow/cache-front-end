@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 function EditGoal(props) {
   const formElement = useRef()
   const location = useLocation()
-  const [validForm, setValidForm] = useState(false)
+  const [validForm, setValidForm] = useState(true)
   const [formData, setFormData] = useState(location.state.goal)
 
   useEffect(()=> {

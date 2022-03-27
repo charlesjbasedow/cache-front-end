@@ -7,27 +7,26 @@ import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import MoneyOffIcon from '@mui/icons-material/MoneyOff';
 
 function ExpenseCard({expense, handleDeleteExpense, user}) {
-  // write a function that returns the correct icon based on category name 
 
   function checkCategory(expense) {
     let catIcon
     if(expense.category === 'Health'){
-      catIcon = <LocalHospitalIcon />
+      catIcon = <LocalHospitalIcon fontSize='large'/>
     } 
     if(expense.category === 'Housing') {
-      catIcon = <HomeIcon />
+      catIcon = <HomeIcon fontSize='large'/>
     } 
     if(expense.category === 'Grocery') {
-      catIcon = <RestaurantIcon />
+      catIcon = <RestaurantIcon fontSize='large'/>
     } 
     if(expense.category === 'Bills') {
-      catIcon = <CreditCardIcon />
+      catIcon = <CreditCardIcon fontSize='large'/>
     } 
     if(expense.category === 'Travel'){
-      catIcon = <AirplanemodeActiveIcon />
+      catIcon = <AirplanemodeActiveIcon fontSize='large'/>
     } 
     if(expense.category === 'Other'){
-      catIcon = <MoneyOffIcon />
+      catIcon = <MoneyOffIcon fontSize='large' />
     }
     return catIcon
   }
@@ -37,7 +36,7 @@ function ExpenseCard({expense, handleDeleteExpense, user}) {
     <>
     {expense.owner._id === user.profile ?
     <div className='card'>
-      <p>{icon}</p>
+      <p className='icon'>{icon}</p>
       <p className='category'>{expense.category}</p>
       <p className='amount'>- ${expense.amount}</p>
       <p className='date'>{expense.date}</p>

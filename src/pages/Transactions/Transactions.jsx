@@ -12,7 +12,7 @@ const Transactions = (props) => {
     </div>
     <div>
       {props.expenses.map(expense => (
-        <ExpenseCard key={expense._id} expense={expense} handleDeleteExpense={props.handleDeleteExpense} />
+        <ExpenseCard key={expense._id} expense={expense} user={props.user} handleDeleteExpense={props.handleDeleteExpense} />
       ))}
     </div>
     </>

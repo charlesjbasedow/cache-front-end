@@ -2,6 +2,10 @@ nav {
   display: grid;
   grid-template: 100% repeat(5, 20%);
   place-items:  end center;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .transactions {

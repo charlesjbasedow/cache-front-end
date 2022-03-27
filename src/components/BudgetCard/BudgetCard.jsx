@@ -5,11 +5,14 @@ function BudgetCard({budget, handleDeleteBudget}) {
     <>
     <div>
       <p>total limit: {budget.totalLimit}</p>
-      <p>category: {budget.category}</p>
-      <p>category limit: {budget.categoryLimit}</p>
+      <p>health limit: {budget.healthLimit}</p>
+      <p>housing limit: {budget.housingLimit}</p>
+      <p>grocery limit: {budget.groceryLimit}</p>
+      <p>bills limit: {budget.billsLimit}</p>
+      <p>travel limit: {budget.travelLimit}</p>
       <Link
           className='btn btn-sm btn-warning'
-          to='/editbudget'
+          to='/edit-budget'
           state={{budget}}
       >
         Edit

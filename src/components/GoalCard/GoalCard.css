@@ -1,0 +1,5 @@
+.goal-container {
+  display: grid;
+  box-shadow: 0px 2px 8px 2px rgb(202, 202, 202);
+  border-radius: 8px;
+}

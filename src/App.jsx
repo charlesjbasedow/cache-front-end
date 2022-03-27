@@ -20,6 +20,7 @@ import Transactions from './pages/Transactions/Transactions'
 import BudgetPage from './pages/BudgetPage/BudgetPage'
 import EditBudget from './pages/EditBudget/EditBudget'
 import GoalPage from './pages/GoalPage/GoalPage'
+import EditGoal from './pages/EditGoal/EditGoal'
 
 const App = () => {
   const [incomes, setIncomes] = useState([])
@@ -62,6 +63,18 @@ const App = () => {
       navigate('/budgetspage')
     })
   }
+
+  const handleUpdateGoal = updatedGoalData => {
+    goalService.update(updatedGoalData)
+    .then(updatedGoal => {
+      const newGoalsArray = goals.map(goal => 
+        goal._id === updatedGoal._id ? updatedGoal : goal
+      )
+      setGoals(newGoalsArray)
+      navigate('/goal-page')
+    })
+  }
+
   useEffect(() => {
     incomeService.getAll()
     .then(allIncomes => setIncomes(allIncomes))
@@ -150,6 +163,7 @@ const App = () => {
         /> 
         <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget}/>} /> 
         <Route path='/goal-page' element={<GoalPage goals={goals} handleDeleteGoal={handleDeleteGoal}/>} />
+        <Route path='/edit-goal' element={<EditGoal handleUpdateGoal={handleUpdateGoal}/>} />
         </Routes>
     </>
   )

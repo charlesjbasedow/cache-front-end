@@ -145,12 +145,16 @@ const App = () => {
           path="/changePassword"
           element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" />}
         />
-        <Route path="/add" element={<AddIncomeExpense />}/>
-
-        <Route path='/add-income' element={<AddIncome handleAddIncome={handleAddIncome} />} />
-        <Route path='/add-expense' element={<AddExpense handleAddExpense={handleAddExpense} />} />  
-        <Route path='/add-budget' element={<AddBudget handleAddBudget={handleAddBudget} />} />
-        <Route path='/add-goal' element={<AddGoal handleAddGoal={handleAddGoal} />} />   
+        <Route path="/add" element={<AddIncomeExpense />}
+        />
+        <Route path='/add-income' element= {user ? <AddIncome handleAddIncome={handleAddIncome} /> : <Navigate to='/login' />} 
+        />
+        <Route path='/add-expense' element= {user ? <AddExpense handleAddExpense={handleAddExpense} /> : <Navigate to='/login' />} 
+        />  
+        <Route path='/add-budget' element={<AddBudget handleAddBudget={handleAddBudget} />} 
+        />
+        <Route path='/add-goal' element={<AddGoal handleAddGoal={handleAddGoal} />} 
+        />  
         <Route path='/transactions' element={user ?
         <Transactions user={user} 
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
@@ -158,9 +162,12 @@ const App = () => {
         />  
         <Route path='/budgetspage' element={<BudgetPage budgets={budgets} handleDeleteBudget={handleDeleteBudget}/>} 
         /> 
-        <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget}/>} /> 
-        <Route path='/goals-page' element={<GoalPage goals={goals} handleDeleteGoal={handleDeleteGoal}/>} />
-        <Route path='/edit-goal' element={<EditGoal handleUpdateGoal={handleUpdateGoal}/>} />
+        <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget}/>} 
+        /> 
+        <Route path='/goals-page' element={<GoalPage goals={goals} handleDeleteGoal={handleDeleteGoal}/>} 
+        />
+        <Route path='/edit-goal' element={<EditGoal handleUpdateGoal={handleUpdateGoal}/>} 
+        />
         </Routes>
     </>
   )

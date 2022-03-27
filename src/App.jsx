@@ -110,14 +110,14 @@ const App = () => {
   const handleAddGoal = newGoalData => {
     goalService.create(newGoalData)
     .then(newGoal => setGoals([...goals, newGoal]))
-    navigate('/goals-page')
+    navigate('/goals')
   }
 
   const handleAddBudget = newBudgetData => {
     budgetService.create(newBudgetData)
     .then(newBudget => 
       setBudgets([...budgets, newBudget]))
-      navigate('/budgetspage')
+      navigate('/budgets')
   } 
 
   const handleLogout = () => {

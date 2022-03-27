@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const GoalPage = (props) => {
   return ( 
     <>
-    <h1>Goals Page</h1>
+    <h1>Track your savings goals</h1>
     <div>
       <Link to="/add-goal">Add a New Goal</Link>
     </div>

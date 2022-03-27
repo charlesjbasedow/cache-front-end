@@ -166,9 +166,9 @@ const App = () => {
         /> 
         <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget} user={user} />} 
         /> 
-        <Route path='/goals-page' element={<GoalPage goals={goals} handleDeleteGoal={handleDeleteGoal}/>} 
+        <Route path='/goals-page' element={<GoalPage goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/>} 
         />
-        <Route path='/edit-goal' element={<EditGoal handleUpdateGoal={handleUpdateGoal}/>} 
+        <Route path='/edit-goal' element={<EditGoal  user={user} handleUpdateGoal={handleUpdateGoal}/>} 
         />
         </Routes>
     </>

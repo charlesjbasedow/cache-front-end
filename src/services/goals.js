@@ -34,14 +34,15 @@ function deleteOne(id) {
 
 
 function update(goal) {
-  return fetch(`${BASE_URL}/${goal.get('_id')}`, {
+  return fetch(`${BASE_URL}/${goal._id}`, {
     method: 'PUT',
     headers: {
+      'content-type': 'application/json',
       'Authorization': `Bearer ${tokenService.getToken()}`
     },
-    body: goal
+    body: JSON.stringify(goal)
   })
-  .then(res => res.json())
+	.then(res => res.json())
 }
 
 export {

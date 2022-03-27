@@ -9,7 +9,7 @@ function BudgetCard({budget, handleDeleteBudget}) {
       <p>category limit: {budget.categoryLimit}</p>
       <Link
           className='btn btn-sm btn-warning'
-          to='/editbudget'
+          to='/edit-budget'
           state={{budget}}
       >
         Edit

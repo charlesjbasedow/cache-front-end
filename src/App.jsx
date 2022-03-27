@@ -17,9 +17,9 @@ import * as expenseService from './services/expenses'
 import * as budgetService from './services/budgets'
 import * as incomeService from './services/incomes'
 import Transactions from './pages/Transactions/Transactions'
-import BudgetPage from './pages/BudgetPage/BudgetPage'
+import Budget from './pages/Budget/Budget'
 import EditBudget from './pages/EditBudget/EditBudget'
-import GoalPage from './pages/GoalPage/GoalPage'
+import Goals from './pages/Goals/Goals'
 import EditGoal from './pages/EditGoal/EditGoal'
 
 const App = () => {
@@ -58,7 +58,7 @@ const App = () => {
         budget._id === updatedBudget._id ? updatedBudget : budget
       )
       setBudgets(newBudgetsArray)
-      navigate('/budgetspage')
+      navigate('/budgets')
     })
   }
 
@@ -166,11 +166,11 @@ const App = () => {
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
         expenses={expenses} handleDeleteExpense={handleDeleteExpense}/> : <Navigate to='/login' />} 
         />  
-        <Route path='/budgetspage' element={<BudgetPage budgets={budgets} handleDeleteBudget={handleDeleteBudget} user={user} />} 
+        <Route path='/budgets' element={<Budget budgets={budgets} handleDeleteBudget={handleDeleteBudget} user={user} />} 
         /> 
-        <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget} user={user} />} 
+        <Route path='/edit-budget' element={<EditBudget handleUpdateBudget={handleUpdateBudget} user={user} />} 
         /> 
-        <Route path='/goals-page' element={<GoalPage goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/>} 
+        <Route path='/goals' element={<Goals goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/>} 
         />
         <Route path='/edit-goal' element={<EditGoal  user={user} handleUpdateGoal={handleUpdateGoal}/>} 
         />

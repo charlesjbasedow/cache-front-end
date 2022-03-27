@@ -29,6 +29,19 @@ const EditBudget = (props) => {
     <>
       <h1>Edit Budget</h1>
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
+				<div className="form-group mb-4">
+					<label htmlFor="total-input" className="form-label">
+						Total Limit
+					</label>
+					<input 
+						type="number"
+						className="form-control"
+						id="total-input"
+						name="totalLimit"
+            value={formData.totalLimit} 
+            onChange={handleChange}
+					/>
+				</div>
 				<div className="form-group mb-3">
 					<label htmlFor="budget-input" className="form-label">
 						Budget Category (required)
@@ -54,19 +67,6 @@ const EditBudget = (props) => {
             value={formData.categoryLimit} 
             onChange={handleChange}
 						required
-					/>
-				</div>
-				<div className="form-group mb-4">
-					<label htmlFor="total-input" className="form-label">
-						Total Limit
-					</label>
-					<input 
-						type="number"
-						className="form-control"
-						id="total-input"
-						name="totalLimit"
-            value={formData.totalLimit} 
-            onChange={handleChange}
 					/>
 				</div>
         <div className="d-grid">

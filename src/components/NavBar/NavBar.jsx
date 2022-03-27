@@ -16,8 +16,8 @@ const NavBar = ({ user, handleLogout }) => {
           {/* <Link to="/changePassword">Change Password</Link> */}
           <Link className='add' to="/add"><AddCircleSharpIcon fontSize='large' /></Link>
           <Link className='transactions' to="/transactions"><CompareArrowsIcon fontSize='large'/></Link>
-          <Link className='budget' to="/budgetspage"><BarChartIcon fontSize='large' /></Link>
-          <Link className='goals' to="/goals-page"><StarIcon fontSize='large' /></Link>
+          <Link className='budget' to="/budgets"><BarChartIcon fontSize='large' /></Link>
+          <Link className='goals' to="/goals"><StarIcon fontSize='large' /></Link>
         </nav>
       :
         <nav>

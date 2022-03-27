@@ -84,9 +84,11 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    budgetService.getAll()
-    .then(allBudgets => setBudgets(allBudgets))
-  }, [])
+    if(user) {
+      budgetService.getAll()
+      .then(allBudgets => setBudgets(allBudgets))
+    }
+  }, [user])
 
   useEffect(() => {
     goalService.getAll()
@@ -160,9 +162,9 @@ const App = () => {
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
         expenses={expenses} handleDeleteExpense={handleDeleteExpense}/> : <Navigate to='/login' />} 
         />  
-        <Route path='/budgetspage' element={<BudgetPage budgets={budgets} handleDeleteBudget={handleDeleteBudget}/>} 
+        <Route path='/budgetspage' element={<BudgetPage budgets={budgets} handleDeleteBudget={handleDeleteBudget} user={user} />} 
         /> 
-        <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget}/>} 
+        <Route path='/editbudget' element={<EditBudget handleUpdateBudget={handleUpdateBudget} user={user} />} 
         /> 
         <Route path='/goals-page' element={<GoalPage goals={goals} handleDeleteGoal={handleDeleteGoal}/>} 
         />

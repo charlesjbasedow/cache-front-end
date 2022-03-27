@@ -1,4 +1,5 @@
 import './IncomeExpenseCard.css'
+import PaidIcon from '@mui/icons-material/Paid';
 
 function IncomeCard({income, handleDeleteIncome, user}) {
   return (  
@@ -6,6 +7,7 @@ function IncomeCard({income, handleDeleteIncome, user}) {
     {income.owner._id === user.profile ?
     <div className='card'>
       {/* <h3>income card</h3> */}
+      <PaidIcon fontSize="large" className='icon' />
       <p className='name'>{income.name}</p>
       <p className='amount'>+ ${income.amount}</p>
       <p className='date'>{income.date}</p>

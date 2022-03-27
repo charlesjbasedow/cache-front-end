@@ -9,7 +9,7 @@ const Transactions = (props) => {
     <>
     <div className="transactions-header">
       <div className="current-balance">
-      <h3 className="current-balance-label">Current Balance</h3>
+      <p className="current-balance-label">Current Balance</p>
     </div>
     <div className="income">
       <p className="income-label">Income</p>
@@ -17,9 +17,9 @@ const Transactions = (props) => {
     <div className="expenses">
       <p className="expenses-label">Expenses</p>
     </div>
-    <h3 className="transactions-title">Transactions</h3>
     </div>
-    
+
+    <h3 className="transactions-title">Transactions</h3>
     <div>
       {props.incomes.map(income => (
         <IncomeCard key={income._id} income={income} user={props.user} handleDeleteIncome={props.handleDeleteIncome} />

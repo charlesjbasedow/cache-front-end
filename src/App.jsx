@@ -218,15 +218,15 @@ const App = () => {
           path="/changePassword"
           element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" />}
         />
-        <Route path="/add" element={<AddIncomeExpense />}
+        <Route path="/add" element={user ? <AddIncomeExpense /> : <Navigate to="/login" />}
         />
         <Route path='/add-income' element= {user ? <AddIncome handleAddIncome={handleAddIncome} /> : <Navigate to='/login' />} 
         />
         <Route path='/add-expense' element= {user ? <AddExpense handleAddExpense={handleAddExpense} /> : <Navigate to='/login' />} 
         />  
-        <Route path='/add-budget' element={<AddBudget handleAddBudget={handleAddBudget} />} 
+        <Route path='/add-budget' element={user ? <AddBudget handleAddBudget={handleAddBudget} /> : <Navigate to='/login' />} 
         />
-        <Route path='/add-goal' element={<AddGoal handleAddGoal={handleAddGoal} />} 
+        <Route path='/add-goal' element={user ? <AddGoal handleAddGoal={handleAddGoal} /> : <Navigate to='/login' />} 
         />  
         <Route path='/transactions' element={user ?
         <Transactions user={user} 
@@ -235,7 +235,7 @@ const App = () => {
         totalExpense={totalExpense} totalIncome={totalIncome}
         /> : <Navigate to='/login' />} 
         />  
-        <Route path='/budgets' element={<Budget 
+        <Route path='/budgets' element={user ? <Budget 
           budgets={budgets} 
           handleDeleteBudget={handleDeleteBudget} 
           user={user}
@@ -245,15 +245,15 @@ const App = () => {
           groceryExpense={groceryExpense}
           billsExpense={billsExpense}
           travelExpense={travelExpense}
-        />} 
+        /> : <Navigate to='/login' />} 
         /> 
-        <Route path='/edit-budget' element={<EditBudget handleUpdateBudget={handleUpdateBudget} user={user} />} 
+        <Route path='/edit-budget' element={ user ? <EditBudget handleUpdateBudget={handleUpdateBudget} user={user} /> : <Navigate to="/login" />} 
         /> 
-        <Route path='/goals' element={<Goals goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/>} 
+        <Route path='/goals' element={ user ? <Goals goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/> : <Navigate to="/login" /> } 
         />
-        <Route path='/edit-goal' element={<EditGoal  user={user} handleUpdateGoal={handleUpdateGoal}/>} 
+        <Route path='/edit-goal' element={ user ? <EditGoal  user={user} handleUpdateGoal={handleUpdateGoal}/> : <Navigate to="/login" />} 
         />
-        </Routes>
+      </Routes>
     </>
   )
 }

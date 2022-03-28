@@ -137,7 +137,7 @@ const App = () => {
   }
 
   let totalIncome = Array.from(incomes).reduce(function(prev, income){
-    if (income.owner._id === user.profile) {
+    if (income.owner._id === user?.profile) {
     prev = prev + income.amount
     }
     return prev
@@ -145,14 +145,14 @@ const App = () => {
 
 
   let totalExpense = Array.from(expenses).reduce(function(prev, expense){
-    if (expense.owner._id === user.profile) {
+    if (expense.owner._id === user?.profile) {
     prev = prev + expense.amount
     }
     return prev
   }, 0)
 
   let healthExpense = Array.from(expenses).reduce(function(prev, expense){
-    if (expense.owner._id === user.profile) {
+    if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Health")){
         prev = prev + expense.amount
       }
@@ -161,7 +161,7 @@ const App = () => {
   }, 0)
   
   let housingExpense = Array.from(expenses).reduce(function(prev, expense){
-    if (expense.owner._id === user.profile) {
+    if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Housing")){
         prev = prev + expense.amount
       }
@@ -170,7 +170,7 @@ const App = () => {
   }, 0)
 
   let groceryExpense = Array.from(expenses).reduce(function(prev, expense){
-    if (expense.owner._id === user.profile) {
+    if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Grocery")){
         prev = prev + expense.amount
       }
@@ -179,7 +179,7 @@ const App = () => {
   }, 0)
 
   let billsExpense = Array.from(expenses).reduce(function(prev, expense){
-    if (expense.owner._id === user.profile) {
+    if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Bills")){
         prev = prev + expense.amount
       }
@@ -188,7 +188,7 @@ const App = () => {
   }, 0)
 
   let travelExpense = Array.from(expenses).reduce(function(prev, expense){
-    if (expense.owner._id === user.profile) {
+    if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Travel")){
         prev = prev + expense.amount
       }

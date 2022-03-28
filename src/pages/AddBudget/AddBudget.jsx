@@ -1,10 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 
 const AddBudget = (props) => {
+const [validForm, setValidForm] = useState(false)
 
-  const [validForm, setValidForm] = useState(false)
+	const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const d = new Date();
+let monthName = month[d.getMonth()];
 
   const [formData, setFormData] = useState({
+		month: monthName,
 		totalLimit: 0,
 		healthLimit: 0,
 		housingLimit: 0,

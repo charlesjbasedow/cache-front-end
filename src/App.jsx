@@ -74,14 +74,18 @@ const App = () => {
   }
 
   useEffect(() => {
+    if(user) {
     incomeService.getAll()
     .then(allIncomes => setIncomes(allIncomes))
-  }, [])
+    }
+  }, [user])
 
   useEffect(() => {
+    if(user) {
     expenseService.getAll()
     .then(allExpenses => setExpenses(allExpenses))
-  }, [])
+    }
+  }, [user])
 
   useEffect(() => {
     if(user) {
@@ -91,9 +95,11 @@ const App = () => {
   }, [user])
 
   useEffect(() => {
+    if(user) {
     goalService.getAll()
     .then(allGoals => setGoals(allGoals))
-  }, [])
+    }
+  }, [user])
 
   const handleAddIncome = newIncomeData => {
     incomeService.create(newIncomeData)

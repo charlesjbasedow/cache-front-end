@@ -12,6 +12,30 @@
   color: green;
 }
 
+.health-icon {
+  color: rgb(255, 0, 0);
+}
+
+.housing-icon {
+  color: blueviolet;
+}
+
+.grocery-icon {
+  color: black;
+}
+
+.bills-icon {
+  color: rgb(45, 73, 97);
+}
+
+.travel-icon {
+  color: rgb(29, 29, 148);
+}
+
+.other-icon {
+  color: grey;
+}
+
 .name, .category {
   grid-area: 1 / 2 / 1 / 2;
   place-self: end start;

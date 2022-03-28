@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 
-function BudgetCard({budget, handleDeleteBudget}) {
+function BudgetCard({budget, handleDeleteBudget,user}) {
   return (  
     <>
+    {budget.owner._id === user.profile ?
     <div>
       <p>total limit: {budget.totalLimit}</p>
       <p>health limit: {budget.healthLimit}</p>
@@ -19,6 +20,9 @@ function BudgetCard({budget, handleDeleteBudget}) {
       </Link>
       <button onClick={() => handleDeleteBudget(budget._id)} >Delete</button>
     </div>
+    :
+    <p></p>
+}
     </>
   );
 }

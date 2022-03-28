@@ -24,7 +24,6 @@ function TravelBarChart(props) {
     setChartOptions({
       responsive: true,
       indexAxis: 'y',
-      options: {
         scales: {
           x: {
             grid: {
@@ -36,7 +35,6 @@ function TravelBarChart(props) {
               display: false
             }
           },
-        }
       }
     })
   }, [props.totalTravelExpense])

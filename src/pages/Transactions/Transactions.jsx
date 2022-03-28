@@ -5,24 +5,6 @@ import ColorToggleButton from "../../components/ToggleButton/ToggleButton";
 
 const Transactions = (props) => {
 
-  // let totalIncome = props.incomes.reduce(function(prev, income){
-  //   if (income.owner._id === props.user.profile) {
-  //   prev = prev + income.amount
-  //   return prev
-  //   }
-  //   return 0
-  // }, 0)
-
-
-  // let totalExpense = props.expenses.reduce(function(prev, expense){
-  //   if (expense.owner._id === props.user.profile) {
-  //   prev = prev + expense.amount
-  //   return prev
-  //   }
-  //   return 0
-  // }, 0)
-
-
   return (  
     <>
     <div className="transactions-header">

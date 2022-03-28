@@ -24,7 +24,6 @@ function BillsBarChart(props) {
     setChartOptions({
       responsive: true,
       indexAxis: 'y',
-      options: {
         scales: {
           x: {
             grid: {
@@ -36,7 +35,6 @@ function BillsBarChart(props) {
               display: false
             }
           },
-        }
       }
     })
   }, [props.totalBillsExpense])

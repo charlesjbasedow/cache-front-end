@@ -136,7 +136,7 @@ const App = () => {
     return prev
     }
     return 0
-  }, 0)
+  }, [])
 
 
   let totalExpense = expenses.reduce(function(prev, expense){
@@ -145,7 +145,7 @@ const App = () => {
     return prev
     }
     return 0
-  }, 0)
+  }, [])
 
 
   return (

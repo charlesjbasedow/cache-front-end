@@ -77,25 +77,10 @@ const App = () => {
     if(user) {
     incomeService.getAll()
     .then(allIncomes => setIncomes(allIncomes))
-    }
-  }, [user])
-
-  useEffect(() => {
-    if(user) {
     expenseService.getAll()
     .then(allExpenses => setExpenses(allExpenses))
-    }
-  }, [user])
-
-  useEffect(() => {
-    if(user) {
-      budgetService.getAll()
-      .then(allBudgets => setBudgets(allBudgets))
-    }
-  }, [user])
-
-  useEffect(() => {
-    if(user) {
+    budgetService.getAll()
+    .then(allBudgets => setBudgets(allBudgets))
     goalService.getAll()
     .then(allGoals => setGoals(allGoals))
     }

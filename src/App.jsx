@@ -182,7 +182,9 @@ const App = () => {
         <Route path='/transactions' element={user ?
         <Transactions user={user} 
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
-        expenses={expenses} handleDeleteExpense={handleDeleteExpense}/> : <Navigate to='/login' />} 
+        expenses={expenses} handleDeleteExpense={handleDeleteExpense}
+        totalExpense={totalExpense} totalIncome={totalIncome}
+        /> : <Navigate to='/login' />} 
         />  
         <Route path='/budgets' element={<Budget budgets={budgets} handleDeleteBudget={handleDeleteBudget} user={user} totalExpense={totalExpense} totalIncome={totalIncome} />} 
         /> 

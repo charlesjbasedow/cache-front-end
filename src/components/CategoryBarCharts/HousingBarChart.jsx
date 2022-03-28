@@ -1,9 +1,7 @@
 import { Bar } from "react-chartjs-2";
 import { useEffect, useState } from 'react';
-import { NoEncryptionTwoTone } from "@mui/icons-material";
 
-
-function HealthBarChart(props) {
+function HousingBarChart(props) {
   const [chartData, setChartData] = useState({
     datasets: []
   })
@@ -12,7 +10,7 @@ function HealthBarChart(props) {
 
   useEffect(() => {
     setChartData({
-      labels: ["Health"],
+      labels: ["Housing"],
       datasets: [{
           base: 0,
           categoryPercentage: 0.5,
@@ -20,7 +18,7 @@ function HealthBarChart(props) {
           maxBarThickness: 20,
           label: "March Expenses",
           data: [28],
-          backgroundColor: 'rgb(255, 99, 132)',
+          backgroundColor: 'blue',
         }]
     })
     setChartOptions({
@@ -49,5 +47,5 @@ function HealthBarChart(props) {
     </div>
   );
 }
- 
-export default HealthBarChart;
+
+export default HousingBarChart;

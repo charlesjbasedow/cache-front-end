@@ -130,23 +130,22 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  let totalIncome = incomes.reduce(function(prev, income){
+  let totalIncome = Array.from(incomes).reduce(function(prev, income){
     if (income.owner._id === user.profile) {
     prev = prev + income.amount
-    return prev
     }
-    return 0
+    return prev
   }, 0)
 
 
-  let totalExpense = expenses.reduce(function(prev, expense){
+  let totalExpense = Array.from(expenses).reduce(function(prev, expense){
     if (expense.owner._id === user.profile) {
     prev = prev + expense.amount
     }
     return prev
   }, 0)
 
-  let healthExpense = expenses.reduce(function(prev, expense){
+  let healthExpense = Array.from(expenses).reduce(function(prev, expense){
     if (expense.owner._id === user.profile) {
       if(expense.category.includes("Health")){
         prev = prev + expense.amount
@@ -155,7 +154,7 @@ const App = () => {
     return prev
   }, 0)
   
-  let housingExpense = expenses.reduce(function(prev, expense){
+  let housingExpense = Array.from(expenses).reduce(function(prev, expense){
     if (expense.owner._id === user.profile) {
       if(expense.category.includes("Housing")){
         prev = prev + expense.amount
@@ -164,7 +163,7 @@ const App = () => {
     return prev
   }, 0)
 
-  let groceryExpense = expenses.reduce(function(prev, expense){
+  let groceryExpense = Array.from(expenses).reduce(function(prev, expense){
     if (expense.owner._id === user.profile) {
       if(expense.category.includes("Grocery")){
         prev = prev + expense.amount
@@ -173,7 +172,7 @@ const App = () => {
     return prev
   }, 0)
 
-  let billsExpense = expenses.reduce(function(prev, expense){
+  let billsExpense = Array.from(expenses).reduce(function(prev, expense){
     if (expense.owner._id === user.profile) {
       if(expense.category.includes("Bills")){
         prev = prev + expense.amount
@@ -182,7 +181,7 @@ const App = () => {
     return prev
   }, 0)
 
-  let travelExpense = expenses.reduce(function(prev, expense){
+  let travelExpense = Array.from(expenses).reduce(function(prev, expense){
     if (expense.owner._id === user.profile) {
       if(expense.category.includes("Travel")){
         prev = prev + expense.amount

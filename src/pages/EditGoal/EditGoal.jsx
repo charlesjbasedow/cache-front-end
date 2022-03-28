@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 function EditGoal(props) {
   const formElement = useRef()
@@ -8,7 +8,7 @@ function EditGoal(props) {
   const [formData, setFormData] = useState(location.state.goal)
 
   useEffect(()=> {
-    formElement.current.checkValidity() ? setValidForm(true) : setValidForm(true)
+    formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
   }, [formData])
 
   const handleChange = evt => {

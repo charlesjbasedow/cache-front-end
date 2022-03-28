@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react"
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const EditBudget = (props) => {
   const formElement = useRef()
@@ -16,7 +16,7 @@ const EditBudget = (props) => {
 
   useEffect(() => {
       formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
-    }, [formData])
+  }, [formData])
 
   const handleSubmit = evt => {
     evt.preventDefault()
@@ -27,7 +27,7 @@ const EditBudget = (props) => {
 
   return (
 		<>
-			<h1>Add Budget</h1>
+			<h1>Edit Budget</h1>
 			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 				<div className="form-group mb-4">
 					<label htmlFor="total-input" className="form-label">
@@ -123,7 +123,7 @@ const EditBudget = (props) => {
 						className="btn btn-primary btn-fluid"
 						disabled={!validForm}
 					>
-						Add Budget
+						Edit Budget
 					</button>
 				</div>
 			</form>

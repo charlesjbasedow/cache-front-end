@@ -27,6 +27,7 @@ const Transactions = (props) => {
     <>
     <div className="transactions-header">
       <div className="current-balance">
+        <p>{props.totalIncome - props.totalExpense}</p>
         <p className="current-balance-label">Current Balance</p>
       </div>
       <div className="income-label-container">

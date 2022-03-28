@@ -1,29 +1,28 @@
-import Chart from 'chart.js/auto';
-import { Doughnut } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { useEffect, useState } from 'react';
 
-function DoughnutChart(props) {
+
+function HealthBarChart(props) {
   const [chartData, setChartData] = useState({
     datasets: []
   })
 
   const [chartOptions, setChartOptions] = useState({})
 
-
-
   useEffect(() => {
     setChartData({
-      labels: ["Health", "Housing", "Grocery", "Bills", "Travel", "Other"],
+      labels: ["Health"],
       datasets: [
         {
+          axis: 'y',
+          base: 0,
+          categoryPercentage: 0.5,
+          barPercentage: 1.0,
+          maxBarThickness: 20,
           label: "March Expenses",
-          data: [20, 50, 100, 35, 120, 10],
-          borderColor: "rgb(53, 162, 235)",
+          data: [28],
           backgroundColor: [
             'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)',
-            'rgb(3, 162, 230)',
           ],
         }
       ]
@@ -33,15 +32,16 @@ function DoughnutChart(props) {
       title: {
         display: true,
         text: "Expenses for March"
-      }
+      },
+      indexAxis: 'y',
     })
   }, [])
 
   return (  
     <div>
-      <Doughnut options={chartOptions} data={chartData} />
+      <Bar options={chartOptions} data={chartData} />
     </div>
   );
 }
  
-export default DoughnutChart;
+export default HealthBarChart;

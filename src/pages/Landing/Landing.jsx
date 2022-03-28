@@ -6,7 +6,14 @@ const Landing = (props) => {
     <main className={styles.container}>
       <h1>hello, {props.user ? props.user.name : 'friend'}</h1>
       <div>
-        <DoughnutChart />
+        <DoughnutChart 
+        totalExpense={props.totalExpense} 
+        healthExpense={props.healthExpense}
+        housingExpense={props.housingExpense}
+        groceryExpense={props.groceryExpense}
+        billsExpense={props.billsExpense}
+        travelExpense={props.travelExpense}
+        />
       </div>
     </main>
   )

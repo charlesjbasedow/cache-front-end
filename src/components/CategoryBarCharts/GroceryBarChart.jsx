@@ -10,14 +10,14 @@ function GroceryBarChart(props) {
 
   useEffect(() => {
     setChartData({
-      labels: ["Housing"],
+      labels: ["Grocery"],
       datasets: [{
           base: 0,
           categoryPercentage: 0.5,
           barPercentage: 1.0,
           maxBarThickness: 20,
           label: "March Expenses",
-          data: [28],
+          data: [props.totalGroceryExpense],
           backgroundColor: 'green',
         }]
     })
@@ -39,7 +39,7 @@ function GroceryBarChart(props) {
         }
       }
     })
-  }, [])
+  }, [props.totalGroceryExpense])
 
   return (  
     <div>

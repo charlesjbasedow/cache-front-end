@@ -9,15 +9,13 @@ function DoughnutChart(props) {
 
   const [chartOptions, setChartOptions] = useState({})
 
-
-
   useEffect(() => {
     setChartData({
       labels: ["Health", "Housing", "Grocery", "Bills", "Travel", "Other"],
       datasets: [
         {
           label: "March Expenses",
-          data: [20, 50, 100, 35, 120, 10],
+          data: [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.groceryExpense],
           borderColor: "rgb(53, 162, 235)",
           backgroundColor: [
             'rgb(255, 99, 132)',
@@ -35,7 +33,7 @@ function DoughnutChart(props) {
         text: "Expenses for March"
       }
     })
-  }, [])
+  }, [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.groceryExpense])
 
   return (  
     <div>

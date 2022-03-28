@@ -17,7 +17,7 @@ function HousingBarChart(props) {
           barPercentage: 1.0,
           maxBarThickness: 20,
           label: "March Expenses",
-          data: [28],
+          data: [props.totalHousingExpense],
           backgroundColor: 'blue',
         }]
     })
@@ -39,7 +39,7 @@ function HousingBarChart(props) {
         }
       }
     })
-  }, [])
+  }, [props.totalHousingExpense])
 
   return (  
     <div>

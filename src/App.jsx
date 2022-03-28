@@ -69,7 +69,7 @@ const App = () => {
         goal._id === updatedGoal._id ? updatedGoal : goal
       )
       setGoals(newGoalsArray)
-      navigate('/goals-page')
+      navigate('/goals')
     })
   }
 

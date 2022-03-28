@@ -11,22 +11,22 @@ function ExpenseCard({expense, handleDeleteExpense, user}) {
   function checkCategory(expense) {
     let catIcon
     if(expense.category === 'Health'){
-      catIcon = <LocalHospitalIcon fontSize='large'/>
+      catIcon = <LocalHospitalIcon className='health-icon' fontSize='large'/>
     } 
     if(expense.category === 'Housing') {
-      catIcon = <HomeIcon fontSize='large'/>
+      catIcon = <HomeIcon className='housing-icon' fontSize='large'/>
     } 
     if(expense.category === 'Grocery') {
-      catIcon = <RestaurantIcon fontSize='large'/>
+      catIcon = <RestaurantIcon className='grocery-icon' fontSize='large'/>
     } 
     if(expense.category === 'Bills') {
-      catIcon = <CreditCardIcon fontSize='large'/>
+      catIcon = <CreditCardIcon className='bills-icon' fontSize='large'/>
     } 
     if(expense.category === 'Travel'){
-      catIcon = <AirplanemodeActiveIcon fontSize='large'/>
+      catIcon = <AirplanemodeActiveIcon className='travel-icon' fontSize='large'/>
     } 
     if(expense.category === 'Other'){
-      catIcon = <MoneyOffIcon fontSize='large' />
+      catIcon = <MoneyOffIcon className='other-icon' fontSize='large' />
     }
     return catIcon
   }

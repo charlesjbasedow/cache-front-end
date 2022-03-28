@@ -5,22 +5,22 @@ import ColorToggleButton from "../../components/ToggleButton/ToggleButton";
 
 const Transactions = (props) => {
 
-  let totalIncome = props.incomes.reduce(function(prev, income){
-    if (income.owner._id === props.user.profile) {
-    prev = prev + income.amount
-    return prev
-    }
-    return 0
-  }, 0)
+  // let totalIncome = props.incomes.reduce(function(prev, income){
+  //   if (income.owner._id === props.user.profile) {
+  //   prev = prev + income.amount
+  //   return prev
+  //   }
+  //   return 0
+  // }, 0)
 
 
-  let totalExpense = props.expenses.reduce(function(prev, expense){
-    if (expense.owner._id === props.user.profile) {
-    prev = prev + expense.amount
-    return prev
-    }
-    return 0
-  }, 0)
+  // let totalExpense = props.expenses.reduce(function(prev, expense){
+  //   if (expense.owner._id === props.user.profile) {
+  //   prev = prev + expense.amount
+  //   return prev
+  //   }
+  //   return 0
+  // }, 0)
 
 
   return (  
@@ -30,11 +30,11 @@ const Transactions = (props) => {
         <p className="current-balance-label">Current Balance</p>
       </div>
       <div className="income-label-container">
-        <p>{totalIncome}</p>
+        <p>{props.totalIncome}</p>
         <p className="income-label">Income</p>
       </div>
       <div className="expenses-label-container">
-      <p>{totalExpense}</p>
+      <p>{props.totalExpense}</p>
         <p className="expenses-label">Expenses</p>
       </div>
     </div>

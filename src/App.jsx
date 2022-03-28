@@ -130,6 +130,24 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  let totalIncome = incomes.reduce(function(prev, income){
+    if (income.owner._id === user.profile) {
+    prev = prev + income.amount
+    return prev
+    }
+    return 0
+  }, 0)
+
+
+  let totalExpense = expenses.reduce(function(prev, expense){
+    if (expense.owner._id === user.profile) {
+    prev = prev + expense.amount
+    return prev
+    }
+    return 0
+  }, 0)
+
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -166,7 +184,7 @@ const App = () => {
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
         expenses={expenses} handleDeleteExpense={handleDeleteExpense}/> : <Navigate to='/login' />} 
         />  
-        <Route path='/budgets' element={<Budget budgets={budgets} handleDeleteBudget={handleDeleteBudget} user={user} />} 
+        <Route path='/budgets' element={<Budget budgets={budgets} handleDeleteBudget={handleDeleteBudget} user={user} totalExpense={totalExpense} totalIncome={totalIncome} />} 
         /> 
         <Route path='/edit-budget' element={<EditBudget handleUpdateBudget={handleUpdateBudget} user={user} />} 
         /> 

@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 
-function BudgetCard({budget, handleDeleteBudget,user}) {
+function BudgetCard({budget, handleDeleteBudget,totalExpense, totalIncome, user,healthExpense}) {
+
   return (  
     <>
     {budget.owner._id === user.profile ?
     <div>
       <p>total limit: {budget.totalLimit}</p>
+      <p>total expense: {totalExpense}</p>
       <p>health limit: {budget.healthLimit}</p>
+      <p>health expense: {healthExpense}</p>
       <p>housing limit: {budget.housingLimit}</p>
       <p>grocery limit: {budget.groceryLimit}</p>
       <p>bills limit: {budget.billsLimit}</p>

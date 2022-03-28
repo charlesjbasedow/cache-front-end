@@ -26,19 +26,19 @@ const BudgetPage = (props) => {
         ))}
       </div>
     <div>
-      <HealthBarChart />
+      <HealthBarChart totalHealthExpense={props.healthExpense} />
     </div>
     <div>
-      <HousingBarChart />
+      <HousingBarChart totalHousingExpense={props.housingExpense} />
     </div>
     <div>
-      <GroceryBarChart />
+      <GroceryBarChart totalGroceryExpense={props.groceryExpense} />
     </div>
     <div>
-      <BillsBarChart />
+      <BillsBarChart totalBillsExpense={props.billsExpense} />
     </div>
     <div>
-      <TravelBarChart />
+      <TravelBarChart totalTravelExpense={props.travelExpense} />
     </div>
     </>
   );

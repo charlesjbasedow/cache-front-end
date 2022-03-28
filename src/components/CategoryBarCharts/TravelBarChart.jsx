@@ -10,14 +10,14 @@ function TravelBarChart(props) {
 
   useEffect(() => {
     setChartData({
-      labels: ["Housing"],
+      labels: ["Travel"],
       datasets: [{
           base: 0,
           categoryPercentage: 0.5,
           barPercentage: 1.0,
           maxBarThickness: 20,
           label: "March Expenses",
-          data: [28],
+          data: [props.totalTravelExpense],
           backgroundColor: 'lightblue',
         }]
     })
@@ -39,7 +39,7 @@ function TravelBarChart(props) {
         }
       }
     })
-  }, [])
+  }, [props.totalTravelExpense])
 
   return (  
     <div>

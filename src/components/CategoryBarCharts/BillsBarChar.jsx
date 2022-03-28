@@ -10,14 +10,14 @@ function BillsBarChart(props) {
 
   useEffect(() => {
     setChartData({
-      labels: ["Housing"],
+      labels: ["Bills"],
       datasets: [{
           base: 0,
           categoryPercentage: 0.5,
           barPercentage: 1.0,
           maxBarThickness: 20,
           label: "March Expenses",
-          data: [28],
+          data: [props.totalBillsExpense],
           backgroundColor: 'grey',
         }]
     })
@@ -39,7 +39,7 @@ function BillsBarChart(props) {
         }
       }
     })
-  }, [])
+  }, [props.totalBillsExpense])
 
   return (  
     <div>

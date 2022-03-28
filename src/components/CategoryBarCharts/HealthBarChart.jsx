@@ -17,7 +17,7 @@ function HealthBarChart(props) {
           barPercentage: 1.0,
           maxBarThickness: 20,
           label: "March Expenses",
-          data: [28],
+          data: [props.totalHealthExpense],
           backgroundColor: 'rgb(255, 99, 132)',
         }]
     })
@@ -39,7 +39,7 @@ function HealthBarChart(props) {
         }
       }
     })
-  }, [])
+  }, [props.totalHealthExpense])
 
   return (  
     <div>

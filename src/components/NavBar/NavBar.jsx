@@ -12,7 +12,7 @@ const NavBar = ({ user, handleLogout }) => {
         <nav>
           {/* Welcome, {user.name} */}
           {/* <Link to="/profiles">Profiles</Link> */}
-          <Link to="" onClick={handleLogout}>LOG OUT</Link>
+          <Link to="/" onClick={handleLogout}>LOG OUT</Link>
           {/* <Link to="/changePassword">Change Password</Link> */}
           <Link className='add' to="/add"><AddCircleSharpIcon fontSize='large' /></Link>
           <Link className='transactions' to="/transactions"><CompareArrowsIcon fontSize='large'/></Link>

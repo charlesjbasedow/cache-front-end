@@ -4,15 +4,22 @@ import ExpenseCard from "../../components/ExpenseCard/ExpenseCard";
 import ColorToggleButton from "../../components/ToggleButton/ToggleButton";
 
 const Transactions = (props) => {
-  // need to filter these totals to be for only the current user
+
   let totalIncome = props.incomes.reduce(function(prev, income){
+    if (income.owner._id === props.user.profile) {
     prev = prev + income.amount
     return prev
+    }
+    return 0
   }, 0)
 
+
   let totalExpense = props.expenses.reduce(function(prev, expense){
+    if (expense.owner._id === props.user.profile) {
     prev = prev + expense.amount
     return prev
+    }
+    return 0
   }, 0)
 
 
@@ -47,5 +54,5 @@ const Transactions = (props) => {
     </>
   )
 }
- 
+
 export default Transactions;

@@ -2,14 +2,14 @@ import Chart from 'chart.js/auto';
 import { Doughnut } from "react-chartjs-2";
 import { useEffect, useState } from 'react';
 
-function ExpensesBarChart(props) {
+function DoughnutChart(props) {
   const [chartData, setChartData] = useState({
     datasets: []
   })
 
   const [chartOptions, setChartOptions] = useState({})
 
-  
+
 
   useEffect(() => {
     setChartData({
@@ -44,4 +44,4 @@ function ExpensesBarChart(props) {
   );
 }
  
-export default ExpensesBarChart;
+export default DoughnutChart;

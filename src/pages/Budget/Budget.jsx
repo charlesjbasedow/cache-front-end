@@ -1,4 +1,9 @@
 import BudgetCard from "../../components/BudgetCard/BudgetCard";
+import HealthBarChart from "../../components/CategoryBarCharts/HealthBarChart"
+import HousingBarChart from "../../components/CategoryBarCharts/HousingBarChart";
+import GroceryBarChart from "../../components/CategoryBarCharts/GroceryBarChart";
+import BillsBarChart from "../../components/CategoryBarCharts/BillsBarChar";
+import TravelBarChart from "../../components/CategoryBarCharts/TravelBarChart";
 
 const BudgetPage = (props) => {
   return ( 
@@ -20,6 +25,21 @@ const BudgetPage = (props) => {
           />
         ))}
       </div>
+    <div>
+      <HealthBarChart />
+    </div>
+    <div>
+      <HousingBarChart />
+    </div>
+    <div>
+      <GroceryBarChart />
+    </div>
+    <div>
+      <BillsBarChart />
+    </div>
+    <div>
+      <TravelBarChart />
+    </div>
     </>
   );
 }

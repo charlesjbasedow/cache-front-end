@@ -35,7 +35,6 @@ return (
             <option name="Grocery">Grocery</option>
             <option name="Bills">Bills</option>
             <option name="Travel">Travel</option>
-            <option name="Goal">Goal</option>
             <option name="Other">Other</option>
         </select>
 	    </div>

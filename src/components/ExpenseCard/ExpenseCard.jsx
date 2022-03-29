@@ -25,9 +25,6 @@ function ExpenseCard({expense, handleDeleteExpense, user}) {
     if(expense.category === 'Travel'){
       catIcon = <AirplanemodeActiveIcon className='travel-icon' fontSize='large'/>
     }
-    if(expense.category === 'Goal'){
-      catIcon = <AirplanemodeActiveIcon className='goal-icon' fontSize='large'/>
-    }
     if(expense.category === 'Other'){
       catIcon = <MoneyOffIcon className='other-icon' fontSize='large' />
     }

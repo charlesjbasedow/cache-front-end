@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import BudgetCard from "../../components/BudgetCard/BudgetCard";
 import HealthProgressBar from "../../components/BudgetCategoryCards/HealthProgressBar";
 import HousingProgressBar from "../../components/BudgetCategoryCards/HousingProgressBar";
@@ -15,9 +16,21 @@ const BudgetPage = (props) => {
   // setCurrentBudget(currentMonthBudget)
   // }, [props.budgets])
  
+  let date = new Date().getDate();
 
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const d = new Date();
+let currentMonth = month[d.getMonth()];
 
   return ( 
+    <>
+    {date === 1 ?
+    <div>
+      <p>Click here to create your {currentMonth} budget </p>
+      <Link to='/add-budget' >Add Budget</Link > 
+    </div>
+    :
     <>
     <h1>Budget Page</h1>
       <div>
@@ -52,6 +65,9 @@ const BudgetPage = (props) => {
     <div>
       <TravelProgressBar totalTravelExpense={props.travelExpense} budgets={props.budgets} />
     </div>
+    </>
+    
+    }
     </>
   );
 }

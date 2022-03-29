@@ -11,9 +11,6 @@ const AddIncomeExpense = () => {
     <div className="add-expense-link">
       <Link className="link" to="/add-expense">Add Expense</Link>
     </div>
-      <div className="add-budget-link">
-        <Link to="/add-budget">Add Budget</Link>
-      </div>
     </div>
       
     </>

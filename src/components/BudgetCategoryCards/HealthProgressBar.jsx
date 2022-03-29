@@ -6,9 +6,11 @@ import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 export default function HealthProgressBar(props) {
   const [progress, setProgress] = useState(0);
 
+  let percentSpent = props.totalHealthExpense / props.currentBudget.healthLimit * 100
+
   useEffect(() => {
-    setProgress(props.totalHealthExpense)
-  }, [props.totalHealthExpense])
+    setProgress(percentSpent)
+  }, [percentSpent])
   
 
   return (

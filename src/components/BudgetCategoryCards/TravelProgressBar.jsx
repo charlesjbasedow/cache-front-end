@@ -6,9 +6,11 @@ import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 export default function TravelProgressBar(props) {
   const [progress, setProgress] = useState(0);
 
+  let percentSpent = props.totaTravelExpense / props.currentBudget.travelLimit * 100
+
   useEffect(() => {
-    setProgress(props.totalTravelExpense)
-  }, [props.totalTravelExpense])
+    setProgress(percentSpent)
+  }, [percentSpent])
   
 
   return (

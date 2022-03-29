@@ -23,6 +23,9 @@ const BudgetPage = (props) => {
 const d = new Date();
 let currentMonth = month[d.getMonth()];
 let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
+let lastBudget = props?.budgets[props.budgets.length-1]
+
+// console.log(lastbudget)
   return ( 
     <>
     {date === 1 || !hasBudget ?
@@ -60,7 +63,7 @@ let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
       <GroceryProgressBar totalGroceryExpense={props.groceryExpense} budgets={props.budgets} />
     </div>
     <div>
-      <BillsProgressBar totalBillsExpense={props.billsExpense} budgets={props.budgets} />
+      <BillsProgressBar totalBillsExpense={props.billsExpense} lastBudget={lastBudget} budgets={props.budgets} />
     </div>
     <div>
       <TravelProgressBar totalTravelExpense={props.travelExpense} budgets={props.budgets} />

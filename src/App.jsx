@@ -121,7 +121,7 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  let totalIncome = Array.from(incomes).reduce(function(prev, income){
+  let totalIncome = incomes.reduce(function(prev, income){
     if (income.owner._id === user?.profile) {
     prev = prev + income.amount
     }
@@ -129,14 +129,14 @@ const App = () => {
   }, 0)
 
 
-  let totalExpense = Array.from(expenses).reduce(function(prev, expense){
+  let totalExpense = expenses.reduce(function(prev, expense){
     if (expense.owner._id === user?.profile) {
     prev = prev + expense.amount
     }
     return prev
   }, 0)
 
-  let healthExpense = Array.from(expenses).reduce(function(prev, expense){
+  let healthExpense = expenses.reduce(function(prev, expense){
     if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Health")){
         prev = prev + expense.amount
@@ -145,7 +145,7 @@ const App = () => {
     return prev
   }, 0)
   
-  let housingExpense = Array.from(expenses).reduce(function(prev, expense){
+  let housingExpense = expenses.reduce(function(prev, expense){
     if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Housing")){
         prev = prev + expense.amount
@@ -154,7 +154,7 @@ const App = () => {
     return prev
   }, 0)
 
-  let groceryExpense = Array.from(expenses).reduce(function(prev, expense){
+  let groceryExpense = expenses.reduce(function(prev, expense){
     if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Grocery")){
         prev = prev + expense.amount
@@ -163,7 +163,7 @@ const App = () => {
     return prev
   }, 0)
 
-  let billsExpense = Array.from(expenses).reduce(function(prev, expense){
+  let billsExpense = expenses.reduce(function(prev, expense){
     if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Bills")){
         prev = prev + expense.amount
@@ -172,11 +172,18 @@ const App = () => {
     return prev
   }, 0)
 
-  let travelExpense = Array.from(expenses).reduce(function(prev, expense){
+  let travelExpense = expenses.reduce(function(prev, expense){
     if (expense.owner._id === user?.profile) {
       if(expense.category.includes("Travel")){
         prev = prev + expense.amount
       }
+    }
+    return prev
+  }, 0)
+
+  let totalSavings = goals.reduce(function(prev, goal){
+    if (goal.owner._id === user?.profile) {
+        prev = prev + goal.currentAmount
     }
     return prev
   }, 0)
@@ -225,7 +232,7 @@ const App = () => {
         <Transactions user={user} 
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
         expenses={expenses} handleDeleteExpense={handleDeleteExpense}
-        totalExpense={totalExpense} totalIncome={totalIncome}
+        totalExpense={totalExpense} totalIncome={totalIncome} totalSavings={totalSavings} goals={goals}
         /> : <Navigate to='/login' />} 
         />  
         <Route path='/budgets' element={user ? <Budget 

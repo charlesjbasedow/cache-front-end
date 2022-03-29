@@ -1,6 +1,7 @@
 import "./Transactions.css"
 import IncomeCard from "../../components/IncomeCard/IncomeCard";
 import ExpenseCard from "../../components/ExpenseCard/ExpenseCard";
+import GoalTransCard from "../../components/GoalTransCard/GoalTransCard";
 import ColorToggleButton from "../../components/ToggleButton/ToggleButton";
 
 const Transactions = (props) => {
@@ -17,8 +18,8 @@ const Transactions = (props) => {
   return (  
     <>
     <div className="transactions-header">
-     
-        <p className="current-balance">{props.totalIncome - props.totalExpense}</p>
+     {console.log(props.goals.currentAmount)}
+        <p className="current-balance">{props.totalIncome - props.totalExpense - props.totalSavings}</p>
         <p className="current-balance-label">Current Balance</p>
       
  
@@ -43,11 +44,15 @@ const Transactions = (props) => {
       ))}
     </div>
     :
-  <div>
+    <div>
       {props.expenses.map(expense => (
         <ExpenseCard key={expense._id} expense={expense} user={props.user} handleDeleteExpense={props.handleDeleteExpense} />
       ))}
+      {props.goals.map(goal => (
+        <GoalTransCard key={goal._id} goal={goal} user={props.user} />
+      ))}
     </div>
+    
   
   
   }

@@ -39,6 +39,19 @@ function EditGoal(props) {
 					/>
 				</div>
 				<div className="form-group mb-3">
+					<label htmlFor="currentAmount-input" className="form-label">
+						Current Amount
+					</label>
+					<input 
+						type="number"
+						className="form-control"
+						id="currentAmount-input"
+						name="currentAmount"
+            value={formData.currentAmount}
+            onChange={handleChange}
+					/>
+				</div>
+				<div className="form-group mb-3">
 					<label htmlFor="amount-input" className="form-label">
 						Goal Amount (required)
 					</label>
@@ -59,7 +72,7 @@ function EditGoal(props) {
 						className="btn btn-primary btn-fluid"
             disabled={!validForm}
 					>
-						Add Goal
+						Update Goal
 					</button>
 				</div>
 			</form>

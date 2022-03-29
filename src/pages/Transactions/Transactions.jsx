@@ -1,7 +1,6 @@
 import "./Transactions.css"
 import IncomeCard from "../../components/IncomeCard/IncomeCard";
 import ExpenseCard from "../../components/ExpenseCard/ExpenseCard";
-import ColorToggleButton from "../../components/ToggleButton/ToggleButton";
 
 const Transactions = (props) => {
   let pageShown
@@ -17,14 +16,14 @@ const Transactions = (props) => {
   return (  
     <>
     <div className="transactions-header">
-     
+    
         <p className="current-balance">{props.totalIncome - props.totalExpense}</p>
         <p className="current-balance-label">Current Balance</p>
       
- 
+
         <p className="income">{props.totalIncome}</p>
         <p className="income-label">Income</p>
-     
+    
       <p className="expenses">{props.totalExpense}</p>
         <p className="expenses-label">Expenses</p>
       

@@ -15,7 +15,7 @@ const BudgetPage = (props) => {
   // let currentMonthBudget = props.budgets[currentMonthBudgetIndex]
   // setCurrentBudget(currentMonthBudget)
   // }, [props.budgets])
- 
+
   let date = new Date().getDate();
 
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];

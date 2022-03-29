@@ -14,7 +14,7 @@ const GoalPage = (props) => {
       ))}
     </div>
     </>
-   );
+  );
 }
- 
+
 export default GoalPage;

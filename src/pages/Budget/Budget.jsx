@@ -1,9 +1,9 @@
 import BudgetCard from "../../components/BudgetCard/BudgetCard";
-import HealthBarChart from "../../components/CategoryBarCharts/HealthBarChart"
-import HousingBarChart from "../../components/CategoryBarCharts/HousingBarChart";
-import GroceryBarChart from "../../components/CategoryBarCharts/GroceryBarChart";
-import BillsBarChart from "../../components/CategoryBarCharts/BillsBarChar";
-import TravelBarChart from "../../components/CategoryBarCharts/TravelBarChart";
+import HealthProgressBar from "../../components/ProgressBars/HealthProgressBar";
+import HousingProgressBar from "../../components/ProgressBars/HousingProgressBar";
+import GroceryProgressBar from "../../components/ProgressBars/GroceryProgressBar";
+import BillsProgressBar from "../../components/ProgressBars/BillsProgressBar";
+import TravelProgressBar from "../../components/ProgressBars/TravelProgressBar";
 
 const BudgetPage = (props) => {
   return ( 
@@ -26,19 +26,19 @@ const BudgetPage = (props) => {
         ))}
       </div>
     <div>
-      <HealthBarChart totalHealthExpense={props.healthExpense} />
+      <HealthProgressBar totalHealthExpense={props.healthExpense} />
     </div>
     <div>
-      <HousingBarChart totalHousingExpense={props.housingExpense} />
+      <HousingProgressBar totalHousingExpense={props.housingExpense} />
     </div>
     <div>
-      <GroceryBarChart totalGroceryExpense={props.groceryExpense} />
+      <GroceryProgressBar totalGroceryExpense={props.groceryExpense} />
     </div>
     <div>
-      <BillsBarChart totalBillsExpense={props.billsExpense} />
+      <BillsProgressBar totalBillsExpense={props.billsExpense} />
     </div>
     <div>
-      <TravelBarChart totalTravelExpense={props.travelExpense} />
+      <TravelProgressBar totalTravelExpense={props.travelExpense} />
     </div>
     </>
   );

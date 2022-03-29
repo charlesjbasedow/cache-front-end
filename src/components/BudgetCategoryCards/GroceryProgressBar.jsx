@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import LinearProgress from '@mui/material/LinearProgress';
 import './BudgetCategoryCards.css'
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 
 export default function GroceryProgressBar(props) {
   const [progress, setProgress] = useState(0);
@@ -12,7 +13,7 @@ export default function GroceryProgressBar(props) {
 
   return (
     <div className='budget-cat-card-container'>
-    <p className='budget-cat-card-icon'>icon</p>
+    <RestaurantIcon className='budget-cat-card-icon'/>
     <p className='budget-cat-card-title'>Grocery</p>
     <div className='budget-progress-container'>
       <LinearProgress variant="determinate" value={progress} sx={{height: 15}} />

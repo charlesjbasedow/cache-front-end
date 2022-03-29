@@ -7,22 +7,38 @@
   place-items: center;
 }
 
-.current-balance-container {
+.current-balance{
   grid-area: 1 / 1 / 2 / 3;
 }
 
-.current-balance{
-  
+.current-balance-label{
+  grid-area: 2 / 1 / 3 / 3;
+  align-self: start;
 }
 
-.income-container {
-  grid-area: 2 / 1 / 2 / 2;
+.income {
+  grid-area: 3 / 1 / 4 / 2;
 }
 
-.expenses-container {
-  grid-area: 2 / 2 / 2 / 3;
+.income-label{
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+.expenses {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.expenses-label{
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.income-expenses-tabs{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
 }
 
 .transactions-title {
   text-align: center;
 }
+

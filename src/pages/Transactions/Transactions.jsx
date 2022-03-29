@@ -17,18 +17,17 @@ const Transactions = (props) => {
   return (  
     <>
     <div className="transactions-header">
-      <div className="current-balance-container">
+     
         <p className="current-balance">{props.totalIncome - props.totalExpense}</p>
         <p className="current-balance-label">Current Balance</p>
-      </div>
-      <div className="income-container">
+      
+ 
         <p className="income">{props.totalIncome}</p>
         <p className="income-label">Income</p>
-      </div>
-      <div className="expenses-container">
+     
       <p className="expenses">{props.totalExpense}</p>
         <p className="expenses-label">Expenses</p>
-      </div>
+      
     </div>
 
     <h3 className="transactions-title">Transactions</h3>
@@ -36,6 +35,7 @@ const Transactions = (props) => {
       <p className="income-tab" onClick={handleIncomeClick}>Income</p>
       <p className="expenses-tab" onClick={handleExpensesClick}>Expenses</p>
     </div>
+    
     {pageShown === 'income' ?
     <div>
       {props.incomes.map(income => (

@@ -4,7 +4,8 @@ import DoughnutChart from '../../components/DoughnutChart/DoughnutChart'
 const Landing = (props) => {
   return (
     <main className={styles.container}>
-      <h1>hello, {props.user ? props.user.name : 'friend'}</h1>
+      <p>hello, {props.user ? props.user.name : 'friend'}</p>
+        <h3>You have ___ remaining in this month's budget</h3>
       <div>
         <DoughnutChart 
         totalExpense={props.totalExpense} 

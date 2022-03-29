@@ -22,10 +22,10 @@ const BudgetPage = (props) => {
 
 const d = new Date();
 let currentMonth = month[d.getMonth()];
-
+let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
   return ( 
     <>
-    {date === 1 ?
+    {date === 1 || !hasBudget ?
     <div>
       <p>Click here to create your {currentMonth} budget </p>
       <Link to='/add-budget' >Add Budget</Link > 

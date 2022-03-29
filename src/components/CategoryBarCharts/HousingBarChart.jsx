@@ -44,9 +44,15 @@ function HousingBarChart(props) {
   }, [props.totalHousingExpense])
 
   return (  
+    <>
+    {props.totalHousingExpense ? 
     <div>
       <Bar options={chartOptions} data={chartData} />
     </div>
+    :
+    ''
+    }
+    </>
   );
 }
 

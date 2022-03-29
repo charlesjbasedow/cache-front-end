@@ -44,9 +44,15 @@ function BillsBarChart(props) {
   }, [props.totalBillsExpense])
 
   return (  
+    <>
+    {props.totalBillsExpense ? 
     <div>
       <Bar options={chartOptions} data={chartData} />
     </div>
+    :
+    ''
+    }
+    </>
   );
 }
 

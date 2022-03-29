@@ -49,10 +49,16 @@ function HealthBarChart(props) {
     })
   }, [props.totalHealthExpense])
 
-  return (  
+  return ( 
+    <>
+    {props.totalHealthExpense ? 
     <div>
       <Bar options={chartOptions} data={chartData} />
     </div>
+    :
+    ''
+    }
+    </>
   );
 }
 

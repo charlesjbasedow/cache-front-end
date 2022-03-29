@@ -44,9 +44,15 @@ function GroceryBarChart(props) {
   }, [props.totalGroceryExpense])
 
   return (  
+    <>
+    {props.totalGroceryExpense ? 
     <div>
       <Bar options={chartOptions} data={chartData} />
     </div>
+    :
+    ''
+    }
+    </>
   );
 }
 

@@ -44,9 +44,15 @@ function TravelBarChart(props) {
   }, [props.totalTravelExpense])
 
   return (  
+    <>
+    {props.totalTravelExpense ? 
     <div>
       <Bar options={chartOptions} data={chartData} />
     </div>
+    :
+    ''
+    }
+    </>
   );
 }
 

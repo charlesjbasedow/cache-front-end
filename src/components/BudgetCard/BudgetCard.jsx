@@ -6,7 +6,7 @@ function BudgetCard({budget, user, handleDeleteBudget,totalExpense, healthExpens
     <>
     {budget.owner._id === user.profile ?
     <div>
-      <p>total limit: {budget.totalLimit}</p>
+      {/* <p>total limit: {budget.totalLimit}</p>
       <p>total expense: {totalExpense}</p>
       <p>health limit: {budget.healthLimit}</p>
       <p>health expense: {healthExpense}</p>
@@ -17,7 +17,7 @@ function BudgetCard({budget, user, handleDeleteBudget,totalExpense, healthExpens
       <p>bills limit: {budget.billsLimit}</p>
       <p>bills expense: {billsExpense}</p>
       <p>travel limit: {budget.travelLimit}</p>
-      <p>travel expense: {travelExpense}</p>
+      <p>travel expense: {travelExpense}</p> */}
       <Link
           className='btn btn-sm btn-warning'
           to='/edit-budget'
@@ -25,7 +25,7 @@ function BudgetCard({budget, user, handleDeleteBudget,totalExpense, healthExpens
       >
         Edit
       </Link>
-      <button onClick={() => handleDeleteBudget(budget._id)} >Delete</button>
+      {/* <button onClick={() => handleDeleteBudget(budget._id)} >Delete</button> */}
     </div>
     :
     <p></p>

@@ -6,9 +6,11 @@ import HomeIcon from '@mui/icons-material/Home';
 export default function HousingProgressBar(props) {
   const [progress, setProgress] = useState(0);
 
+  let percentSpent = props.totalHousingExpense / props.currentBudget.housingLimit * 100
+
   useEffect(() => {
-    setProgress(props.totalHousingExpense)
-  }, [props.totalHousingExpense])
+    setProgress(percentSpent)
+  }, [percentSpent])
   
 
   return (

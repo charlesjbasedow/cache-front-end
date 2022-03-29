@@ -6,6 +6,8 @@ import HousingProgressBar from "../../components/BudgetCategoryCards/HousingProg
 import GroceryProgressBar from "../../components/BudgetCategoryCards/GroceryProgressBar";
 import BillsProgressBar from "../../components/BudgetCategoryCards/BillsProgressBar";
 import TravelProgressBar from "../../components/BudgetCategoryCards/TravelProgressBar";
+import CircularDeterminate from "../../components/TotalBudgetChart/TotalBudgetChart";
+
 
 const BudgetPage = (props) => {
   // const [currentBudget, setCurrentBudget] = useState({})
@@ -20,12 +22,19 @@ const BudgetPage = (props) => {
 
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
+
+  const d = new Date();
+  let currentMonth = month[d.getMonth()];
+  let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
+
+
 const d = new Date();
 let currentMonth = month[d.getMonth()];
 let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
 let lastBudget = props?.budgets[props.budgets.length-1]
 
 // console.log(lastbudget)
+
   return ( 
     <>
     {date === 1 || !hasBudget ?
@@ -36,6 +45,9 @@ let lastBudget = props?.budgets[props.budgets.length-1]
     :
     <>
     <h1>Budget Page</h1>
+    <div>
+      <CircularDeterminate budgets={props.budgets} />
+    </div>
       <div>
         {props.budgets.map(budget => (
           <BudgetCard 
@@ -52,7 +64,9 @@ let lastBudget = props?.budgets[props.budgets.length-1]
           />
         ))}
       </div>
-
+      <div>
+        <h3>Categories</h3>
+      </div>
     <div>
       <HealthProgressBar totalHealthExpense={props.healthExpense} budgets={props.budgets} />
     </div>

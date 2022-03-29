@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import LinearProgress from '@mui/material/LinearProgress';
 import './BudgetCategoryCards.css'
+import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 
 export default function TravelProgressBar(props) {
   const [progress, setProgress] = useState(0);
@@ -12,7 +13,7 @@ export default function TravelProgressBar(props) {
 
   return (
     <div className='budget-cat-card-container'>
-    <p className='budget-cat-card-icon'>icon</p>
+    <AirplanemodeActiveIcon className='budget-cat-card-icon' />
     <p className='budget-cat-card-title'>Travel</p>
     <div className='budget-progress-container'>
       <LinearProgress variant="determinate" value={progress} sx={{height: 15}} />

@@ -1,13 +1,15 @@
 .budget-cat-card-container{
   display: grid;
   grid-template: 1fr 1fr / 25% 75%;
-  margin: 3%;
+  margin: 5%;
   background-color: aliceblue;
-  /* place-items: center; */
+  border-radius: 8px;
 }
 
 .budget-cat-card-icon{
   grid-area: 1 / 1 / 1 / 1;
+  padding-left: 20%;
+  align-self: center;
 }
 
 .budget-cat-card-title{
@@ -17,10 +19,12 @@
 .budget-progress-container{
   grid-column: 1 / 4;
   grid-row: 2 / 3;
+  padding: 5%;
 }
 
 .budget-status-msg{
   grid-column: 1 / 4;
   grid-row: 3 / 3;
   place-self: start;
+  padding-left: 5%;
 }

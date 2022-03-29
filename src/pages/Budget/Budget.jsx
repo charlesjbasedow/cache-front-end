@@ -23,21 +23,19 @@ const BudgetPage = (props) => {
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 
-  const d = new Date();
-  let currentMonth = month[d.getMonth()];
-  let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
+  // const d = new Date();
+  // let currentMonth = month[d.getMonth()];
+  // let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
 
 
 const d = new Date();
 let currentMonth = month[d.getMonth()];
 let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
-let lastBudget = props?.budgets[props.budgets.length-1]
-
-// console.log(lastbudget)
+let currentBudget = props?.budgets[props.budgets.length-1]
 
   return ( 
     <>
-    {date === 1 || !hasBudget ?
+    {!hasBudget ?
     <div>
       <p>Click here to create your {currentMonth} budget </p>
       <Link to='/add-budget' >Add Budget</Link > 
@@ -68,19 +66,19 @@ let lastBudget = props?.budgets[props.budgets.length-1]
         <h3>Categories</h3>
       </div>
     <div>
-      <HealthProgressBar totalHealthExpense={props.healthExpense} budgets={props.budgets} />
+      <HealthProgressBar totalHealthExpense={props.healthExpense} currentBudget={currentBudget} budgets={props.budgets} />
     </div>
     <div>
-      <HousingProgressBar totalHousingExpense={props.housingExpense} budgets={props.budgets} />
+      <HousingProgressBar totalHousingExpense={props.housingExpense} currentBudget={currentBudget} budgets={props.budgets} />
     </div>
     <div>
-      <GroceryProgressBar totalGroceryExpense={props.groceryExpense} budgets={props.budgets} />
+      <GroceryProgressBar totalGroceryExpense={props.groceryExpense} currentBudget={currentBudget} budgets={props.budgets} />
     </div>
     <div>
-      <BillsProgressBar totalBillsExpense={props.billsExpense} lastBudget={lastBudget} budgets={props.budgets} />
+      <BillsProgressBar totalBillsExpense={props.billsExpense} currentBudget={currentBudget} budgets={props.budgets} />
     </div>
     <div>
-      <TravelProgressBar totalTravelExpense={props.travelExpense} budgets={props.budgets} />
+      <TravelProgressBar totalTravelExpense={props.travelExpense} currentBudget={currentBudget} budgets={props.budgets} />
     </div>
     </>
     

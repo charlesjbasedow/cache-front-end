@@ -5,13 +5,12 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 
 export default function BillsProgressBar(props) {
   const [progress, setProgress] = useState(0);
-  // return NaN
-  let percentSpent = props.totalBillsExpense / props.lastBudget.billsLimit * 100
-  console.log(percentSpent)
+
+  let percentSpent = props.totalBillsExpense / props.currentBudget.billsLimit * 100
 
   useEffect(() => {
-    setProgress(props.totalBillsExpense)
-  }, [props.totalBillsExpense])
+    setProgress(percentSpent)
+  }, [percentSpent])
 
   return (
     <div className='budget-cat-card-container'>

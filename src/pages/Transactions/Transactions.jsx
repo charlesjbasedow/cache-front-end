@@ -18,7 +18,6 @@ const Transactions = (props) => {
   return (  
     <>
     <div className="transactions-header">
-     {console.log(props.goals.currentAmount)}
         <p className="current-balance">{props.totalIncome - props.totalExpense - props.totalSavings}</p>
         <p className="current-balance-label">Current Balance</p>
       

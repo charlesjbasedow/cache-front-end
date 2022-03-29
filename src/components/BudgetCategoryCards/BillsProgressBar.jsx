@@ -5,8 +5,8 @@ import './BudgetCategoryCards.css'
 export default function BillsProgressBar(props) {
   const [progress, setProgress] = useState(0);
   // return NaN
-  // let percentSpent = props.totalBillsExpense / props.budgets.billsLimit * 100
-  // console.log(percentSpent)
+  let percentSpent = props.totalBillsExpense / props.lastBudget.billsLimit * 100
+  console.log(percentSpent)
 
   useEffect(() => {
     setProgress(props.totalBillsExpense)

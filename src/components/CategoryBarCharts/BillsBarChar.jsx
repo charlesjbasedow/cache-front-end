@@ -10,7 +10,7 @@ function BillsBarChart(props) {
 
   useEffect(() => {
     setChartData({
-      labels: ["Bills"],
+      labels: [""],
       datasets: [{
           base: 0,
           categoryPercentage: 0.5,
@@ -24,18 +24,22 @@ function BillsBarChart(props) {
     setChartOptions({
       responsive: true,
       indexAxis: 'y',
-        scales: {
-          x: {
-            grid: {
-              display: false
-            }
-          },
-          y: {
-            grid: {
-              display: false
-            }
-          },
-      }
+      scales: {
+        x: {
+          max: 100,
+          min: 0,
+          grid: {
+            display: false,
+            drawBorder: false,
+          }
+        },
+        y: {
+          grid: {
+            display: false,
+            drawBorder: false,
+          }
+        },
+    }
     })
   }, [props.totalBillsExpense])
 

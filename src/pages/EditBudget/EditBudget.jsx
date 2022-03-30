@@ -24,25 +24,15 @@ const EditBudget = (props) => {
 
   }  
 
+	function handleClick() {
+    formData.totalLimit = Number(formData.healthLimit)+Number(formData.housingLimit)+Number(formData.groceryLimit)+Number(formData.billsLimit)+Number(formData.travelLimit)
+  }
+
 
   return (
 		<>
 			<h1>Edit Budget</h1>
 			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
-				<div className="form-group mb-4">
-					<label htmlFor="total-input" className="form-label">
-							Total Limit
-					</label>
-					<input 
-						type="number"
-						className="form-control"
-						id="total-input"
-						name="totalLimit"
-						value={formData.totalLimit}
-						onChange={handleChange}
-					/>
-					</div>
-
 				<div className="form-group mb-3">
 					<label htmlFor="health-limit-input" className="form-label">
 						Health Limit
@@ -121,6 +111,7 @@ const EditBudget = (props) => {
 					<button
 						type="submit"
 						className="btn btn-primary btn-fluid"
+						onClick={handleClick}
 						disabled={!validForm}
 					>
 						Edit Budget

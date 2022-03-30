@@ -1,68 +1,47 @@
-# Decoupled MERN Stack with JWT Auth Template - Front End
+# Cache - Budgeting App
 
-This is the front end of a decoupled MERN Stack app that includes JWT Authentication.
 
-When combined with the back end found [here](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-back-end), you'll have all you need to build a full stack MERN app!
 
-Use this to go build things! 🚀
+# Getting Started
 
-## To Use This Template
+<a href="https://cachefrontend.herokuapp.com/">Cache</a>
+<br>
+<a href="https://whimsical.com/cache-budget-app-erd-Vxzr1JRk8dCMnrtuzNmMjN">ERD</a>
+<br>
+<a href="https://trello.com/b/VL89qktx/cache-budget-app">Trello</a>
 
-**Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
+# Wireframes
 
-```bash
-git clone https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end <name-of-your-app-here>-front-end
-cd <name-of-your-app-here>-front-end
-```
 
-Once you are in the project directory:
 
-```bash
-rm -rf .git
-```
+# Technologies Used
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-Re-initialize a git repository:
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-```bash
-git init
-```
+  ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-Use the GitHub CLI to create a new project repository on GitHub:
+  ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-```bash
-gh repo create <name-of-your-app-here>-front-end
-```
+  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-Run `npm i` to fetch the template's dependencies:
+  ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-```bash
-npm i
-```
+  ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-touch a `.env` file:
+  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-```bash
-touch .env
-```
+  ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+  
+  ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
-Fill it with the following:
 
-```
-REACT_APP_BACKEND_SERVER_URL=http://localhost:3001
-```
 
-> 🚨 DO NOT place secrets in this `.env` file. The contents of this file WILL be exposed to site visitors.
+# What's next?
 
-Delete this README.md, then make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!
+- [ ] Users can view previous monthly budgets.
+- [ ] Recurring Income/Expenses are automatically added every month.
+- [ ] Import previous budget data into next months budget.

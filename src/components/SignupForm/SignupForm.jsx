@@ -44,8 +44,9 @@ const SignupForm = props => {
       className={styles.container}
     >
       <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
+        <label htmlFor="name" className={styles.label}></label>
         <input
+          placeholder='Name'
           type="text"
           autoComplete="off"
           id="name"
@@ -55,8 +56,9 @@ const SignupForm = props => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
+        <label htmlFor="email" className={styles.label}></label>
         <input
+          placeholder='Email'
           type="text"
           autoComplete="off"
           id="email"
@@ -66,8 +68,9 @@ const SignupForm = props => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
+        <label htmlFor="password" className={styles.label}></label>
         <input
+          placeholder='Password'
           type="password"
           autoComplete="off"
           id="password"
@@ -78,9 +81,9 @@ const SignupForm = props => {
       </div>
       <div className={styles.inputContainer}>
         <label htmlFor="confirm" className={styles.label}>
-          Confirm Password
         </label>
         <input
+          placeholder='Confirm Password'
           type="password"
           autoComplete="off"
           id="confirm"
@@ -89,13 +92,13 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
+      <div className='btn-container'>
+        <button disabled={isFormInvalid()} className='signup-btn'>
           Sign Up
         </button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
+        {/* <Link to="/">
+          <button className='cancel-btn'>Cancel</button>
+        </Link> */}
       </div>
     </form>
   )

@@ -10,9 +10,11 @@ const Landing = (props) => {
   let totalLimit = props?.budgets[props.budgets.length-1]?.totalLimit
 
   return (
+    <>
+    {props.user ?
     <main className={styles.container}>
       <h1>{currentMonth} Spending Overview</h1>
-        <h3>You have {totalLimit - props.totalExpense} remaining in this month's budget</h3>
+        <h3>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
       <div>
         <DoughnutChart 
         totalExpense={props.totalExpense} 
@@ -24,6 +26,10 @@ const Landing = (props) => {
         />
       </div>
     </main>
+    :
+    <p></p>
+    }
+    </> 
   )
 }
 

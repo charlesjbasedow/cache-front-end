@@ -18,15 +18,15 @@ function GoalCard ({goal, handleDeleteGoal, user}) {
       </div>
       {goal.currentAmount > 0 ?
       <div className='amount-container'>
-      <p className='goal-current-amount'><SquareRoundedIcon /> ${goal.currentAmount} Saved</p>
-      <p className='goal-amount'><SquareRoundedIcon /> ${goal.amount - goal.currentAmount} To Save</p>
+      <p className='goal-current-amount'><SquareRoundedIcon className='saved' /> ${goal.currentAmount} Saved</p>
+      <p className='goal-amount'><SquareRoundedIcon className='to-save' /> ${goal.amount - goal.currentAmount} To Save</p>
       </div>
       :
       <p></p>
       }
 
       <div className='delete-goal-btn-container'>
-      <button className='delete-goal-btn' onClick={() => handleDeleteGoal(goal._id)}><ClearIcon fontSize='small' /></button>
+      <button className='delete-goal-btn' onClick={() => handleDeleteGoal(goal._id)}>X</button>
       </div>
       <div className='edit-goal-link-container'>
       <Link to='/edit-goal' state={{goal}} className='edit-goal-link'>Edit</Link>

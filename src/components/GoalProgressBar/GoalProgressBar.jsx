@@ -12,7 +12,7 @@ export default function GoalProgressBar(props) {
 
   return (
       <LinearProgress className='progress-bar' variant="determinate" value={progress} 
-      sx={{height: 15, 
+      sx={{height: 20, 
         color: 'secondary', }} />
   );
 }

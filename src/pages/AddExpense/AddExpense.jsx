@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import '../AddIncome/AddIncome&Expense.css'
 
 const AddExpense = (props) => {
     const formElement = useRef()
@@ -24,10 +25,10 @@ const AddExpense = (props) => {
   
 
 return ( 
-  <>
+  <main>
     <h1>Add Expense</h1>
     <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
-	    <div className="form-group mb-3">
+	    <div className="category-input-container">
         <label htmlFor="category-select">Category:</label>
         <select name="category" value={formData.category} onChange={handleChange} id="category-select">
             <option name="Health">Health</option>
@@ -38,13 +39,16 @@ return (
             <option name="Other">Other</option>
         </select>
 	    </div>
-		<div className="form-group mb-3">
+		<div className="amount-input-container">
 		<label htmlFor="amount-input" className="form-label">
 			Amount
 		</label>
 		<input 
+      placeholder='Amount'
+      size={40}
+      max={100000}
 		  type="number"
-			className="form-control"
+			className="amount-input"
 			id="amount-input"
 			name="amount"
       value={formData.amount}
@@ -52,13 +56,12 @@ return (
 			required
 		/>
 		</div>
-		<div className="form-group mb-4">
+		<div className="date-input-container">
 		<label htmlFor="date-input" className="form-label">
-			Date
 		</label>
 		<input 
 			type="date"
-			className="form-control"
+			className="date-input"
 			id="date-input"
 			name="date"
       value={formData.Date}
@@ -66,11 +69,11 @@ return (
       
 		/>
 		</div>
-		<div className="d-grid">
-		<button type="submit" className="btn btn-primary btn-fluid" disabled={!validForm}>Add Expense</button>
+		<div className="add-btn-container">
+		<button type="submit" className="add-btn" disabled={!validForm}>Add Expense</button>
 		</div>
 		</form>
-    </>
+  </main>
   );
 }
 

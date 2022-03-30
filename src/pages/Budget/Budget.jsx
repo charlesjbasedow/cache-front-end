@@ -43,7 +43,8 @@ const BudgetPage = (props) => {
           
     <div className="budget-chart">
     <div className="total-amount-container">
-      <h3 className="total-amount-left">${props.totalExpense} left</h3>
+      <h3 className="total-amount-left">${props.totalExpense}</h3>
+      <p>left</p>
     </div>
     
     <div className="budget-chart-container">

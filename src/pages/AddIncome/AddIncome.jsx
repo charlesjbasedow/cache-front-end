@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import './AddIncome&Expense.css'
+import ListRoundedIcon from '@mui/icons-material/ListRounded';
 
 const AddIncome = (props) => {
   const formElement = useRef()
@@ -25,17 +27,18 @@ const AddIncome = (props) => {
   }
 
   return (  
-    <>
+    <main>
     <h1>Add Income</h1>
-    
     <form autoComplete="off" ref={formElement} onSubmit={handleSubmit} >
-				<div className="form-group mb-3">
+				<div className="category-input-container">
 					<label htmlFor="category-input" className="form-label">
 						Category
 					</label>
 					<input 
+						maxLength={18}
+						placeholder="Category"
 						type="text"
-						className="form-control"
+						className="category-input"
 						id="category-input"
 						name="name"
             value={formData.category}
@@ -43,13 +46,16 @@ const AddIncome = (props) => {
 						required
 					/>
 				</div>
-				<div className="form-group mb-3">
+				<div className="amount-input-container">
 					<label htmlFor="amount-input" className="form-label">
 						Amount
 					</label>
 					<input 
+						min={1}
+						max={100000}
+						placeholder="Amount"
 						type="number"
-						className="form-control"
+						className="amount-input"
 						id="amount-input"
 						name="amount"
             value={formData.amount}
@@ -57,31 +63,29 @@ const AddIncome = (props) => {
 						required
 					/>
 				</div>
-				<div className="form-group mb-4">
+				<div className="date-input-container">
 					<label htmlFor="date-input" className="form-label">
-						Date
 					</label>
 					<input 
 						type="date"
-						className="form-control"
+						className="date-input"
 						id="date-input"
 						name="date"
             value={formData.date}
             onChange={handleChange}
 					/>
 				</div>
-				<div className="d-grid">
+				<div className="add-btn-container">
 					<button
 						type="submit"
-						className="add-income-btn"
+						className="add-btn"
             disabled={!validForm}
 					>
 						Add Income
 					</button>
 				</div>
 			</form>
-      
-    </>
+		</main>
   );
 }
  

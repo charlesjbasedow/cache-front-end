@@ -15,10 +15,10 @@ export default function HousingProgressBar(props) {
 
   return (
     <div className='budget-cat-card-container'>
-    <HomeIcon className='budget-cat-card-icon'/>
+    <HomeIcon fontSize='large' className='budget-cat-card-icon'/>
     <p className='budget-cat-card-title'>Housing</p>
     <div className='budget-progress-container'>
-      <LinearProgress variant="determinate" value={progress} sx={{height: 15}} />
+      <LinearProgress className='progress-bar' variant="determinate" value={progress} sx={{height: 15}} />
     </div>
     {progress >= 100 ? 
     <p className='budget-status-msg'>You've exceeded your budget</p>

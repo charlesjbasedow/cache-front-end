@@ -1,0 +1,36 @@
+.budget-chart{
+  display: grid;
+  grid-template: 100% / 100%;
+}
+
+.total-amount-container{
+  grid-area: 1 / 1 / 2 / 2;
+  place-self: center;
+}
+
+.budget-chart-container{
+  grid-area: 1 / 1 / 2 / 2;
+  /* margin: 19%; */
+}
+.total-budget-chart{
+  /* height: 200px;
+  margin: 19%; */
+}
+
+.budget-pg-title, .categories-title{
+  display: grid;
+  justify-items: center;
+}
+
+.edit-budget-link{
+  text-decoration: none;
+  display: grid;
+  place-items: end;
+  margin: 5%;
+}
+
+.categories-title{  
+  border-bottom: 1px rgb(228, 228, 228) solid;
+}
+
+

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import './Budget.css'
 import BudgetCard from "../../components/BudgetCard/BudgetCard";
 import HealthProgressBar from "../../components/BudgetCategoryCards/HealthProgressBar";
 import HousingProgressBar from "../../components/BudgetCategoryCards/HousingProgressBar";
@@ -13,19 +14,10 @@ const BudgetPage = (props) => {
 
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-
-
-
-
-
-const d = new Date();
-let currentMonth = month[d.getMonth()];
-let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth);
-let lastBudget = props?.budgets[props.budgets.length-1]
-
-// console.log(lastbudget)
+  const d = new Date();
+  let currentMonth = month[d.getMonth()];
+  let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth)
   let currentBudget = props?.budgets[props.budgets.length-1]
-
 
   return ( 
     <>
@@ -36,10 +28,7 @@ let lastBudget = props?.budgets[props.budgets.length-1]
     </div>
     :
     <>
-    <h1>{currentMonth} Budget Summary</h1>
-    <div>
-      <TotalBudgetChart currentBudget={currentBudget} totalExpense={props.totalExpense} />
-    </div>
+    <h1 className="budget-pg-title">{currentMonth} Budget Summary</h1>
       <div>
         {props.budgets.map(budget => (
           <BudgetCard 
@@ -50,8 +39,16 @@ let lastBudget = props?.budgets[props.budgets.length-1]
           />
         ))}
       </div>
-      <div>
-        <h3>Categories</h3>
+    <div className="budget-chart">
+    <div className="total-amount-container">
+      <h3 className="total-amount-left">${props.totalExpense} left</h3>
+    </div>
+    <div className="budget-chart-container">
+      <TotalBudgetChart className="total-budget-chart" currentBudget={currentBudget} totalExpense={props.totalExpense} />
+    </div>
+    </div>
+      <div className=".categories-title-container">
+        <h3 className="categories-title">Categories</h3>
       </div>
     <div>
       <HealthProgressBar totalHealthExpense={props.healthExpense} currentBudget={currentBudget} budgets={props.budgets} />

@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import '../../pages/Budget/Budget.css'
+import ModeEditOutlinedIcon from '@mui/icons-material/ModeEditOutlined';
+import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 
 function BudgetCard({budget, user, handleDeleteBudget,totalExpense, healthExpense,housingExpense, groceryExpense,billsExpense, travelExpense}) {
 
@@ -19,11 +22,11 @@ function BudgetCard({budget, user, handleDeleteBudget,totalExpense, healthExpens
       <p>travel limit: {budget.travelLimit}</p>
       <p>travel expense: {travelExpense}</p> */}
       <Link
-          className='btn btn-sm btn-warning'
+          className='edit-budget-link'
           to='/edit-budget'
           state={{budget}}
       >
-        Edit
+        <ModeEditOutlineIcon /> edit
       </Link>
       {/* <button onClick={() => handleDeleteBudget(budget._id)} >Delete</button> */}
     </div>

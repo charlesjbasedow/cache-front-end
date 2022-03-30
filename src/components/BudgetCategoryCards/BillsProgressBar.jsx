@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import LinearProgress from '@mui/material/LinearProgress';
 import './BudgetCategoryCards.css'
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import { pink } from '@mui/material/colors';
 
 export default function BillsProgressBar(props) {
   const [progress, setProgress] = useState(0);
@@ -14,10 +15,12 @@ export default function BillsProgressBar(props) {
 
   return (
     <div className='budget-cat-card-container'>
-    <CreditCardIcon className='budget-cat-card-icon'/>
+    <CreditCardIcon fontSize='large' className='budget-cat-card-icon'/>
     <p className='budget-cat-card-title'>Bills</p>
     <div className='budget-progress-container'>
-      <LinearProgress variant="determinate" value={progress} sx={{height: 15}} />
+      <LinearProgress className='progress-bar' variant="determinate" value={progress} 
+      sx={{height: 15, 
+        color: 'secondary', }} />
     </div>
     {progress >= 100 ? 
     <p className='budget-status-msg'>You've exceeded your budget</p>

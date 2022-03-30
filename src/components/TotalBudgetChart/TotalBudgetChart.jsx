@@ -1,4 +1,3 @@
-import Chart from 'chart.js/auto';
 import { Doughnut } from "react-chartjs-2";
 import { useEffect, useState } from 'react';
 
@@ -15,6 +14,7 @@ function TotalBudgetChart(props) {
       datasets: [
         {
           label: "",
+          cutout: 220,
           data: [props.currentBudget.totalLimit, props.totalExpense],
           borderColor: "rgb(53, 162, 235)",
           backgroundColor: [
@@ -26,17 +26,22 @@ function TotalBudgetChart(props) {
     })
     setChartOptions({
       responsive: true,
+      maintainAspectRatio: false,
+      cutout: 200,
+      plugins: {
+        legend: {
+          display: false,
+        }
+      },
       title: {
         display: true,
         text: ""
       }
     })
-  }, [])
+  }, [props.currentBudget.totalLimit, props.totalExpense])
 
   return (  
-    <div>
       <Doughnut options={chartOptions} data={chartData} />
-    </div>
   );
 }
  

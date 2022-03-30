@@ -3,7 +3,6 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
 }
 
 .label,
@@ -13,4 +12,19 @@
 
 .inputContainer {
   margin-bottom: 1rem;
+}
+
+input{
+  border: 0;
+  background-color: aliceblue;
+  border-radius: 8px;
+  padding: 6%;
+}
+
+button {
+  border-radius: 5px;
+  background-color: beige;
+  border: 0;
+  padding: 6%;
+  width: 80px;
 }

@@ -5,6 +5,7 @@ function AddGoal(props) {
   const [validForm, setValidForm] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
+		currentAmount: 0,
     amount: 0,
   })
 

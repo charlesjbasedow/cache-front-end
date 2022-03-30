@@ -28,6 +28,11 @@ function DoughnutChart(props) {
     })
     setChartOptions({
       responsive: true,
+      // plugins: {
+      //   legend: {
+      //     display: false,
+      //   }
+      // },
       title: {
         display: true,
         text: "Expenses for March"
@@ -36,9 +41,7 @@ function DoughnutChart(props) {
   }, [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.groceryExpense])
 
   return (  
-    <div>
       <Doughnut options={chartOptions} data={chartData} />
-    </div>
   );
 }
  

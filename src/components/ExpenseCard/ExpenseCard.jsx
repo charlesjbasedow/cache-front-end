@@ -5,6 +5,7 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import MoneyOffIcon from '@mui/icons-material/MoneyOff';
+import ClearIcon from '@mui/icons-material/Clear';
 
 function ExpenseCard({expense, handleDeleteExpense, user}) {
 
@@ -40,7 +41,7 @@ function ExpenseCard({expense, handleDeleteExpense, user}) {
       <p className='category'>{expense.category}</p>
       <p className='amount'>- ${expense.amount}</p>
       <p className='date'>{expense.date}</p>
-      <button className='delete-btn' onClick={() => handleDeleteExpense(expense._id)} >X</button>
+      <button className='delete-btn' onClick={() => handleDeleteExpense(expense._id)} ><ClearIcon fontSize='small' /></button>
     </div>
     :
     <p></p>

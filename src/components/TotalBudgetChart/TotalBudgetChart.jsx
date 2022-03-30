@@ -14,7 +14,7 @@ function TotalBudgetChart(props) {
       datasets: [
         {
           label: "",
-          cutout: 220,
+          cutout: 150,
           data: [props.currentBudget.totalLimit, props.totalExpense],
           borderColor: "rgb(53, 162, 235)",
           backgroundColor: [
@@ -26,8 +26,7 @@ function TotalBudgetChart(props) {
     })
     setChartOptions({
       responsive: true,
-      maintainAspectRatio: false,
-      cutout: 200,
+      // maintainAspectRatio: false,
       plugins: {
         legend: {
           display: false,

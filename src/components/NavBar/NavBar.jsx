@@ -1,25 +1,21 @@
 import { Link } from 'react-router-dom'
 import './NavBar.css'
-import AddCircleSharpIcon from '@mui/icons-material/AddCircleSharp';
+import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import StarIcon from '@mui/icons-material/Star';
-import HomeIcon from '@mui/icons-material/Home';
+import StarBorderPurple500OutlinedIcon from '@mui/icons-material/StarBorderPurple500Outlined';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ?
-        <nav>
-          {/* Welcome, {user.name} */}
-          {/* <Link to="/profiles">Profiles</Link> */}
-          {/* <Link to="/" onClick={handleLogout}>LOG OUT</Link> */}
-          {/* <Link to="/changePassword">Change Password</Link> */}
-          <Link className='home' to="/"><HomeIcon fontSize='large' /></Link>
-          <Link className='add' to="/add"><AddCircleSharpIcon fontSize='large' /></Link>
+        <nav className='bottom-nav'>
+          <Link className='home' to="/"><HomeOutlinedIcon fontSize='large' /></Link>
+          <Link className='add' to="/add"><AddCircleOutlineOutlinedIcon fontSize='large' /></Link>
           <Link className='transactions' to="/transactions"><CompareArrowsIcon fontSize='large'/></Link>
           <Link className='budget' to="/budgets"><BarChartIcon fontSize='large' /></Link>
-          <Link className='goals' to="/goals"><StarIcon fontSize='large' /></Link>
+          <Link className='goals' to="/goals"><StarBorderPurple500OutlinedIcon fontSize='large' /></Link>
         </nav>
       :
         <nav>

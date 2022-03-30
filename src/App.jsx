@@ -21,6 +21,7 @@ import Budget from './pages/Budget/Budget'
 import EditBudget from './pages/EditBudget/EditBudget'
 import Goals from './pages/Goals/Goals'
 import EditGoal from './pages/EditGoal/EditGoal'
+import Header from './components/Header/Header'
 
 const App = () => {
   const [incomes, setIncomes] = useState([])
@@ -191,10 +192,12 @@ const App = () => {
 
   return (
     <>
+    <Header user={user} handleLogout={handleLogout} />
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing 
         user={user}
+        budgets={budgets}
         totalExpense={totalExpense} 
         healthExpense={healthExpense}
         housingExpense={housingExpense}

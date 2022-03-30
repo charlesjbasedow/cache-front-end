@@ -4,6 +4,7 @@
   margin: 5%;
   background-color: aliceblue;
   border-radius: 8px;
+  box-shadow: 3px 3px 7px 2px rgb(202, 202, 202);
 }
 
 .budget-cat-card-icon{

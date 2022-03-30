@@ -1,6 +1,6 @@
 .budget-cat-card-container{
   display: grid;
-  grid-template: 1fr 1fr / 25% 75%;
+  grid-template: 1fr 1fr / 20% 75%;
   margin: 5%;
   background-color: aliceblue;
   border-radius: 8px;
@@ -19,12 +19,18 @@
 .budget-progress-container{
   grid-column: 1 / 4;
   grid-row: 2 / 3;
-  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .budget-status-msg{
   grid-column: 1 / 4;
-  grid-row: 3 / 3;
+  grid-row: 2 / 3;
   place-self: start;
   padding-left: 5%;
+  padding-top: 3%;
+}
+
+.progress-bar{
+  border-radius: 8px;
 }

@@ -6,15 +6,6 @@ import GoalTransCard from "../../components/GoalTransCard/GoalTransCard";
 import ColorToggleButton from "../../components/ToggleButton/ToggleButton";
 
 const Transactions = (props) => {
-  let pageShown
-  function handleIncomeClick() {
-    return pageShown = 'income'
-  }
-
-  function handleExpensesClick() {
-    return pageShown = 'expenses'
-  }
-
 
   return (  
     <>
@@ -36,11 +27,10 @@ const Transactions = (props) => {
 
     <h3 className="transactions-title">Transactions</h3>
     <div className="income-expenses-tabs">
-      <p className="income-tab" onClick={handleIncomeClick}>Income</p>
-      <p className="expenses-tab" onClick={handleExpensesClick}>Expenses</p>
+      <p className="income-tab" >Income</p>
+      <p className="expenses-tab" >Expenses</p>
     </div>
     
-    {pageShown === 'income' ?
     <div>
       {props.incomes.map(income => (
         <IncomeCard key={income._id} income={income} user={props.user} handleDeleteIncome={props.handleDeleteIncome} />
@@ -55,13 +45,6 @@ const Transactions = (props) => {
         <GoalTransCard key={goal._id} goal={goal} user={props.user} />
       ))}
     </div>
-    
-  
-  
-  }
-
-    
-    
     </>
   )
 }

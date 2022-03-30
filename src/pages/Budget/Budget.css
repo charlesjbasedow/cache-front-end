@@ -10,11 +10,9 @@
 
 .budget-chart-container{
   grid-area: 1 / 1 / 2 / 2;
-  /* margin: 19%; */
 }
-.total-budget-chart{
-  /* height: 200px;
-  margin: 19%; */
+.budget-chart{
+  margin: 12%;
 }
 
 .budget-pg-title, .categories-title{
@@ -26,11 +24,13 @@
   text-decoration: none;
   display: grid;
   place-items: end;
-  margin: 5%;
+  margin-right: 5%;
 }
 
 .categories-title{  
   border-bottom: 1px rgb(228, 228, 228) solid;
 }
+
+
 
 

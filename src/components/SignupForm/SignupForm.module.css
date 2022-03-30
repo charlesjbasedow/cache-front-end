@@ -21,10 +21,10 @@ input{
   padding: 6%;
 }
 
-button {
+.signup-btn {
   border-radius: 5px;
   background-color: beige;
   border: 0;
   padding: 6%;
-  width: 80px;
+  width: 60px;
 }

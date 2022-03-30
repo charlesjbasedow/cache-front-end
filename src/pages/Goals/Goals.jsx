@@ -6,7 +6,7 @@ import '../../components/GoalCard/GoalCard.css'
 const GoalPage = (props) => {
   return ( 
     <>
-    <h1>Track your savings goals</h1>
+    <h1 className="goal-pg-title">Track your savings goals</h1>
     <div className="add-goal-link-container">
       <Link className="add-goal-link" to="/add-goal"><AddIcon fontSize="large" />Add Goal</Link>
     </div>

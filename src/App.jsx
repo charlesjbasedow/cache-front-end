@@ -197,6 +197,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing 
         user={user}
+        budgets={budgets}
         totalExpense={totalExpense} 
         healthExpense={healthExpense}
         housingExpense={housingExpense}

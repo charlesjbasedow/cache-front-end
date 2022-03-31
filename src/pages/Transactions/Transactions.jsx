@@ -40,6 +40,7 @@ useEffect(()=>{
 
   return (  
     <>
+
     <div className="transactions-background">
 
       <nav className='transactions-header-nav'>
@@ -51,6 +52,7 @@ useEffect(()=>{
         <p className='title' >Transactions</p>
         <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
         </div>
+    <main>
 
       <div className="transactions-header">
         <p className="current-balance">$ {props.totalIncome - props.totalExpense - props.totalSavings}</p>
@@ -76,8 +78,12 @@ useEffect(()=>{
           <GoalTransCard key={goal._id} goal={goal} user={props.user} />
         ))}
         </div>  
+
       </div>
     </div>
+
+    </main>    
+
     </>
   )
 }

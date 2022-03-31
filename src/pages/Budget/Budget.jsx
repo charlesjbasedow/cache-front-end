@@ -21,6 +21,7 @@ const BudgetPage = (props) => {
 
   return ( 
     <>
+    <main>
     {!hasBudget ?
     <div>
       <p>Click here to create your {currentMonth} budget </p>
@@ -71,6 +72,7 @@ const BudgetPage = (props) => {
     </>
     
     }
+    </main>
     </>
   );
 }

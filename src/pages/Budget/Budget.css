@@ -1,3 +1,7 @@
+main{
+  margin-bottom: 15%;
+}
+
 .budget-chart{
   display: grid;
   grid-template: 100% / 100%;

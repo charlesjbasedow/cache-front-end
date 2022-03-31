@@ -1,3 +1,4 @@
+
 .transactions-header-nav{
   display: grid;
   grid-template: 25% 75% / 33% 33% 33%;
@@ -15,6 +16,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+main{
+  margin-bottom: 15%;
 }
 
 .transactions-header {
@@ -77,7 +81,7 @@
   border-radius: 8px;
   width: fit-content;
   padding: 2%;
-  margin: 8%;
+  margin-left: 25%;
 }
 
 .transactions-title {
@@ -92,5 +96,13 @@
   font-size: medium;
 }
 
+@media only screen and (min-width: 500px) {
+  .income-expenses-tabs{
+    margin-left: 43%;
+  }
+  .income-tab, .expenses-tab{
+    padding-left: 2% 10%;
+  }
 
+}
 

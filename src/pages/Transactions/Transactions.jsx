@@ -42,7 +42,6 @@ useEffect(()=>{
   return (  
     <>
 
-    <main>
     <div className="transactions-background">
 
       <nav className='transactions-header-nav'>
@@ -83,7 +82,6 @@ useEffect(()=>{
       </div>
     </div>
 
-    </main>    
 
     </>
   )

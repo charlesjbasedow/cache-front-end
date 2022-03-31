@@ -195,8 +195,8 @@ const App = () => {
     <>
 
     {/* <Header user={user} handleLogout={handleLogout} /> */}
-      <Header user={user} handleLogout={handleLogout} />
-      <DarkMode />
+      {/* <Header user={user} handleLogout={handleLogout} />
+      <DarkMode /> */}
 
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>

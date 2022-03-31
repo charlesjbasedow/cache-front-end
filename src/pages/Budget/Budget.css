@@ -2,6 +2,15 @@ main{
   margin-bottom: 15%;
 }
 
+.budget-header-nav{
+  background-color: #28734a;
+  color: rgb(255, 255, 255);
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .budget-chart{
   display: grid;
   grid-template: 100% / 100%;

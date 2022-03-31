@@ -73,6 +73,7 @@ p.goal-name{
 }
 
 .add-goal-link{
+  text-align: center;
   text-decoration: none;
   grid-row: 1;
   margin-top: 5%;
@@ -81,7 +82,7 @@ p.goal-name{
 
 .add-goal-link-container{
   display: grid;
-  place-items: end;
+  place-items: center;
   margin-right: 5%;
 }
 

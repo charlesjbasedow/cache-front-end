@@ -28,17 +28,17 @@ const AddIncome = (props) => {
 
   return (  
     <main>
-    <h1>Add Income</h1>
+    <h1 className="category-title">Add Income</h1>
     <form autoComplete="off" ref={formElement} onSubmit={handleSubmit} >
-				<div className="category-input-container">
+				<div className="container">
 					<label htmlFor="category-input" className="form-label">
-						Category
+						Category:
 					</label>
 					<input 
 						maxLength={18}
 						placeholder="Category"
 						type="text"
-						className="category-input"
+						className="input"
 						id="category-input"
 						name="name"
             value={formData.category}
@@ -46,16 +46,16 @@ const AddIncome = (props) => {
 						required
 					/>
 				</div>
-				<div className="amount-input-container">
+				<div className="container">
 					<label htmlFor="amount-input" className="form-label">
-						Amount
+						Amount:
 					</label>
 					<input 
 						min={1}
 						max={100000}
 						placeholder="Amount"
 						type="number"
-						className="amount-input"
+						className="input"
 						id="amount-input"
 						name="amount"
             value={formData.amount}
@@ -63,19 +63,20 @@ const AddIncome = (props) => {
 						required
 					/>
 				</div>
-				<div className="date-input-container">
+				<div className="container">
 					<label htmlFor="date-input" className="form-label">
+						Date:
 					</label>
 					<input 
 						type="date"
-						className="date-input"
+						className="input"
 						id="date-input"
 						name="date"
             value={formData.date}
             onChange={handleChange}
 					/>
 				</div>
-				<div className="add-btn-container">
+				<div className="container">
 					<button
 						type="submit"
 						className="add-btn"

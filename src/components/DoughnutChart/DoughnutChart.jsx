@@ -1,6 +1,7 @@
 import Chart from 'chart.js/auto';
 import { Doughnut } from "react-chartjs-2";
 import { useEffect, useState } from 'react';
+import styles from '../../pages/Landing/Landing.module.css'
 
 function DoughnutChart(props) {
   const [chartData, setChartData] = useState({
@@ -40,8 +41,10 @@ function DoughnutChart(props) {
     })
   }, [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.groceryExpense])
 
-  return (  
+  return ( 
+    <div className={styles.doughnutchart}>
       <Doughnut options={chartOptions} data={chartData} />
+    </div> 
   );
 }
  

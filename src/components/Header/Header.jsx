@@ -9,10 +9,10 @@ const Header = ({user, handleLogout}) => {
     {user ?
       <nav className='header-nav'>
         <div className='user-icon-container'>
-          <AccountCircleIcon fontSize="large" className="user-icon" /> {user.name}
+          <AccountCircleIcon fontSize="medium" className="user-icon" /> {user.name}
         </div>
+        <Link className='logout-link' to="/" onClick={handleLogout}><LogoutIcon fontSize="medium"/> </Link>
         
-        <Link className='logout-link' to="/" onClick={handleLogout}><LogoutIcon fontSize="large"/> </Link>
         {/* <Link to="/changePassword">Change Password</Link> */}
       </nav>
     :

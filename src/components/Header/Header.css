@@ -5,7 +5,7 @@
   color: rgb(255, 255, 255);
   padding: 2%;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .user-icon-container{
@@ -16,4 +16,8 @@
 .logout-link {
   text-decoration: none;
   color: rgb(255, 255, 255);
+}
+
+.title{
+
 }

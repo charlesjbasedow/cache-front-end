@@ -192,7 +192,7 @@ const App = () => {
 
   return (
     <>
-    <Header user={user} handleLogout={handleLogout} />
+    {/* <Header user={user} handleLogout={handleLogout} /> */}
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing 

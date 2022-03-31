@@ -26,7 +26,6 @@ function TotalBudgetChart(props) {
     })
     setChartOptions({
       responsive: true,
-      // maintainAspectRatio: false,
       plugins: {
         legend: {
           display: false,

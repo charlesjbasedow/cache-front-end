@@ -36,7 +36,7 @@ function ExpenseCard({expense, handleDeleteExpense, user}) {
   return (  
     <>
     {expense.owner._id === user.profile ?
-    <div className='card'>
+    <div className='expense-card'>
       <p className='icon'>{icon}</p>
       <p className='category'>{expense.category}</p>
       <p className='amount'>- ${expense.amount}</p>

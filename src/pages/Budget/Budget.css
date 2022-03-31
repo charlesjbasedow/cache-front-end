@@ -15,9 +15,9 @@ main{
 .budget-chart-container{
   grid-area: 1 / 1 / 2 / 2;
 }
-.budget-chart{
+/* .budget-chart{
   margin: 12%;
-}
+} */
 
 .budget-pg-title, .categories-title{
   display: grid;

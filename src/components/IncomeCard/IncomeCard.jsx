@@ -6,7 +6,7 @@ function IncomeCard({income, handleDeleteIncome, user}) {
   return (  
     <>
     {income.owner._id === user.profile ?
-    <div className='card'>
+    <div className='income-card'>
       <PaidIcon fontSize="large" className='icon' />
       <p className='name'>{income.name}</p>
       <p className='amount'>+ ${income.amount}</p>

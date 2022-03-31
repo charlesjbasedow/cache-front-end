@@ -1,14 +1,9 @@
-/* main{
-  display: grid;
-} */
-
 .goal-pg-title{
   text-align: center;
 }
 
 .goal-subtitle{
   text-align: center;
-  color: rgb(104, 104, 104);
   padding: 3%;
   margin: 2%;
 }
@@ -23,6 +18,7 @@
   padding: 5%;
   height: 75%;
   place-self: center;
+  background-color: white;
 }
 
 .delete-goal-btn-container{
@@ -31,7 +27,7 @@
 }
 
 .delete-goal-btn{
-  background-color: rgb(231, 0, 0);
+  background-color: rgb(215, 0, 0);
   border-radius: 5px;
   border: 0;
   color: rgb(255, 255, 255);
@@ -43,11 +39,14 @@ p.goal-name{
   place-self: end start;
   margin-bottom: 3%;
   padding-left: 5%;
+  font-weight: bold;
+  font-size: large;
 }
 
 .savings-icon{
   place-self: end start;
   color: rgb(196, 196, 196);
+  margin-bottom: 5%;
 }
 
 .amount-container{
@@ -56,7 +55,9 @@ p.goal-name{
   grid-template-columns: 50% 50%;
   place-items: center start;
   padding-bottom: 6%;
+  padding-left: 4%;
   border-bottom: 1px solid rgb(201, 201, 201);
+  margin-top: 4%;
 }
 
 .goal-amount{
@@ -89,17 +90,16 @@ p.goal-name{
 }
 
 .add-goal-link{
-  text-align: center;
   text-decoration: none;
-  grid-row: 1;
   margin-top: 5%;
   margin-bottom: 6%;
+  color: #287148;
 }
 
 .add-goal-link-container{
   display: grid;
-  place-items: center;
-  margin-right: 5%;
+  place-items: end;
+  margin-right: 6%;
 }
 
 .goal-progress-container{

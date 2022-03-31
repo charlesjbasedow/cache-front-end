@@ -50,7 +50,7 @@ useEffect(()=>{
         <div className='user-icon-container'>
           <AccountCircleIcon fontSize="medium" className="user-icon" /> {props.user.name}
         </div>
-        <p className='title' >Transactions</p>
+        <p className='transactions-title' >Transactions</p>
         <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
         </div>
 

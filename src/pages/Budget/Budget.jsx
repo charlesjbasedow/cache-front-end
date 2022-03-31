@@ -11,6 +11,7 @@ import TotalBudgetChart from "../../components/TotalBudgetChart/TotalBudgetChart
 
 
 const BudgetPage = (props) => {
+
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
   const d = new Date();
@@ -29,7 +30,13 @@ const BudgetPage = (props) => {
     <>
 
     <h1 className="budget-pg-title">{currentMonth} Budget Summary</h1>
-      <div>
+      
+          
+    <div className="budget-chart">
+    <div className="total-amount-container">
+      <h3 className="total-amount-left">${props.totalExpense} left</h3>
+    </div>
+    <div>
         {props.budgets.map(budget => (
           <BudgetCard 
           user={props.user} 
@@ -39,12 +46,6 @@ const BudgetPage = (props) => {
           />
         ))}
       </div>
-          
-    <div className="budget-chart">
-    <div className="total-amount-container">
-      <h3 className="total-amount-left">${currentBudget.totalLimit - props.totalExpense} left</h3>
-    </div>
-    
     <div className="budget-chart-container">
       <TotalBudgetChart className="total-budget-chart" currentBudget={currentBudget} totalExpense={props.totalExpense} />
     </div>

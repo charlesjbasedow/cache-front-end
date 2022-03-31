@@ -38,7 +38,7 @@ useEffect(()=>{
   return (  
     <>
       <div className="transactions-header">
-        <p className="current-balance">{props.totalIncome - props.totalExpense - props.totalSavings}</p>
+        <p className="current-balance">$ {props.totalIncome - props.totalExpense - props.totalSavings}</p>
         <p className="current-balance-label">Current Balance</p>
         <p className="income">{props.totalIncome}</p>
         <p className="income-label">Income</p>

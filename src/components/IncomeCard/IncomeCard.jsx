@@ -10,7 +10,7 @@ function IncomeCard({income, handleDeleteIncome, user}) {
       <PaidIcon fontSize="large" className='icon' />
       <p className='name'>{income.name}</p>
       <p className='amount'>+ ${income.amount}</p>
-      <p className='date'>{income.date}</p>
+      <p className='date'>{new Date(income.date).toLocaleDateString() }</p>
       <button className='delete-btn' onClick={() => handleDeleteIncome(income._id)} ><DeleteIcon fontSize='small' /></button>
     </div>
     :
@@ -19,5 +19,5 @@ function IncomeCard({income, handleDeleteIncome, user}) {
     </>
   );
 }
- 
+
 export default IncomeCard;

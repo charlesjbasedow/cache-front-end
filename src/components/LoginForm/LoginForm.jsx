@@ -56,10 +56,12 @@ const LoginForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <button className={styles.button}>Log In</button>
+      <div className={styles.inputContainer}>
+        <button className="login-btn">Log In</button>
+      </div>
+      <div className={styles.inputContainer}>
         <Link to="/">
-          <button>Cancel</button>
+          <button className="cancel-btn">Cancel</button>
         </Link>
       </div>
     </form>

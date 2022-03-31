@@ -14,3 +14,19 @@
 .inputContainer {
   margin-bottom: 1rem;
 }
+
+input{
+  border: 0;
+  background-color: aliceblue;
+  border-radius: 8px;
+  padding: 6%;
+}
+
+.login-btn {
+  border-radius: 5px;
+  background-color: beige;
+  border: 0;
+  padding: 6%;
+  width: 60px;
+}
+

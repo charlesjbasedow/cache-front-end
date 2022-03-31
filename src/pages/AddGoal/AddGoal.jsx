@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import '../AddIncome/AddIncome&Expense.css'
 
 function AddGoal(props) {
   const formElement = useRef()
@@ -27,9 +28,9 @@ function AddGoal(props) {
 
   return (
     <>
-      <h1>Add Goal</h1>
+      <h1 className = "category-title">Add Goal</h1>
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="name-input" className="form-label">
 						Goals's Name (required)
 					</label>
@@ -43,7 +44,7 @@ function AddGoal(props) {
 						required
 					/>
 				</div>
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="amount-input" className="form-label">
 						Goal Amount (required)
 					</label>
@@ -58,7 +59,7 @@ function AddGoal(props) {
 					/>
 				</div>
 				
-				<div className="d-grid">
+				<div className="container">
 					<button
 						type="submit"
 						className="btn btn-primary btn-fluid"

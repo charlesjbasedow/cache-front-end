@@ -193,11 +193,6 @@ const App = () => {
 
   return (
     <>
-
-    {/* <Header user={user} handleLogout={handleLogout} /> */}
-      {/* <Header user={user} handleLogout={handleLogout} />
-      <DarkMode /> */}
-
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing

@@ -61,6 +61,7 @@ const BudgetPage = (props) => {
             />
             ))}
         </div>
+        </div>
 
         <h3 className="categories-title">Categories</h3>
     <div>

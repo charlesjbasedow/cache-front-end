@@ -43,21 +43,21 @@ const BudgetPage = (props) => {
     <div className="total-amount-container">
       <h3 className="total-amount-left">${props.totalExpense} left</h3>
     </div>
-    <div>
-        {props.budgets.map(budget => (
-          <BudgetCard 
-          user={props.user} 
-          key={budget._id} 
-          budget={budget} 
-          // handleDeleteBudget={props.handleDeleteBudget}
-          />
-        ))}
-      </div>
     <div className="budget-chart-container">
       <TotalBudgetChart className="total-budget-chart" currentBudget={currentBudget} totalExpense={props.totalExpense} />
     </div>
     </div>
       <div className=".categories-title-container">
+        <div>
+          {props.budgets.map(budget => (
+            <BudgetCard 
+            user={props.user} 
+            key={budget._id} 
+            budget={budget} 
+            // handleDeleteBudget={props.handleDeleteBudget}
+            />
+            ))}
+        </div>
         <h3 className="categories-title">Categories</h3>
       </div>
     <div>

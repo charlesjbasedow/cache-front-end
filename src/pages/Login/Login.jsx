@@ -19,7 +19,7 @@ const LoginPage = props => {
         updateMessage={updateMessage}
       />
       <p>Don't have an account? 
-      <Link to="/signup"> Sign Up</Link>
+      <Link className={styles.signupLink} to="/signup"> Sign Up</Link>
       </p>
     </main>
   )

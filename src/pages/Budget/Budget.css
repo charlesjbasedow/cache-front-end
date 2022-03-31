@@ -2,6 +2,23 @@ main{
   margin-bottom: 15%;
 }
 
+.add-budget{
+  display: grid;
+  place-items: center;
+  margin-top: 10%;
+}
+
+.add-budget-link{
+  color: white;
+}
+
+.add-budget-btn{
+  border: 0;
+  border-radius: 8px;
+  background-color: #3abd75;
+  padding: 3%;
+}
+
 .budget-title{
   text-align: center;
   margin: 7%;

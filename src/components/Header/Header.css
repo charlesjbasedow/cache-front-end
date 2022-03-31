@@ -21,7 +21,11 @@
 .remaining-budget-msg{
   margin: 6%;
   text-align: center;
-  color: rgb(71, 71, 71);
+  color: rgb(0, 0, 0);
+}
+
+.login-link{
+  color: #28734a;
 }
 
 

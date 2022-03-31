@@ -183,6 +183,15 @@ const App = () => {
     return prev
   }, 0)
 
+  let otherExpense = expenses.reduce(function(prev, expense){
+    if (expense.owner._id === user?.profile) {
+      if(expense.category.includes("Other")){
+        prev = prev + expense.amount
+      }
+    }
+    return prev
+  }, 0)
+
   let totalSavings = goals.reduce(function(prev, goal){
     if (goal.owner._id === user?.profile) {
         prev = prev + goal.currentAmount
@@ -210,6 +219,7 @@ const App = () => {
         groceryExpense={groceryExpense}
         billsExpense={billsExpense}
         travelExpense={travelExpense}
+        otherExpense={otherExpense}
         />} />
         <Route
           path="/signup"

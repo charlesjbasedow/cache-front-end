@@ -68,6 +68,20 @@ main{
     width: 550px;
   }
 
+  .budget-header-nav{
+    padding: 1%;
+  }
+
+  .add-budget{
+    display: grid;
+    justify-content: center;
+    font-weight: bolder;
+  }
+
+  .addbudget-link{
+    margin-left: 30%;
+  }
+
 }
 
 

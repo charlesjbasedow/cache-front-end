@@ -12,9 +12,11 @@ const Landing = (props) => {
   const d = new Date()
   let currentMonth = month[d.getMonth()]
   let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth)
-
   let totalLimit = props?.budgets[props.budgets.length-1]?.totalLimit
 
+
+  console.log(props)
+  
   return (
     <>
     {props.user ?
@@ -30,7 +32,7 @@ const Landing = (props) => {
   </>
       {hasBudget ?
         <h3 className='remaining-budget-msg'>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
-      : <h3>No budget found, create one 
+      : <h3 className='remaining-budget-msg'>No budget found, create one 
         <Link to="/add-budget"> here</Link> 
         </h3>
       }
@@ -42,6 +44,7 @@ const Landing = (props) => {
         groceryExpense={props.groceryExpense}
         billsExpense={props.billsExpense}
         travelExpense={props.travelExpense}
+        otherExpense={props.otherExpense}
         />
       </div>
     
@@ -60,6 +63,8 @@ const Landing = (props) => {
                 groceryExpense={1}
                 billsExpense={1}
                 travelExpense={1}
+                otherExpense={1}
+
           />
           </div>
         

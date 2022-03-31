@@ -120,3 +120,19 @@ p.goal-name{
   color: rgb(183,224,189)
 }
 
+
+@media only screen and (min-width: 500px) {
+  .add-goal-link{
+    margin-top: 0;
+  }
+
+  .add-goal-link-container{
+    margin-right: 50%;
+  }
+
+  .goal-container {
+    height: 10%;
+    padding: 1%;
+  }
+
+}

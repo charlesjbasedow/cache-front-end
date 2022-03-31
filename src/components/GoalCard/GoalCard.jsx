@@ -22,7 +22,10 @@ function GoalCard ({goal, handleDeleteGoal, user}) {
       <p className='goal-amount'><SquareRoundedIcon className='to-save' /> ${goal.amount - goal.currentAmount} To Save</p>
       </div>
       :
-      <p></p>
+      <div className='amount-container'>
+      <p className='goal-current-amount'><SquareRoundedIcon className='saved' /> ${goal.currentAmount} Saved</p>
+      <p className='goal-amount'><SquareRoundedIcon className='to-save' /> ${goal.amount - goal.currentAmount} To Save</p>
+      </div>
       }
 
       <div className='delete-goal-btn-container'>

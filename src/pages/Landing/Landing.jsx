@@ -27,15 +27,13 @@ const Landing = (props) => {
         <p className='title' >Spending Overview</p>
         <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
       </nav>
-    
   </>
       {hasBudget ?
-        <h3>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
+        <h3 className='remaining-budget-msg'>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
       : <h3>No budget found, create one 
         <Link to="/add-budget"> here</Link> 
         </h3>
       }
-
       <div>
         <DoughnutChart 
         totalExpense={props.totalExpense} 

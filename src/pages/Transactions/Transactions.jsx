@@ -7,6 +7,7 @@ import GoalTransCard from "../../components/GoalTransCard/GoalTransCard";
 import { Link } from 'react-router-dom'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 
 const Transactions = (props) => { 
   const [showGoals, setShowGoals] = useState(null)
@@ -68,7 +69,7 @@ useEffect(()=>{
 
       <h3 className="transactions-title">Transactions</h3>
       <div className="income-expenses-tabs">
-        <button className="income-tab" value="all" onClick={handleClick}>All</button>
+        <button className="all-tab" value="all" onClick={handleClick}>All</button>
         <button className="income-tab" value="income" onClick={handleClick}>Income</button>
         <button className="expenses-tab" value="expense" onClick={handleClick}>Expenses</button>
       </div>   

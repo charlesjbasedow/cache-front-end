@@ -11,7 +11,6 @@ import TotalBudgetChart from "../../components/TotalBudgetChart/TotalBudgetChart
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-
 const BudgetPage = (props) => {
 
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -35,13 +34,14 @@ const BudgetPage = (props) => {
         <div className='user-icon-container'>
           <AccountCircleIcon fontSize="medium" className="user-icon" /> {props.user.name}
         </div>
-        <p className="budget-pg-title">{currentMonth} Budget</p>
+        <p className="budget-pg-title">Budgets</p>
         <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
     </nav>
-
+    <h2 className="budget-title">{currentMonth} Budget</h2>
     <div className="budget-chart">
     <div className="total-amount-container">
-      <h3 className="total-amount-left">${props.totalExpense} left</h3>
+      <h1 className="total-amount-left">${props.totalExpense}</h1>
+      <h3 className="left">left</h3>
     </div>
     <div>
         {props.budgets.map(budget => (
@@ -57,9 +57,9 @@ const BudgetPage = (props) => {
       <TotalBudgetChart className="total-budget-chart" currentBudget={currentBudget} totalExpense={props.totalExpense} />
     </div>
     </div>
-      <div className=".categories-title-container">
+
+    <div className="categories-container">
         <h3 className="categories-title">Categories</h3>
-      </div>
     <div>
       <HealthProgressBar totalHealthExpense={props.healthExpense} currentBudget={currentBudget} budgets={props.budgets} />
     </div>
@@ -74,6 +74,7 @@ const BudgetPage = (props) => {
     </div>
     <div>
       <TravelProgressBar totalTravelExpense={props.travelExpense} currentBudget={currentBudget} budgets={props.budgets} />
+    </div>
     </div>
     </>
     

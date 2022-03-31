@@ -2,8 +2,13 @@ main{
   margin-bottom: 15%;
 }
 
+.budget-title{
+  text-align: center;
+  margin: 7%;
+}
+
 .budget-header-nav{
-  background-color: #28734a;
+  background-color: #287149;
   color: rgb(255, 255, 255);
   padding: 2%;
   display: flex;
@@ -19,18 +24,19 @@ main{
 .total-amount-container{
   grid-area: 1 / 1 / 2 / 2;
   place-self: center;
+  text-align: center;
+}
+
+.left{
+  color: rgb(159, 159, 159);
 }
 
 .budget-chart-container{
   grid-area: 1 / 1 / 2 / 2;
 }
-/* .budget-chart{
-  margin: 12%;
-} */
 
-.budget-pg-title, .categories-title{
-  display: grid;
-  justify-items: center;
+.categories-title{
+  text-align: center;
 }
 
 .edit-budget-link{
@@ -38,10 +44,12 @@ main{
   display: grid;
   place-items: end;
   margin-right: 5%;
+  color: #287149;
 }
 
 .categories-title{  
   border-bottom: 1px rgb(228, 228, 228) solid;
+  padding-bottom: 5%;
 }
 
 

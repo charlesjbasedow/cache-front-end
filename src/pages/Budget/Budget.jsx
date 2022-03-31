@@ -8,6 +8,8 @@ import GroceryProgressBar from "../../components/BudgetCategoryCards/GroceryProg
 import BillsProgressBar from "../../components/BudgetCategoryCards/BillsProgressBar";
 import TravelProgressBar from "../../components/BudgetCategoryCards/TravelProgressBar";
 import TotalBudgetChart from "../../components/TotalBudgetChart/TotalBudgetChart"
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 const BudgetPage = (props) => {
@@ -29,10 +31,14 @@ const BudgetPage = (props) => {
     </div>
     :
     <>
+    <nav className='budget-header-nav'>
+        <div className='user-icon-container'>
+          <AccountCircleIcon fontSize="medium" className="user-icon" /> {props.user.name}
+        </div>
+        <p className="budget-pg-title">{currentMonth} Budget</p>
+        <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
+    </nav>
 
-    <h1 className="budget-pg-title">{currentMonth} Budget Summary</h1>
-      
-          
     <div className="budget-chart">
     <div className="total-amount-container">
       <h3 className="total-amount-left">${props.totalExpense} left</h3>

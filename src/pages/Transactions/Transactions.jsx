@@ -42,7 +42,6 @@ useEffect(()=>{
   return (  
     <>
 
-    <main>
     <div className="transactions-background">
 
       <nav className='transactions-header-nav'>
@@ -51,7 +50,7 @@ useEffect(()=>{
         <div className='user-icon-container'>
           <AccountCircleIcon fontSize="medium" className="user-icon" /> {props.user.name}
         </div>
-        <p className='transactions-title' >Transactions</p>
+        <h3 className='transactions-title' >Transactions</h3>
         <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
         </div>
 
@@ -83,7 +82,6 @@ useEffect(()=>{
       </div>
     </div>
 
-    </main>    
 
     </>
   )

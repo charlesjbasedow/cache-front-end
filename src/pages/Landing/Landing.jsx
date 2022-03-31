@@ -24,7 +24,7 @@ const Landing = (props) => {
         <div className='user-icon-container'>
           <AccountCircleIcon fontSize="medium" className="user-icon" /> {props.user.name}
         </div>
-        <p className='title' >Spending Overview</p>
+        <h3 className='title' >Spending Overview</h3>
         <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
       </nav>
   </>

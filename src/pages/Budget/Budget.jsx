@@ -24,10 +24,12 @@ const BudgetPage = (props) => {
     <>
     <main>
     {!hasBudget ?
-    <div>
-      <p>Click here to create your {currentMonth} budget </p>
-      <Link to='/add-budget' >Add Budget</Link > 
-    </div>
+    <div className="add-budget">
+    <h3 className="add-budget-msg">Click below to create your {currentMonth} budget </h3>
+    <button className="add-budget-btn">
+    <Link className="add-budget-link" to='/add-budget' >Create a Budget</Link > 
+    </button>
+  </div>
     :
     <>
     <nav className='budget-header-nav'>

@@ -1,4 +1,3 @@
-// import styles from './Landing.module.css'
 import DoughnutChart from '../../components/DoughnutChart/DoughnutChart'
 import '../../components/Header/Header.css'
 import { Link } from 'react-router-dom'
@@ -49,8 +48,8 @@ const Landing = (props) => {
     :
     <main>     
           <h4 className='title-nouser'>
-          <Link to="/login"> Log In</Link> or 
-          <Link to="/signup"> Sign Up</Link> to Access your Budget
+          <Link className='login-link' to="/login"> Log In</Link> or 
+          <Link className='login-link' to="/signup"> Sign Up</Link> to get started
           </h4>
           <div>
           <DoughnutChart 

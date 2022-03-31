@@ -37,6 +37,7 @@ useEffect(()=>{
 
   return (  
     <>
+    <main>
       <div className="transactions-header">
         <p className="current-balance">$ {props.totalIncome - props.totalExpense - props.totalSavings}</p>
         <p className="current-balance-label">Current Balance</p>
@@ -57,6 +58,7 @@ useEffect(()=>{
           <GoalTransCard key={goal._id} goal={goal} user={props.user} />
         ))}
         </div>  
+    </main>    
     </>
   )
 }

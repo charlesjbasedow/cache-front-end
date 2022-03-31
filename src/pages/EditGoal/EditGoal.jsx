@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import { useLocation } from 'react-router-dom'
+import '../AddIncome/AddIncome&Expense.css'
 
 function EditGoal(props) {
   const formElement = useRef()
@@ -22,9 +23,9 @@ function EditGoal(props) {
 
   return (
     <>
-      <h1>Edit Goal</h1>
+      <h1 className="category-title">Edit Goal</h1>
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="name-input" className="form-label">
 						Goals's Name (required)
 					</label>
@@ -38,7 +39,7 @@ function EditGoal(props) {
 						required
 					/>
 				</div>
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="currentAmount-input" className="form-label">
 						Current Amount
 					</label>
@@ -51,7 +52,7 @@ function EditGoal(props) {
             onChange={handleChange}
 					/>
 				</div>
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="amount-input" className="form-label">
 						Goal Amount (required)
 					</label>
@@ -66,7 +67,7 @@ function EditGoal(props) {
 					/>
 				</div>
 				
-				<div className="d-grid">
+				<div className="container">
 					<button
 						type="submit"
 						className="btn btn-primary btn-fluid"
@@ -82,3 +83,4 @@ function EditGoal(props) {
 
 
 export default EditGoal;
+

@@ -26,11 +26,11 @@ const AddExpense = (props) => {
 
 return ( 
   <main>
-    <h1>Add Expense</h1>
+    <h1 className="category-title">Add Expense</h1>
     <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
-	    <div className="category-input-container">
+	    <div className="container">
         <label htmlFor="category-select">Category:</label>
-        <select name="category" value={formData.category} onChange={handleChange} id="category-select">
+        <select name="category" className = "input" value={formData.category} onChange={handleChange} id="category-select">
             <option name="Health">Health</option>
             <option name="Housing">Housing</option>
             <option name="Grocery">Grocery</option>
@@ -39,16 +39,16 @@ return (
             <option name="Other">Other</option>
         </select>
 	    </div>
-		<div className="amount-input-container">
+		<div className="container">
 		<label htmlFor="amount-input" className="form-label">
-			Amount
+			Amount:
 		</label>
 		<input 
       placeholder='Amount'
       size={40}
       max={100000}
 		  type="number"
-			className="amount-input"
+			className="input"
 			id="amount-input"
 			name="amount"
       value={formData.amount}
@@ -56,12 +56,13 @@ return (
 			required
 		/>
 		</div>
-		<div className="date-input-container">
+		<div className="container">
 		<label htmlFor="date-input" className="form-label">
+      Date:
 		</label>
 		<input 
 			type="date"
-			className="date-input"
+			className="input"
 			id="date-input"
 			name="date"
       value={formData.Date}
@@ -69,7 +70,7 @@ return (
       
 		/>
 		</div>
-		<div className="add-btn-container">
+		<div className="container">
 		<button type="submit" className="add-btn" disabled={!validForm}>Add Expense</button>
 		</div>
 		</form>

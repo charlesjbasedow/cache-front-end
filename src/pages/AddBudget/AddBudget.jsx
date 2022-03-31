@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import '../AddIncome/AddIncome&Expense.css'
 
 const AddBudget = (props) => {
 const [validForm, setValidForm] = useState(false)
@@ -42,10 +43,10 @@ let dateYear =  new Date().getFullYear();
   return( 
     <>
 
-      <h1>Add Budget</h1>
+      <h1 className="category-title">Add Budget</h1>
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 
-        <div className="form-group mb-3">
+        <div className="container">
           <label htmlFor="health-limit-input" className="form-label">
             Health Limit
           </label>
@@ -59,7 +60,7 @@ let dateYear =  new Date().getFullYear();
           />
         </div>
 
-        <div className="form-group mb-3">
+        <div className="container">
           <label htmlFor="categorytotal-input" className="form-label">
             Housing Limit
           </label>
@@ -74,7 +75,7 @@ let dateYear =  new Date().getFullYear();
           />
         </div>
 
-        <div className="form-group mb-3">
+        <div className="container">
           <label htmlFor="grocery-limit-input" className="form-label">
             Grocery Limit
           </label>
@@ -89,7 +90,7 @@ let dateYear =  new Date().getFullYear();
           />
         </div>
 
-        <div className="form-group mb-3">
+        <div className="container">
           <label htmlFor="bills-limit-input" className="form-label">
             Bills Limit
           </label>
@@ -104,7 +105,7 @@ let dateYear =  new Date().getFullYear();
           />
         </div>
 
-        <div className="form-group mb-3">
+        <div className="container">
           <label htmlFor="travel-limit-input" className="form-label">
             Travel Limit
           </label>
@@ -119,7 +120,7 @@ let dateYear =  new Date().getFullYear();
           />
         </div>
 
-        <div className="d-grid">
+        <div className="container">
           <button
             type="submit"
             className="btn btn-primary btn-fluid"

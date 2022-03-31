@@ -13,7 +13,8 @@ const Landing = (props) => {
     <>
     {props.user ?
     <main className={styles.container}>
-      <h1 className = {styles.overview}>{currentMonth} Spending Overview</h1>
+
+      <h1 className={styles.title}>{currentMonth} Spending Overview</h1>
         <h3>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
       <div>
         <DoughnutChart 

@@ -1,6 +1,12 @@
-.logout-link {
-  margin-left: 80%
 
+nav{
+  /* background-color: lightseagreen; */
+  color: rgb(141, 141, 141);
+}
+
+.logout-link {
+  text-decoration: none;
+  margin-left: 80%
 }
 
 .user-icon {

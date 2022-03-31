@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './GoalCard.css'
-import ClearIcon from '@mui/icons-material/Clear';
+import DeleteIcon from '@mui/icons-material/Delete';
 import SavingsIcon from '@mui/icons-material/Savings';
 import GoalProgressBar from '../GoalProgressBar/GoalProgressBar'
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
@@ -26,7 +26,7 @@ function GoalCard ({goal, handleDeleteGoal, user}) {
       }
 
       <div className='delete-goal-btn-container'>
-      <button className='delete-goal-btn' onClick={() => handleDeleteGoal(goal._id)}>X</button>
+      <button className='delete-goal-btn' onClick={() => handleDeleteGoal(goal._id)}><DeleteIcon fontSize='small' /></button>
       </div>
       <div className='edit-goal-link-container'>
       <Link to='/edit-goal' state={{goal}} className='edit-goal-link'>Edit</Link>

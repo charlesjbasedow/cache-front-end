@@ -10,6 +10,8 @@
   margin: 7%;
   display: grid;
   place-content: center;
+  background-color: rgb(5,204,169);
+  color: white;
 }
 
 .add-income-link{

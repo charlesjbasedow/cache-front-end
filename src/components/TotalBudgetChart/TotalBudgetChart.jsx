@@ -16,10 +16,10 @@ function TotalBudgetChart(props) {
           label: "",
           cutout: 150,
           data: [props.currentBudget.totalLimit, props.totalExpense],
-          borderColor: "rgb(53, 162, 235)",
+          borderColor: "rgb(255, 255, 255)",
           backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
+            'rgb(5,204,169)',
+            'rgb(240, 240, 240)',
           ],
         }
       ]

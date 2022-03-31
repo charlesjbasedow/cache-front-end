@@ -17,7 +17,7 @@ function DoughnutChart(props) {
         {
           label: "March Expenses",
           data: [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.groceryExpense],
-          borderColor: "rgb(53, 162, 235)",
+          borderColor: "rgb(255, 255, 255)",
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',

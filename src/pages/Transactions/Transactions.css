@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
 
 main{
   margin-bottom: 15%;

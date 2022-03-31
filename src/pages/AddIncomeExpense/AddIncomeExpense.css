@@ -1,6 +1,7 @@
 .add-container {
   display: grid;
   text-align: center;
+  padding: 2%;
 }
 
 .add-income-link, .add-expense-link {
@@ -10,7 +11,7 @@
   margin: 7%;
   display: grid;
   place-content: center;
-  background-color: rgb(5,204,169);
+  background-color: #287149;
   color: white;
 }
 

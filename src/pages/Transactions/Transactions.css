@@ -78,28 +78,39 @@ main{
 }
 
 .income-expenses-tabs{
-  /* display: grid; */
-  /* grid-template-columns: 50% 50%;
-  place-items: center; */
   display: flex;
   justify-content: center;
-  border: 1px solid lightseagreen;
+  border: 1px solid #28734a;
   border-radius: 8px;
-  width: fit-content;
+  width: 60%;
   padding: 2%;
-  margin-left: 25%;
+  margin-left: 18%;
 }
 
 .transactions-title {
   text-align: center;
 }
 
-.income-tab, .expenses-tab{
+/* .income-tab{
+  margin-left: 5%;
+} */
+
+.income-tab, .all-tab, .expenses-tab{
   background-color: transparent;
   border: 0;
   border-radius: 8px;
-  color: lightseagreen;
+  color: #28734a;
   font-size: medium;
+  margin-left: 8%;
+}
+
+.income-tab{
+  margin-left: 12%;
+}
+
+.all-tab{
+  margin: 0;
+  align-self: flex-start;
 }
 
 @media only screen and (min-width: 500px) {

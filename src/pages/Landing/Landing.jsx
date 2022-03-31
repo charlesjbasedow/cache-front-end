@@ -28,7 +28,7 @@ const Landing = (props) => {
       </nav>
     
   </>
-     
+    
         <h3>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
       <div>
         <DoughnutChart 
@@ -42,12 +42,24 @@ const Landing = (props) => {
       </div>
     </main>
     :
-    <nav>
-        <ul>
-          <Link to="/login">Log In</Link>
-          <Link to="/signup">Sign Up</Link>
-        </ul>
-      </nav>
+    <main>     
+          <h4 className='title-nouser'>
+          <Link to="/login"> Log In</Link> or 
+          <Link to="/signup"> Sign Up</Link> to Access your Budget
+          </h4>
+          <div>
+          <DoughnutChart 
+                totalExpense={1} 
+                healthExpense={1}
+                housingExpense={1}
+                groceryExpense={1}
+                billsExpense={1}
+                travelExpense={1}
+          />
+          </div>
+        
+    </main>
+
     }
     </> 
   )

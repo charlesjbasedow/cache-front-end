@@ -200,7 +200,8 @@ const App = () => {
 
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing 
+        <Route path="/" element={<Landing
+        handleLogout={handleLogout} 
         user={user}
         budgets={budgets}
         totalExpense={totalExpense} 
@@ -237,13 +238,16 @@ const App = () => {
         <Route path='/add-goal' element={user ? <AddGoal handleAddGoal={handleAddGoal} /> : <Navigate to='/login' />} 
         />  
         <Route path='/transactions' element={user ?
-        <Transactions user={user} 
+        <Transactions 
+        handleLogout={handleLogout}
+        user={user} 
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
         expenses={expenses} handleDeleteExpense={handleDeleteExpense}
         totalExpense={totalExpense} totalIncome={totalIncome} totalSavings={totalSavings} goals={goals}
         /> : <Navigate to='/login' />} 
         />  
         <Route path='/budgets' element={user ? <Budget 
+          handleLogout={handleLogout}
           budgets={budgets} 
           handleDeleteBudget={handleDeleteBudget} 
           user={user}
@@ -257,7 +261,7 @@ const App = () => {
         /> 
         <Route path='/edit-budget' element={ user ? <EditBudget handleUpdateBudget={handleUpdateBudget} user={user} /> : <Navigate to="/login" />} 
         /> 
-        <Route path='/goals' element={ user ? <Goals goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/> : <Navigate to="/login" /> } 
+        <Route path='/goals' element={ user ? <Goals handleLogout={handleLogout} goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/> : <Navigate to="/login" /> } 
         />
         <Route path='/edit-goal' element={ user ? <EditGoal  user={user} handleUpdateGoal={handleUpdateGoal}/> : <Navigate to="/login" />} 
         />

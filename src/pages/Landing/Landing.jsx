@@ -11,6 +11,7 @@ const Landing = (props) => {
 
   const d = new Date()
   let currentMonth = month[d.getMonth()]
+  let hasBudget = props?.budgets?.some((budget) => budget.month === currentMonth)
 
   let totalLimit = props?.budgets[props.budgets.length-1]?.totalLimit
 
@@ -28,8 +29,13 @@ const Landing = (props) => {
       </nav>
     
   </>
-    
+      {hasBudget ?
         <h3>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
+      : <h3>No budget found, create one 
+        <Link to="/add-budget"> here</Link> 
+        </h3>
+      }
+
       <div>
         <DoughnutChart 
         totalExpense={props.totalExpense} 
@@ -40,6 +46,7 @@ const Landing = (props) => {
         travelExpense={props.travelExpense}
         />
       </div>
+    
     </main>
     :
     <main>     

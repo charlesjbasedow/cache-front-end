@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import PersonIcon from '@mui/icons-material/Person';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
 import './Header.css'
 
 const Header = ({user, handleLogout}) => {
@@ -7,8 +8,8 @@ const Header = ({user, handleLogout}) => {
     <>
     {user ?
       <nav className='user-name'>
-        <PersonIcon /> {user.name} 
-        <Link className='logout-link' to="/" onClick={handleLogout}>Log Out</Link>
+        <AccountCircleIcon fontSize="large" className="user-icon" />
+        <Link className='logout-link' to="/" onClick={handleLogout}><LogoutIcon fontSize="large"/> </Link>
         {/* <Link to="/changePassword">Change Password</Link> */}
       </nav>
     :
@@ -22,5 +23,5 @@ const Header = ({user, handleLogout}) => {
   </>
   );
 }
- 
+
 export default Header;

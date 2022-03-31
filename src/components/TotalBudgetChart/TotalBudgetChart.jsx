@@ -19,7 +19,7 @@ function TotalBudgetChart(props) {
           borderColor: "rgb(240, 240, 240)",
           backgroundColor: [
             'rgb(126,208,141)',
-            'rgb(240, 240, 240)',
+            'rgb(211,211,211)',
           ],
         }
       ]
@@ -42,5 +42,5 @@ function TotalBudgetChart(props) {
       <Doughnut options={chartOptions} data={chartData} />
   );
 }
- 
+
 export default TotalBudgetChart;

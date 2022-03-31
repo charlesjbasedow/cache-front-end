@@ -1,14 +1,19 @@
 
-nav{
-  /* background-color: lightseagreen; */
-  color: rgb(141, 141, 141);
+.header-nav{
+  display: flex;
+  background-color: #28734a;
+  color: rgb(255, 255, 255);
+  padding: 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-icon-container{
+  display: flex;
+  align-items: center;
 }
 
 .logout-link {
   text-decoration: none;
-  margin-left: 80%
-}
-
-.user-icon {
-  margin-left: 1%
+  color: rgb(255, 255, 255);
 }

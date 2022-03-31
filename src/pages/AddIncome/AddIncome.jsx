@@ -28,14 +28,14 @@ const AddIncome = (props) => {
 
   return (  
     <main>
-    <h1 className="category-title">Add Income</h1>
+    <h2 className="category-title">Add an Income</h2>
     <form autoComplete="off" ref={formElement} onSubmit={handleSubmit} >
 				<div className="container">
 					<label htmlFor="category-input" className="form-label">
-						Category:
+						
 					</label>
 					<input 
-						maxLength={18}
+						maxLength={20}
 						placeholder="Category"
 						type="text"
 						className="input"
@@ -48,7 +48,7 @@ const AddIncome = (props) => {
 				</div>
 				<div className="container">
 					<label htmlFor="amount-input" className="form-label">
-						Amount:
+						$
 					</label>
 					<input 
 						min={1}
@@ -65,7 +65,7 @@ const AddIncome = (props) => {
 				</div>
 				<div className="container">
 					<label htmlFor="date-input" className="form-label">
-						Date:
+						
 					</label>
 					<input 
 						type="date"

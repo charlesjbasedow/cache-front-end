@@ -20,21 +20,18 @@ function AddGoal(props) {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-		// const goalFormData = new FormData()
-    // goalFormData.append('name', formData.name)
-    // goalFormData.append('amount', formData.amount)
     props.handleAddGoal(formData)
   }
 
   return (
     <>
-      <h1 className = "category-title">Add Goal</h1>
+      <h2 className = "category-title">Add a New Savings Goal</h2>
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 				<div className="container">
 					<label htmlFor="name-input" className="form-label">
-						Goals's Name (required)
 					</label>
 					<input 
+					placeholder="Goal Name"
 						type="text"
 						className="form-control"
 						id="name-input"
@@ -46,7 +43,7 @@ function AddGoal(props) {
 				</div>
 				<div className="container">
 					<label htmlFor="amount-input" className="form-label">
-						Goal Amount (required)
+						$
 					</label>
 					<input 
 						type="number"
@@ -62,7 +59,7 @@ function AddGoal(props) {
 				<div className="container">
 					<button
 						type="submit"
-						className="btn btn-primary btn-fluid"
+						className="add-btn"
             disabled={!validForm}
 					>
 						Add Goal

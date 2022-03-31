@@ -40,7 +40,7 @@ function ExpenseCard({expense, handleDeleteExpense, user}) {
       <p className='icon'>{icon}</p>
       <p className='category'>{expense.category}</p>
       <p className='amount'>- ${expense.amount}</p>
-      <p className='date'>{expense.date}</p>
+      <p className='date'>{new Date(expense.date).toLocaleDateString() }</p>
       <button className='delete-btn' onClick={() => handleDeleteExpense(expense._id)} ><DeleteIcon fontSize='small' /></button>
     </div>
     :

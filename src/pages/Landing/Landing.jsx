@@ -24,18 +24,16 @@ const Landing = (props) => {
         <div className='user-icon-container'>
           <AccountCircleIcon fontSize="medium" className="user-icon" /> {props.user.name}
         </div>
-        <p className='title' >Spending Overview</p>
+        <h3 className='title' >Spending Overview</h3>
         <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
       </nav>
-    
   </>
       {hasBudget ?
-        <h3 className='message'>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
-      : <h3 className='message'> No budget found, create one 
+        <h3 className='remaining-budget-msg'>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
+      : <h3>No budget found, create one 
         <Link to="/add-budget"> here</Link> 
         </h3>
       }
-
       <div>
         <DoughnutChart 
         totalExpense={props.totalExpense} 

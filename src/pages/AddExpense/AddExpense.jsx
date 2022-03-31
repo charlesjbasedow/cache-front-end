@@ -26,10 +26,10 @@ const AddExpense = (props) => {
 
 return ( 
   <main>
-    <h1 className="category-title">Add Expense</h1>
+    <h2 className="category-title">Add an Expense</h2>
     <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 	    <div className="container">
-        <label htmlFor="category-select">Category:</label>
+        <label htmlFor="category-select"></label>
         <select name="category" className = "input" value={formData.category} onChange={handleChange} id="category-select">
             <option name="Health">Health</option>
             <option name="Housing">Housing</option>
@@ -41,7 +41,7 @@ return (
 	    </div>
 		<div className="container">
 		<label htmlFor="amount-input" className="form-label">
-			Amount:
+			$
 		</label>
 		<input 
       placeholder='Amount'
@@ -58,7 +58,7 @@ return (
 		</div>
 		<div className="container">
 		<label htmlFor="date-input" className="form-label">
-      Date:
+      
 		</label>
 		<input 
 			type="date"

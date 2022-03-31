@@ -27,7 +27,6 @@ function EditGoal(props) {
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 				<div className="container">
 					<label htmlFor="name-input" className="form-label">
-						Goals's Name (required)
 					</label>
 					<input 
 						type="text"
@@ -41,7 +40,7 @@ function EditGoal(props) {
 				</div>
 				<div className="container">
 					<label htmlFor="currentAmount-input" className="form-label">
-						Current Amount
+						$
 					</label>
 					<input 
 						type="number"
@@ -54,7 +53,6 @@ function EditGoal(props) {
 				</div>
 				<div className="container">
 					<label htmlFor="amount-input" className="form-label">
-						Goal Amount (required)
 					</label>
 					<input 
 						type="number"
@@ -70,7 +68,7 @@ function EditGoal(props) {
 				<div className="container">
 					<button
 						type="submit"
-						className="btn btn-primary btn-fluid"
+						className="add-btn"
             disabled={!validForm}
 					>
 						Update Goal

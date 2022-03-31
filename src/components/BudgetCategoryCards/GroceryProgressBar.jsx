@@ -20,7 +20,14 @@ export default function GroceryProgressBar(props) {
     <RestaurantIcon fontSize='large' className='budget-cat-card-icon'/>
     <p className='budget-cat-card-title'>Grocery</p>
     <div className='budget-progress-container'>
-      <LinearProgress className='progress-bar' variant="determinate" value={progress} sx={{height: 15}} />
+    <LinearProgress className='progress-bar' variant="determinate" value={progress}       
+        sx={{
+        height: 15,
+        backgroundColor: 'rgb(183,224,189)',
+        "& .MuiLinearProgress-bar": {
+        backgroundColor: 'seagreen'
+        }}} 
+      /> 
     </div>
     {progress >= 100 ? 
     <p className='budget-status-msg'><CloseIcon fontSize='small' /> You've exceeded your budget</p>

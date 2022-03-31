@@ -1,29 +1,52 @@
 .container {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 100px;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   margin-bottom: 1rem;
   font-size: 1rem;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  margin-left: 25%;
+  border-radius: 8px;
 }
 
-.label,
-.button {
-  margin-right: .5rem;
+.update-icon{
+  color: rgb(177, 177, 177);
+  padding-left: 12%;
+}
+
+.form-label {
+  background-color: white;
+  padding-left: 20%;
+}
+
+.form-control{
+  background-color: white;
 }
 
 .inputContainer {
   margin-bottom: 0.5rem;
 }
 
-.input{
+#amount-input{
+  width: 190%;
+}
+
+.add-btn{
+  border-radius: 4px;
+  border: none;
+  background-color: #28734a;
+  color: white;
+}
+
+.input, .form-control{
   border: 0;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   border-radius: 8px;
   font-size: 1rem;
   padding: 0;
-  padding-left: 10px;
+  padding: 10px;
   width: 150px
 }
 

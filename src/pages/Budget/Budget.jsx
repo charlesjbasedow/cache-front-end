@@ -34,13 +34,13 @@ const BudgetPage = (props) => {
         <div className='user-icon-container'>
           <AccountCircleIcon fontSize="medium" className="user-icon" /> {props.user.name}
         </div>
-        <p className="budget-pg-title">Budgets</p>
+        <h3 className="budget-pg-title">Budgets</h3>
         <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
     </nav>
     <h2 className="budget-title">{currentMonth} Budget</h2>
     <div className="budget-chart">
     <div className="total-amount-container">
-      <h1 className="total-amount-left">${props.totalExpense}</h1>
+      <h1 className="total-amount-left">${currentBudget.totalLimit - props.totalExpense}</h1>
       <h3 className="left">left</h3>
     </div>
     <div className="budget-chart-container">

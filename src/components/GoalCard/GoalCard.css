@@ -31,10 +31,12 @@
 }
 
 .delete-goal-btn{
-  background-color: rgb(231, 0, 0);
+  background-color: transparent;
   border-radius: 5px;
-  border: 0;
-  color: rgb(255, 255, 255);
+  border: 1px solid red;
+  border-radius: 8px;
+  color: rgb(232, 0, 0);
+  margin: 2%;
 }
 
 p.goal-name{
@@ -47,7 +49,7 @@ p.goal-name{
 
 .savings-icon{
   place-self: end start;
-  color: rgb(196, 196, 196);
+  color: rgb(196, 33, 168);
 }
 
 .amount-container{
@@ -79,7 +81,7 @@ p.goal-name{
   grid-area: 4 / 1 / 5 / 3;
   text-decoration: none;
   place-self: center;
-  padding-top: 6%;
+  padding-top: 5%;
 }
 
 .edit-goal-link{
@@ -109,10 +111,10 @@ p.goal-name{
 }
 
 .saved{
-  color: royalblue;
+  color: seagreen;
 }
 
 .to-save{
-  color: #a8caed;
+  color: rgb(183,224,189)
 }
 

@@ -12,17 +12,17 @@ function DoughnutChart(props) {
 
   useEffect(() => {
     setChartData({
-      labels: ["Health", "Housing", "Grocery", "Bills", "Travel", "Other"],
+      labels: ["Health", "Housing", "Bills", "Travel", "Other", "Grocery"],
       datasets: [
         {
           label: "March Expenses",
-          data: [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.groceryExpense],
+          data: [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.otherExpense, props.groceryExpense],
           borderColor: "rgb(255, 255, 255)",
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)',
             'rgb(3, 162, 230)',
+            'rgb(255, 205, 86)',
           ],
         }
       ]
@@ -39,7 +39,9 @@ function DoughnutChart(props) {
         text: "Expenses for March"
       }
     })
-  }, [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.groceryExpense])
+  }, [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.otherExpense, props.groceryExpense])
+
+  {console.log(props.groceryExpense)}
 
   return ( 
     <div className={styles.doughnutchart}>
@@ -47,5 +49,5 @@ function DoughnutChart(props) {
     </div> 
   );
 }
- 
+
 export default DoughnutChart;

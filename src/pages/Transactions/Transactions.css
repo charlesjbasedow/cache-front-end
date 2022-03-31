@@ -4,7 +4,6 @@
   background-color: #28734a;
   color: rgb(255, 255, 255);
   padding: 2%;
-  margin-top: 3%;
 }
 
 .transactions-background{
@@ -113,15 +112,18 @@ button > .active {
   background-color: white;
 }
 
-/* @media only screen and (min-width: 500px) {
-  .income-expenses-tabs{
-    margin-left: 30%;
-    width: 40%;
+@media only screen and (min-width: 500px) {
+  .transactions-header-nav{
+    padding: 0;
+  }
+  
+  .transactions-header{
+    padding: 0;
   }
 
-  .income-tab, .all-tab, .expenses-tab{
-    margin-left: 20%;
+  .page-header{
+    margin-top: 1%;
   }
 
-} */
+}
 

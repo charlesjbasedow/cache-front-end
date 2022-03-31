@@ -29,4 +29,9 @@
     margin-top: 10%;
   }
 
+  .add-income-link, .add-expense-link {
+    width: 300px;
+    margin-left: 40%;
+  }
+
 }

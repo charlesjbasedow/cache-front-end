@@ -113,13 +113,19 @@ main{
   align-self: flex-start;
 }
 
-@media only screen and (min-width: 500px) {
+button > .active { 
+  background-color: white;
+}
+
+/* @media only screen and (min-width: 500px) {
   .income-expenses-tabs{
-    margin-left: 43%;
-  }
-  .income-tab, .expenses-tab{
-    padding-left: 2% 10%;
+    margin-left: 30%;
+    width: 40%;
   }
 
-}
+  .income-tab, .all-tab, .expenses-tab{
+    margin-left: 20%;
+  }
+
+} */
 

@@ -30,8 +30,8 @@ const Landing = (props) => {
     
   </>
       {hasBudget ?
-        <h3>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
-      : <h3>No budget found, create one 
+        <h3 className='message'>You have ${totalLimit - props.totalExpense} remaining in your budget</h3>
+      : <h3 className='message'> No budget found, create one 
         <Link to="/add-budget"> here</Link> 
         </h3>
       }

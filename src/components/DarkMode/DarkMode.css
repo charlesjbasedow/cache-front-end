@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: var(--link-color);
+  color: #28734a
 }
 
 .toggle-theme-wrapper {

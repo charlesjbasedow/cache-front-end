@@ -52,6 +52,22 @@ main{
   padding-bottom: 5%;
 }
 
+@media only screen and (min-width: 500px) {
 
+  .budget-title{
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    
+  }
+
+  .budget-chart-container{
+    margin-top: 0;
+    margin-left: 35%;
+    height: 550px;
+    width: 550px;
+  }
+
+}
 
 

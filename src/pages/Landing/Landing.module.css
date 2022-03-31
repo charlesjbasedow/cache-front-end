@@ -27,5 +27,17 @@
 
 @media only screen and (min-width: 500px) {
 
+  h3> .message{
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-left: 32%;
+  }
+
+  .doughnutchart{
+    margin-top: 0;
+    margin-left: 35%;
+    height: 550px;
+    width: 550px;
+  }
 
 }

@@ -6,12 +6,19 @@ Cache is a budgeting app where users can manage their expenses, income and savin
 Click [here](https://cachefrontend.herokuapp.com/) to view the app. 
 
 ### Project Planning Materials  
-[ERD]("https://whimsical.com/cache-budget-app-erd-Vxzr1JRk8dCMnrtuzNmMjN">)
+[ERD](https://whimsical.com/cache-budget-app-erd-Vxzr1JRk8dCMnrtuzNmMjN">)
 
 [Trello](https://trello.com/b/VL89qktx/cache-budget-app)
 
 # Wireframe
-![Wireframe](public/wireframe.png)
+![Wireframe](public/wireframe.png)  
+
+# Screenshots
+![Landing Page](public/landing-page.png)  
+
+![Budget Page](public/budget.png)  
+
+![Transactions Page](public/transactions.png)
 
 
 # Technologies Used
@@ -20,7 +27,7 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
 
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-![MaterialUI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+  ![MaterialUI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 
   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
@@ -45,3 +52,5 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
 - [ ] Users can view summaries of their previous monthly budgets
 - [ ] Users can create recurring incomes and expenses which are automatically added according to the specified time period.
 - [ ] Import previous budget data into next months budget.
+- [ ] Implement light/dark mode
+- [ ] Sorting transactions by date- most recent at the top

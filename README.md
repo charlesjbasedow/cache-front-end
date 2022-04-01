@@ -18,11 +18,10 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
 
 # Screenshots
 
-<img src="./public/landing-page.png" width="600" height="650" />
+<img src="./public/landing-page.png" width="375" height="667" />
+<img src="./public/budget.png" width="375" height="667 />
 
-<img src="./public/budget.png" width="600" height="650" />
-
-<img src="./public/transactions.png" width="600" height="650" />
+<img src="./public/transactions.png" width="375" height="667" />
 
 
 # Technologies Used
@@ -57,3 +56,4 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
 - [ ] Import previous budget data into next months budget.
 - [ ] Sorting transactions by date - most recent at the top.
 - [ ] Implement Light/Dark mode.
+- [ ] Implement a bank account api

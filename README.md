@@ -16,12 +16,27 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
 ![Wireframe](public/wireframe.png)  
  
 
-# Screenshots
+#### Cache Screenshots
 
-<img src="./public/landing-page.png" width="375" height="667" />
-<img src="./public/budget.png" width="375" height="667 />
+<table>
+  <tr>
+    <td>Landing Page</td>
+    <td>Budget Page</td>
+    <td>Spending Overview</td>
+    <td>Transactions Page</td>
+    <td>Expense Progress Bars</td>
+    <td>Goal Page</td>
+  </tr>
+  <tr>
+    <td><img src="./public/ReadMePics/LandingPage.png" width="270" height="480" /></td>
+    <td><img src="./public/ReadMePics/BudgetPage.png" width="270" height="480" /></td>
+    <td><img src="./public/ReadMePics/SpendingPage.png" width="270" height="480" /></td>
+    <td><img src="./public/ReadMePics/TransPage.png" width="270" height="480" /></td>
+    <td><img src="./public/ReadMePics/ProgressBars.png" width="270" height="480" /></td>
+    <td><img src="./public/ReadMePics/GoalPage.png" width="270" height="480" /></td>
+  </tr>
+ </table>
 
-<img src="./public/transactions.png" width="375" height="667" />
 
 
 # Technologies Used

@@ -68,7 +68,7 @@ const AddExpense = (props) => {
             onChange={handleChange}
           />
         </div>
-        <div className="container">
+        <div>
           <button type="submit" className="add-btn" disabled={!validForm}>Add Expense</button>
         </div>
       </form>

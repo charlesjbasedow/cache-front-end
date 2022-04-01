@@ -33,9 +33,12 @@
   border: none;
   background-color: #3abd75;
   color: white;
-  padding: 6%;
-  display: flex;
-  align-items: center;
+  padding: 2%;
+  margin-top: 5%;
+  margin-left: 35%;
+  height: 40px;
+  width: 100px;
+  font-weight: bolder;
 }
 
 .input, .form-control{

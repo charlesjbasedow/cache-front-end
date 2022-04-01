@@ -108,7 +108,7 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-				<div className="container">
+				<div>
 					<button
 						type="submit"
 						className="add-btn"

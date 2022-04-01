@@ -50,4 +50,19 @@
     font-size: 2rem;
   }
 
+  .cache-logo {
+    margin-left: 35%;
+    height: 550px;
+    width: 530px;
+  }
+
+  .landing-intro {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .title-nouser{
+    text-align: center;
+  }
+
 }

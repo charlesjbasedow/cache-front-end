@@ -32,17 +32,17 @@ const Landing = (props) => {
               <Link to="/add-budget"> here</Link> 
             </h3>
           }
-          <div>
-            <DoughnutChart 
-            totalExpense={props.totalExpense} 
-            healthExpense={props.healthExpense}
-            housingExpense={props.housingExpense}
-            groceryExpense={props.groceryExpense}
-            billsExpense={props.billsExpense}
-            travelExpense={props.travelExpense}
-            otherExpense={props.otherExpense}
-            />
-          </div>
+            <div>
+              <DoughnutChart 
+              totalExpense={props.totalExpense} 
+              healthExpense={props.healthExpense}
+              housingExpense={props.housingExpense}
+              groceryExpense={props.groceryExpense}
+              billsExpense={props.billsExpense}
+              travelExpense={props.travelExpense}
+              otherExpense={props.otherExpense}
+              />
+            </div>
         </main>
         :
         <main>     
@@ -51,11 +51,10 @@ const Landing = (props) => {
             <Link className='login-link' to="/signup"> Sign Up</Link> to get started
           </h4>
           <div>
-
-          <img className="cache-logo" src="cache-logo.png" alt='cache logo'></img>
+            <img className="cache-logo" src="cache-logo.png" alt='cache logo'></img>
           </div> 
           <p className='landing-intro'>Experience an easy way to manage your money </p>       
-       </main>           
+        </main>           
       }
     </> 
   )

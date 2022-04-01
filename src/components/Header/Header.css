@@ -30,13 +30,28 @@
   color: #28734a;
 }
 
+.guest-landing {
+  display: grid;
+  place-items: center;
+  padding: 5%;
+  margin-top: 30%;
+}
+
 .cache-logo {
   height: 150px;
-  width: 230px;
+  width: 250px;
 }
 
 .landing-intro {
   text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 10%;
+  margin-top: 0;
+}
+
+.title-nouser {
+  margin-top: 75%;
 }
 
 @media only screen and (min-width: 500px) {

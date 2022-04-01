@@ -12,13 +12,12 @@
 
 .page-header{
   grid-area: 1 / 1 / 2 / 4;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.transactions-title{
-  margin-top: 1%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: #28734a;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  justify-items: center;
 }
 
 .transactions-header {
@@ -26,14 +25,13 @@
   grid-area: 2 / 1 / 3 / 4;
   grid-template: 25% 25% 25% 25% / 50% 50%;
   border-radius: 8px;
-  margin: 4%;
   padding: 4%;
   place-items: center;
 }
 
 .transactions-section{
   background-color: white;
-  padding-top: 4%;
+  padding-top: 8%;
   border-radius: 30px;
   min-height: 150vh;
 }

@@ -1,9 +1,11 @@
 # Cache  
-Cache is a budgeting app where users can manage their expenses, income and saving goals all in one place. It can be difficult to keep track of where your money is going, especially with the rise of online shopping and other digital transactions. Cache simplifies tracking your spending habits with specified budgets displayed visually each month. 
+
+Cache is a budgeting app where users can manage their expenses, income and saving goals all in one place. It can be difficult to keep track of where your money is going, especially with the rise of online shopping and other digital transactions. Cache simplifies tracking your spending habits with specified budgets displayed visually each month.  
 
 # Getting Started
 
 Click [here](https://cachefrontend.herokuapp.com/) to view the app. 
+
 
 ### Project Planning Materials  
 [ERD](https://whimsical.com/cache-budget-app-erd-Vxzr1JRk8dCMnrtuzNmMjN">)
@@ -12,13 +14,15 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
 
 # Wireframe
 ![Wireframe](public/wireframe.png)  
+ 
 
 # Screenshots
-![Landing Page](public/landing-page.png)  
 
-![Budget Page](public/budget.png)  
+<img src="./public/landing-page.png" width="600" height="650" />
 
-![Transactions Page](public/transactions.png)
+<img src="./public/budget.png" width="600" height="650" />
+
+<img src="./public/transactions.png" width="600" height="650" />
 
 
 # Technologies Used
@@ -46,11 +50,10 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
   ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
 
-
 # Next Steps
 
-- [ ] Users can view summaries of their previous monthly budgets
+- [ ] Users can view summaries of their previous monthly budgets.
 - [ ] Users can create recurring incomes and expenses which are automatically added according to the specified time period.
 - [ ] Import previous budget data into next months budget.
-- [ ] Implement light/dark mode
-- [ ] Sorting transactions by date- most recent at the top
+- [ ] Sorting transactions by date - most recent at the top.
+- [ ] Implement Light/Dark mode.

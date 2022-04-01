@@ -18,10 +18,12 @@ function DoughnutChart(props) {
           data: [props.healthExpense, props.housingExpense, props.travelExpense, props.billsExpense, props.otherExpense, props.groceryExpense],
           borderColor: "rgb(255, 255, 255)",
           backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(3, 162, 230)',
-            'rgb(255, 205, 86)',
+            'rgb(50, 168, 82)',
+            'rgb(168, 139, 50)',
+            'rgb(145, 50, 168)',
+            'rgb(168, 50, 56)',
+            'rgb(157, 168, 50)',
+            'rgb(50, 157, 168)',
           ],
         }
       ]

@@ -51,11 +51,11 @@ const Transactions = (props) => {
             <Link className='logout-link' to="/" onClick={props.handleLogout}><LogoutIcon fontSize="medium"/> </Link>
           </div>
           <div className="transactions-header">
-            <p className="current-balance">$ {props.totalIncome - props.totalExpense - props.totalSavings}</p>
+            <p className="current-balance">${props.totalIncome - props.totalExpense - props.totalSavings}</p>
             <p className="current-balance-label">Current Balance</p>
-            <p className="income">{props.totalIncome}</p>
+            <p className="income">${props.totalIncome}</p>
             <p className="income-label">Income</p>
-            <p className="expenses">{props.totalExpense}</p>
+            <p className="expenses">${props.totalExpense}</p>
             <p className="expenses-label">Expenses</p>
           </div>
         </nav>

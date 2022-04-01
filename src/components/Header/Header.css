@@ -28,6 +28,15 @@
   color: #28734a;
 }
 
+.cache-logo {
+  height: 150px;
+  width: 230px;
+}
+
+.landing-intro {
+  text-align: center;
+}
+
 @media only screen and (min-width: 500px) {
 
   .header-nav{

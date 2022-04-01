@@ -21,6 +21,10 @@ import Budget from './pages/Budget/Budget'
 import EditBudget from './pages/EditBudget/EditBudget'
 import Goals from './pages/Goals/Goals'
 import EditGoal from './pages/EditGoal/EditGoal'
+import Header from './components/Header/Header'
+import 'chart.js/auto';
+import { Chart } from 'react-chartjs-2';
+
 
 const App = () => {
   const [incomes, setIncomes] = useState([])

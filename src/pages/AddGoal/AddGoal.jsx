@@ -54,8 +54,7 @@ function AddGoal(props) {
             onChange={handleChange}
 						required
 					/>
-				</div>
-				
+				</div>				
 				<div className="container">
 					<button
 						type="submit"

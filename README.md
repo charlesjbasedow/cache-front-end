@@ -1,5 +1,5 @@
 # Cache  
-Cache is a budgetting app where users can manage their expenses, income and saving goals all in one place. It can be difficult to keep track of where your money is going, especially with the rise of online shopping and other digital transactions. Cache simplifies tracking your spending habits with specified bugets displayed visually each month. 
+Cache is a budgeting app where users can manage their expenses, income and saving goals all in one place. It can be difficult to keep track of where your money is going, especially with the rise of online shopping and other digital transactions. Cache simplifies tracking your spending habits with specified budgets displayed visually each month. 
 
 # Getting Started
 

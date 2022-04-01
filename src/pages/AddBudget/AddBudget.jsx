@@ -7,13 +7,13 @@ import HomeIcon from '@mui/icons-material/Home';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 
 const AddBudget = (props) => {
-const [validForm, setValidForm] = useState(false)
+  const [validForm, setValidForm] = useState(false)
 
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-const d = new Date();
-let monthName = month[d.getMonth()];
-let dateYear =  new Date().getFullYear();
+  const d = new Date();
+  let monthName = month[d.getMonth()];
+  let dateYear =  new Date().getFullYear();
 
   const [formData, setFormData] = useState({
     year: dateYear,
@@ -47,10 +47,8 @@ let dateYear =  new Date().getFullYear();
 
   return( 
     <>
-
       <h1 className="category-title">Add Budget</h1>
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
-
         <div className="container">
           <label htmlFor="health-limit-input" className="form-label">
             <LocalHospitalIcon className="update-icon" />
@@ -64,7 +62,6 @@ let dateYear =  new Date().getFullYear();
             onChange={handleChange}
           />
         </div>
-
         <div className="container">
           <label htmlFor="categorytotal-input" className="form-label">
             <HomeIcon className="update-icon" />
@@ -79,7 +76,6 @@ let dateYear =  new Date().getFullYear();
             required
           />
         </div>
-
         <div className="container">
           <label htmlFor="grocery-limit-input" className="form-label">
             <RestaurantIcon className="update-icon" />
@@ -94,7 +90,6 @@ let dateYear =  new Date().getFullYear();
             required
           />
         </div>
-
         <div className="container">
           <label htmlFor="bills-limit-input" className="form-label">
             <CreditCardIcon className="update-icon" />
@@ -109,7 +104,6 @@ let dateYear =  new Date().getFullYear();
             required
           />
         </div>
-
         <div className="container">
           <label htmlFor="travel-limit-input" className="form-label">
             <AirplanemodeActiveIcon className="update-icon" />
@@ -124,7 +118,6 @@ let dateYear =  new Date().getFullYear();
             required
           />
         </div>
-
         <div className="container">
           <button
             type="submit"

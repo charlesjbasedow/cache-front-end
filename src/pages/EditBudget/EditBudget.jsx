@@ -52,7 +52,6 @@ const EditBudget = (props) => {
 						onChange={handleChange}
 					/>
 				</div>
-
 				<div className="container">
 					<label htmlFor="categorytotal-input" className="form-label">
 						<HomeIcon className="update-icon" />
@@ -67,7 +66,6 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-
 				<div className="container">
 					<label htmlFor="grocery-limit-input" className="form-label">
 						<RestaurantIcon className="update-icon" />
@@ -82,7 +80,6 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-
 				<div className="container">
 					<label htmlFor="bills-limit-input" className="form-label">
 						<CreditCardIcon className="update-icon" />
@@ -97,7 +94,6 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-
 				<div className="container">
 					<label htmlFor="travel-limit-input" className="form-label">
 						<AirplanemodeActiveIcon className="update-icon" />
@@ -112,7 +108,6 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-
 				<div className="container">
 					<button
 						type="submit"

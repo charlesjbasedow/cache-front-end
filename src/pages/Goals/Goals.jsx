@@ -18,7 +18,7 @@ const GoalPage = (props) => {
       <div className="goal-pg-background">
         <h3 className='goal-subtitle'>Track and see your progress towards short and long- term savings goals</h3>
         <div className="add-goal-link-container">
-          <Link className="add-goal-link" to="/add-goal"><AddIcon fontSize="large" />Add Goal</Link>
+          <Link className="add-goal-link" to="/add-goal"><AddIcon fontSize="large" /></Link>
         </div>
         <div>
           {props.goals.map(goal => (

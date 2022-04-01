@@ -28,7 +28,7 @@
 
 .delete-goal-btn{
   background-color: transparent;
-  background-color: rgb(215, 0, 0);
+  background-color: rgba(215, 0, 0, 0.773);
   border-radius: 5px;
   border: 0;
   border-radius: 8px;
@@ -95,9 +95,9 @@ p.goal-name{
 
 .add-goal-link{
   text-decoration: none;
-  margin-top: 5%;
-  margin-bottom: 6%;
   color: #287148;
+  padding-top: 2%;
+  font-size: small;
 }
 
 .add-goal-link-container{

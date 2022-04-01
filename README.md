@@ -23,6 +23,8 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
     <td><img src="./public/ReadMePics/LandingPage.png" width="270" height="480" /></td>
     <td><img src="./public/ReadMePics/BudgetPage.png" width="270" height="480" /></td>
     <td><img src="./public/ReadMePics/SpendingPage.png" width="270" height="480" /></td>
+  </tr>
+  <tr>
     <td><img src="./public/ReadMePics/TransPage.png" width="270" height="480" /></td>
     <td><img src="./public/ReadMePics/ProgressBars.png" width="270" height="480" /></td>
     <td><img src="./public/ReadMePics/GoalPage.png" width="270" height="480" /></td>

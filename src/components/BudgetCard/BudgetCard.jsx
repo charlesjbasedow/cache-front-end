@@ -4,9 +4,14 @@ import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 
 function BudgetCard({budget, user}) {
 
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+  const d = new Date();
+  let currentMonth = month[d.getMonth()];
+
   return (  
     <>
-      {budget.owner._id === user.profile ?
+      {budget.owner._id === user.profile && budget.month === currentMonth ?
         <div>
           <Link
               className='edit-budget-link'
@@ -17,7 +22,7 @@ function BudgetCard({budget, user}) {
           </Link>
         </div>
         :
-        <p>You don't have a budget</p>
+        <p></p>
       }
     </>
   );

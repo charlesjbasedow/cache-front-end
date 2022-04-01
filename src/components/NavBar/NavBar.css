@@ -11,13 +11,14 @@
   z-index: 1;
 }
 
-nav > .active { 
-  background-color: #28734a;
-}
 
 .transactions, .add, .budgets, .goals, .home {
   padding: 5%;
   color: rgb(201, 201, 201);
+}
+
+.active { 
+  color: #28734a !important;
 }
 
 

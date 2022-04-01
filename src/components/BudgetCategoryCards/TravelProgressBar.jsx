@@ -14,7 +14,6 @@ export default function TravelProgressBar(props) {
     setProgress(percentSpent)
   }, [percentSpent])
   
-
   return (
     <div className='budget-cat-card-container'>
       <AirplanemodeActiveIcon fontSize='large' className='budget-cat-card-icon' />

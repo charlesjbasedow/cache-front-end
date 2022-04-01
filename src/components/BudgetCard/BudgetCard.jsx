@@ -14,11 +14,11 @@ function BudgetCard({budget, user}) {
       {budget.owner._id === user.profile && budget.month === currentMonth ?
         <div>
           <Link
-              className='edit-budget-link'
-              to='/edit-budget'
-              state={{budget}}
+            className='edit-budget-link'
+            to='/edit-budget'
+            state={{budget}}
           >
-            <ModeEditOutlineIcon /> edit
+          <ModeEditOutlineIcon /> edit
           </Link>
         </div>
         :

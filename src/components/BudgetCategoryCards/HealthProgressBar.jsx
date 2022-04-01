@@ -14,7 +14,6 @@ export default function HealthProgressBar(props) {
     setProgress(percentSpent)
   }, [percentSpent])
   
-
   return (
     <div className='budget-cat-card-container'>
       <LocalHospitalIcon fontSize='large' className='budget-cat-card-icon'/>

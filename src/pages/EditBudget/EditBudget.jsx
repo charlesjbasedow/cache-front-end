@@ -34,7 +34,6 @@ const EditBudget = (props) => {
     formData.totalLimit = Number(formData.healthLimit)+Number(formData.housingLimit)+Number(formData.groceryLimit)+Number(formData.billsLimit)+Number(formData.travelLimit)
   }
 
-
   return (
 		<>
 			<h2 className="category-title">Update your Budget</h2>

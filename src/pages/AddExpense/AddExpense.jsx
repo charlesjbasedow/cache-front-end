@@ -23,7 +23,6 @@ const AddExpense = (props) => {
     props.handleAddExpense(formData)
   }
   
-
   return ( 
     <main>
       <h2 className="category-title">Add an Expense</h2>

@@ -14,7 +14,6 @@ export default function HousingProgressBar(props) {
     setProgress(percentSpent)
   }, [percentSpent])
   
-
   return (
     <div className='budget-cat-card-container'>
       <HomeIcon fontSize='large' className='budget-cat-card-icon'/>

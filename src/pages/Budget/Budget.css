@@ -25,12 +25,13 @@ main{
 }
 
 .budget-header-nav{
-  background-color: #287149;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: #28734a;
   color: rgb(255, 255, 255);
   padding: 2%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-items: center;
 }
 
 .budget-chart{
@@ -62,6 +63,7 @@ main{
   place-items: end;
   margin-right: 5%;
   color: #287149;
+  font-size: small;
 }
 
 .categories-title{  

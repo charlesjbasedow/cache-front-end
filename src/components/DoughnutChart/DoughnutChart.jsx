@@ -19,9 +19,11 @@ function DoughnutChart(props) {
           borderColor: "rgb(255, 255, 255)",
           backgroundColor: [
             'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
             'rgb(3, 162, 230)',
-            'rgb(255, 205, 86)',
+            'rgb(75,192,192)',
+            'rgb(168,158,228)',
+            'rgb(54, 162, 235)',
+            'rgb(255,181,73)',
           ],
         }
       ]

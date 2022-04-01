@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 const Transactions = (props) => { 
   const [showGoals, setShowGoals] = useState(null)
@@ -54,13 +55,12 @@ const Transactions = (props) => {
             <p className="current-balance">$ {props.totalIncome - props.totalExpense - props.totalSavings}</p>
             <p className="current-balance-label">Current Balance</p>
             <p className="income">{props.totalIncome}</p>
-            <p className="income-label">Income</p>
+            <p className="income-label"> <ArrowCircleUpIcon /> Income</p>
             <p className="expenses">{props.totalExpense}</p>
-            <p className="expenses-label">Expenses</p>
+            <p className="expenses-label"><ArrowCircleDownIcon /> Expenses</p>
           </div>
         </nav>
         <div className="transactions-section">
-          <h3 className="transactions-title">Transactions</h3>
           <div className="income-expenses-tabs">
             <button className="all-tab" value="all" onClick={handleClick}>All</button>
             <button className="income-tab" value="income" onClick={handleClick}>Income</button>

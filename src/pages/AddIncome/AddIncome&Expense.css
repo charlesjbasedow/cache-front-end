@@ -67,4 +67,15 @@
     margin-left: 45%;
   }
 
+  .add-btn{
+    border-radius: 4px;
+    border: none;
+    background-color: #3abd75;
+    color: white;
+    margin-left: 47%;
+    font-weight: bolder;
+    margin-top: 0;
+    padding: 0;
+  }
+
 }

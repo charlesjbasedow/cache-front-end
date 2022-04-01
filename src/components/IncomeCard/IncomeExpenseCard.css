@@ -42,3 +42,10 @@
   color: rgb(255, 255, 255);
   margin: 2%;
 }
+
+@media only screen and (min-width: 500px) {
+  .income-card, .expense-card {
+    margin: 2%;
+    padding: 2%;
+  }
+}

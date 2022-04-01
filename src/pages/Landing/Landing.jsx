@@ -55,17 +55,9 @@ const Landing = (props) => {
           <Link className='login-link' to="/signup"> Sign Up</Link> to get started
           </h4>
           <div>
-          <DoughnutChart 
-                totalExpense={1} 
-                healthExpense={1}
-                housingExpense={1}
-                groceryExpense={1}
-                billsExpense={1}
-                travelExpense={1}
-                otherExpense={1}
-
-          />
-          </div>
+  <img className="cache-logo" src="cache-logo.png" alt='cache logo'></img>
+          </div> 
+          <p className='landing-intro'>Experience an easy way to manage your money </p>
         
     </main>
 

@@ -41,11 +41,11 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav className='bottom-nav'>
-          <Link className={'home' + getActiveClassName('home')} to="/" onClick={handleHomeClick}><HomeOutlinedIcon fontSize='large' /></Link>
-          <Link className={'transactions' + getActiveClassName('transactions')} to="/transactions" onClick={handleTransactionsClick}><CompareArrowsIcon fontSize='large'/></Link>
-          <Link className={'add' + getActiveClassName('add')} to="/add" onClick={handleAddClick}><AddCircleOutlineOutlinedIcon fontSize='large' /></Link>
-          <Link className={'budgets' + getActiveClassName('budgets')}  to="/budgets" onClick={handleBudgetsClick}><BarChartIcon fontSize='large' /></Link>
-          <Link className={'goals' + getActiveClassName('goals')}  to="/goals" onClick={handleGoalsClick}><StarBorderPurple500OutlinedIcon fontSize='large' /></Link>
+          <Link className={'home ' + getActiveClassName('home')} to="/" onClick={handleHomeClick}><HomeOutlinedIcon fontSize='large' /></Link>
+          <Link className={'transactions ' + getActiveClassName('transactions')} to="/transactions" onClick={handleTransactionsClick}><CompareArrowsIcon fontSize='large'/></Link>
+          <Link className={'add ' + getActiveClassName('add')} to="/add" onClick={handleAddClick}><AddCircleOutlineOutlinedIcon fontSize='large' /></Link>
+          <Link className={'budgets ' + getActiveClassName('budgets')}  to="/budgets" onClick={handleBudgetsClick}><BarChartIcon fontSize='large' /></Link>
+          <Link className={'goals ' + getActiveClassName('goals')}  to="/goals" onClick={handleGoalsClick}><StarBorderPurple500OutlinedIcon fontSize='large' /></Link>
         </nav>
         :
         <nav>

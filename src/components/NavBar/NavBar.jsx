@@ -47,7 +47,7 @@ const NavBar = ({ user, handleLogout }) => {
           <Link className={'budgets' + getActiveClassName('budgets')}  to="/budgets" onClick={handleBudgetsClick}><BarChartIcon fontSize='large' /></Link>
           <Link className={'goals' + getActiveClassName('goals')}  to="/goals" onClick={handleGoalsClick}><StarBorderPurple500OutlinedIcon fontSize='large' /></Link>
         </nav>
-      :
+        :
         <nav>
         </nav>
       }

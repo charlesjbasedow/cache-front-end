@@ -21,8 +21,6 @@ import Budget from './pages/Budget/Budget'
 import EditBudget from './pages/EditBudget/EditBudget'
 import Goals from './pages/Goals/Goals'
 import EditGoal from './pages/EditGoal/EditGoal'
-import Header from './components/Header/Header'
-import DarkMode from './components/DarkMode/DarkMode'
 
 const App = () => {
   const [incomes, setIncomes] = useState([])

@@ -89,5 +89,5 @@ const AddIncome = (props) => {
 		</main>
   );
 }
- 
+
 export default AddIncome;

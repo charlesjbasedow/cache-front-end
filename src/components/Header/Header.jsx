@@ -12,10 +12,8 @@ const Header = ({user, handleLogout}) => {
           <AccountCircleIcon fontSize="medium" className="user-icon" /> {user.name}
         </div>
         <Link className='logout-link' to="/" onClick={handleLogout}><LogoutIcon fontSize="medium"/> </Link>
-        
-        {/* <Link to="/changePassword">Change Password</Link> */}
       </nav>
-    :
+      :
       <nav>
         <ul>
           <Link to="/login">Log In</Link>

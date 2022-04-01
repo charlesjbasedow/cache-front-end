@@ -35,17 +35,17 @@ function ExpenseCard({expense, handleDeleteExpense, user}) {
 
   return (  
     <>
-    {expense.owner._id === user.profile ?
-    <div className='expense-card'>
-      <p className='icon'>{icon}</p>
-      <p className='category'>{expense.category}</p>
-      <p className='amount'>- ${expense.amount}</p>
-      <p className='date'>{new Date(expense.date).toLocaleDateString() }</p>
-      <button className='delete-btn' onClick={() => handleDeleteExpense(expense._id)} ><DeleteIcon fontSize='small' /></button>
-    </div>
-    :
-    <p></p>
-    }
+      {expense.owner._id === user.profile ?
+        <div className='expense-card'>
+          <p className='icon'>{icon}</p>
+          <p className='category'>{expense.category}</p>
+          <p className='amount'>- ${expense.amount}</p>
+          <p className='date'>{new Date(expense.date).toLocaleDateString() }</p>
+          <button className='delete-btn' onClick={() => handleDeleteExpense(expense._id)} ><DeleteIcon fontSize='small' /></button>
+        </div>
+        :
+        <p></p>
+      }
     </>
   );
 }

@@ -1,3 +1,39 @@
+main{
+  margin-bottom: 15%;
+}
+
+.add-budget{
+  display: grid;
+  place-items: center;
+  margin-top: 10%;
+}
+
+.add-budget-link{
+  color: white;
+}
+
+.add-budget-btn{
+  border: 0;
+  border-radius: 8px;
+  background-color: #3abd75;
+  padding: 3%;
+}
+
+.budget-title{
+  text-align: center;
+  margin: 7%;
+}
+
+.budget-header-nav{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: #28734a;
+  color: rgb(255, 255, 255);
+  padding: 2%;
+  align-items: center;
+  justify-items: center;
+}
+
 .budget-chart{
   display: grid;
   grid-template: 100% / 100%;
@@ -6,18 +42,19 @@
 .total-amount-container{
   grid-area: 1 / 1 / 2 / 2;
   place-self: center;
+  text-align: center;
+}
+
+.left{
+  color: rgb(159, 159, 159);
 }
 
 .budget-chart-container{
   grid-area: 1 / 1 / 2 / 2;
 }
-.budget-chart{
-  margin: 12%;
-}
 
-.budget-pg-title, .categories-title{
-  display: grid;
-  justify-items: center;
+.categories-title{
+  text-align: center;
 }
 
 .edit-budget-link{
@@ -25,12 +62,45 @@
   display: grid;
   place-items: end;
   margin-right: 5%;
+  color: #287149;
+  font-size: small;
 }
 
 .categories-title{  
   border-bottom: 1px rgb(228, 228, 228) solid;
+  padding-bottom: 5%;
 }
 
+@media only screen and (min-width: 500px) {
 
+  .budget-title{
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    
+  }
+
+  .budget-chart-container{
+    margin-top: 0;
+    margin-left: 35%;
+    height: 550px;
+    width: 550px;
+  }
+
+  .budget-header-nav{
+    padding: 1%;
+  }
+
+  .add-budget{
+    display: grid;
+    justify-content: center;
+    font-weight: bolder;
+  }
+
+  .addbudget-link{
+    margin-left: 30%;
+  }
+
+}
 
 

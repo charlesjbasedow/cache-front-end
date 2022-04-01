@@ -16,17 +16,16 @@ function TotalBudgetChart(props) {
           label: "",
           cutout: 150,
           data: [props.currentBudget.totalLimit, props.totalExpense],
-          borderColor: "rgb(53, 162, 235)",
+          borderColor: "rgb(240, 240, 240)",
           backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
+            'rgb(126,208,141)',
+            'rgb(211,211,211)',
           ],
         }
       ]
     })
     setChartOptions({
       responsive: true,
-      // maintainAspectRatio: false,
       plugins: {
         legend: {
           display: false,
@@ -43,5 +42,5 @@ function TotalBudgetChart(props) {
       <Doughnut options={chartOptions} data={chartData} />
   );
 }
- 
+
 export default TotalBudgetChart;

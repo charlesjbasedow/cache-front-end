@@ -12,7 +12,13 @@ export default function GoalProgressBar(props) {
 
   return (
       <LinearProgress className='progress-bar' variant="determinate" value={progress} 
-      sx={{height: 20, 
-        color: 'secondary', }} />
+        sx={{
+          height: 15,
+          backgroundColor: 'rgb(183,224,189)',
+          "& .MuiLinearProgress-bar": {
+            backgroundColor: 'seagreen'
+          }
+        }} 
+      />
   );
 }

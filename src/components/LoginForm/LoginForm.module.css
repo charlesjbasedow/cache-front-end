@@ -14,3 +14,20 @@
 .inputContainer {
   margin-bottom: 1rem;
 }
+
+input{
+  border: 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 6%;
+}
+
+.loginBtn, .cancelBtn {
+  border-radius: 5px;
+  background-color: #3abd75;
+  color: white;
+  border: 0;
+  padding: 6%;
+  width: 60px;
+}
+

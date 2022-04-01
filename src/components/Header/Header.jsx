@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom'
-import PersonIcon from '@mui/icons-material/Person';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
+import './Header.css'
 
 const Header = ({user, handleLogout}) => {
   return (  
     <>
     {user ?
-      <nav>
-        {user.name} <PersonIcon />
-        <Link to="/" onClick={handleLogout}>Log Out</Link>
-        <Link to="/changePassword">Change Password</Link>
+      <nav className='header-nav'>
+        <div className='user-icon-container'>
+          <AccountCircleIcon fontSize="medium" className="user-icon" /> {user.name}
+        </div>
+        <Link className='logout-link' to="/" onClick={handleLogout}><LogoutIcon fontSize="medium"/> </Link>
       </nav>
-    :
+      :
       <nav>
         <ul>
           <Link to="/login">Log In</Link>
@@ -21,5 +24,5 @@ const Header = ({user, handleLogout}) => {
   </>
   );
 }
- 
+
 export default Header;

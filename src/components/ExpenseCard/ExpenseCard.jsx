@@ -5,7 +5,7 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import MoneyOffIcon from '@mui/icons-material/MoneyOff';
-import ClearIcon from '@mui/icons-material/Clear';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function ExpenseCard({expense, handleDeleteExpense, user}) {
 
@@ -35,17 +35,17 @@ function ExpenseCard({expense, handleDeleteExpense, user}) {
 
   return (  
     <>
-    {expense.owner._id === user.profile ?
-    <div className='card'>
-      <p className='icon'>{icon}</p>
-      <p className='category'>{expense.category}</p>
-      <p className='amount'>- ${expense.amount}</p>
-      <p className='date'>{expense.date}</p>
-      <button className='delete-btn' onClick={() => handleDeleteExpense(expense._id)} ><ClearIcon fontSize='small' /></button>
-    </div>
-    :
-    <p></p>
-    }
+      {expense.owner._id === user.profile ?
+        <div className='expense-card'>
+          <p className='icon'>{icon}</p>
+          <p className='category'>{expense.category}</p>
+          <p className='amount'>- ${expense.amount}</p>
+          <p className='date'>{new Date(expense.date).toLocaleDateString() }</p>
+          <button className='delete-btn' onClick={() => handleDeleteExpense(expense._id)} ><DeleteIcon fontSize='small' /></button>
+        </div>
+        :
+        <p></p>
+      }
     </>
   );
 }

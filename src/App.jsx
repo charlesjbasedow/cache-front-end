@@ -22,6 +22,9 @@ import EditBudget from './pages/EditBudget/EditBudget'
 import Goals from './pages/Goals/Goals'
 import EditGoal from './pages/EditGoal/EditGoal'
 import Header from './components/Header/Header'
+import 'chart.js/auto';
+import { Chart } from 'react-chartjs-2';
+
 
 const App = () => {
   const [incomes, setIncomes] = useState([])
@@ -182,6 +185,15 @@ const App = () => {
     return prev
   }, 0)
 
+  let otherExpense = expenses.reduce(function(prev, expense){
+    if (expense.owner._id === user?.profile) {
+      if(expense.category.includes("Other")){
+        prev = prev + expense.amount
+      }
+    }
+    return prev
+  }, 0)
+
   let totalSavings = goals.reduce(function(prev, goal){
     if (goal.owner._id === user?.profile) {
         prev = prev + goal.currentAmount
@@ -192,10 +204,10 @@ const App = () => {
 
   return (
     <>
-    <Header user={user} handleLogout={handleLogout} />
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing 
+        <Route path="/" element={<Landing
+        handleLogout={handleLogout} 
         user={user}
         budgets={budgets}
         totalExpense={totalExpense} 
@@ -204,6 +216,7 @@ const App = () => {
         groceryExpense={groceryExpense}
         billsExpense={billsExpense}
         travelExpense={travelExpense}
+        otherExpense={otherExpense}
         />} />
         <Route
           path="/signup"
@@ -232,13 +245,16 @@ const App = () => {
         <Route path='/add-goal' element={user ? <AddGoal handleAddGoal={handleAddGoal} /> : <Navigate to='/login' />} 
         />  
         <Route path='/transactions' element={user ?
-        <Transactions user={user} 
+        <Transactions 
+        handleLogout={handleLogout}
+        user={user} 
         incomes={incomes} handleDeleteIncome={handleDeleteIncome} 
         expenses={expenses} handleDeleteExpense={handleDeleteExpense}
         totalExpense={totalExpense} totalIncome={totalIncome} totalSavings={totalSavings} goals={goals}
         /> : <Navigate to='/login' />} 
         />  
         <Route path='/budgets' element={user ? <Budget 
+          handleLogout={handleLogout}
           budgets={budgets} 
           handleDeleteBudget={handleDeleteBudget} 
           user={user}
@@ -252,7 +268,7 @@ const App = () => {
         /> 
         <Route path='/edit-budget' element={ user ? <EditBudget handleUpdateBudget={handleUpdateBudget} user={user} /> : <Navigate to="/login" />} 
         /> 
-        <Route path='/goals' element={ user ? <Goals goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/> : <Navigate to="/login" /> } 
+        <Route path='/goals' element={ user ? <Goals handleLogout={handleLogout} goals={goals} user={user} handleDeleteGoal={handleDeleteGoal}/> : <Navigate to="/login" /> } 
         />
         <Route path='/edit-goal' element={ user ? <EditGoal  user={user} handleUpdateGoal={handleUpdateGoal}/> : <Navigate to="/login" />} 
         />

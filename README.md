@@ -1,19 +1,20 @@
 # Cache  
 
-Cache is a budgeting app where users can manage their expenses, income and saving goals all in one place. It can be difficult to keep track of where your money is going, especially with the rise of online shopping and other digital transactions. Cache simplifies tracking your spending habits with specified budgets displayed visually each month. 
+Cache is a budgeting app where users can manage their expenses, income and saving goals all in one place. It can be difficult to keep track of where your money is going, especially with the rise of online shopping and other digital transactions. Cache simplifies tracking your spending habits with specified budgets displayed visually each month.  
 
 # Getting Started
 
-Click [HERE](https://cachefrontend.herokuapp.com/) to view the app. 
+Click [here](https://cachefrontend.herokuapp.com/) to view the app. 
 
-## Project Planning Materials  
+
+### Project Planning Materials  
 [ERD](https://whimsical.com/cache-budget-app-erd-Vxzr1JRk8dCMnrtuzNmMjN">)
 
 [Trello](https://trello.com/b/VL89qktx/cache-budget-app)
 
-# Wireframes
-
+# Wireframe
 ![Wireframe](public/wireframe.png)  
+ 
 
 # Screenshots
 
@@ -22,6 +23,7 @@ Click [HERE](https://cachefrontend.herokuapp.com/) to view the app.
 <img src="./public/budget.png" width="600" height="650" />
 
 <img src="./public/transactions.png" width="600" height="650" />
+
 
 # Technologies Used
 
@@ -46,7 +48,6 @@ Click [HERE](https://cachefrontend.herokuapp.com/) to view the app.
   ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
   
   ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
-
 
 
 # Next Steps

@@ -1,5 +1,11 @@
 import { useState, useEffect, useRef } from "react"
 import { useLocation } from 'react-router-dom'
+import '../AddIncome/AddIncome&Expense.css'
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import HomeIcon from '@mui/icons-material/Home';
+import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 
 const EditBudget = (props) => {
   const formElement = useRef()
@@ -31,11 +37,11 @@ const EditBudget = (props) => {
 
   return (
 		<>
-			<h1>Edit Budget</h1>
+			<h2 className="category-title">Update your Budget</h2>
 			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="health-limit-input" className="form-label">
-						Health Limit
+						<LocalHospitalIcon className="update-icon" />
 					</label>
 					<input 
 						type="number"
@@ -46,10 +52,9 @@ const EditBudget = (props) => {
 						onChange={handleChange}
 					/>
 				</div>
-
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="categorytotal-input" className="form-label">
-						Housing Limit
+						<HomeIcon className="update-icon" />
 					</label>
 					<input 
 						type="number"
@@ -61,10 +66,9 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="grocery-limit-input" className="form-label">
-						Grocery Limit
+						<RestaurantIcon className="update-icon" />
 					</label>
 					<input 
 						type="number"
@@ -76,10 +80,9 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="bills-limit-input" className="form-label">
-						Bills Limit
+						<CreditCardIcon className="update-icon" />
 					</label>
 					<input 
 						type="number"
@@ -91,10 +94,9 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="travel-limit-input" className="form-label">
-						Travel Limit
+						<AirplanemodeActiveIcon className="update-icon" />
 					</label>
 					<input 
 						type="number"
@@ -106,11 +108,10 @@ const EditBudget = (props) => {
 						required
 					/>
 				</div>
-
-				<div className="d-grid">
+				<div>
 					<button
 						type="submit"
-						className="btn btn-primary btn-fluid"
+						className="add-btn"
 						onClick={handleClick}
 						disabled={!validForm}
 					>

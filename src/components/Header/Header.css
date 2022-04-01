@@ -1,0 +1,88 @@
+.header-nav{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: #28734a;
+  color: rgb(255, 255, 255);
+  padding: 2%;
+  align-items: center;
+  justify-items: center;
+}
+
+.user-icon-container{
+  display: flex;
+  align-items: center;
+  justify-self: start;
+}
+
+.logout-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  justify-self: end;
+}
+
+.remaining-budget-msg{
+  margin: 6%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.login-link{
+  color: #28734a;
+}
+
+.guest-landing {
+  display: grid;
+  place-items: center;
+  padding: 5%;
+  margin-top: 30%;
+}
+
+.cache-logo {
+  height: 150px;
+  width: 250px;
+}
+
+.landing-intro {
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 10%;
+  margin-top: 0;
+}
+
+.title-nouser {
+  margin-top: 75%;
+}
+
+@media only screen and (min-width: 500px) {
+
+  .header-nav{
+    padding: 1%;
+  }
+
+  .remaining-budget-msg{
+    margin-bottom: 3%;
+    font-size: 2rem;
+  }
+
+  .cache-logo {
+    margin-left: 5%;
+    height: 550px;
+    width: 530px;
+  }
+
+  .landing-intro {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .title-nouser{
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .guest-landing {
+    margin-top: 0;
+  }
+
+}

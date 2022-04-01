@@ -3,3 +3,20 @@
   align-items: center;
   flex-direction: column;
 }
+
+.login{
+  margin-top: 35%;
+  margin-bottom: 0;
+}
+
+.signupLink{
+  color: #28734a;
+}
+
+@media only screen and (min-width: 500px) {
+  .login{
+    margin-top: 10%;
+    margin-bottom: 0;
+  }
+
+}

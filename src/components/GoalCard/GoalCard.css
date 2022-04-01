@@ -1,9 +1,11 @@
-main{
-  display: grid;
-}
-
 .goal-pg-title{
   text-align: center;
+}
+
+.goal-subtitle{
+  text-align: center;
+  padding: 3%;
+  margin: 2%;
 }
 
 .goal-container {
@@ -14,9 +16,9 @@ main{
   border-radius: 8px;
   margin: 5%;
   padding: 5%;
-  width: 60%;
   height: 75%;
   place-self: center;
+  background-color: white;
 }
 
 .delete-goal-btn-container{
@@ -25,10 +27,13 @@ main{
 }
 
 .delete-goal-btn{
-  background-color: rgb(231, 0, 0);
+  background-color: transparent;
+  background-color: rgba(215, 0, 0, 0.773);
   border-radius: 5px;
   border: 0;
+  border-radius: 8px;
   color: rgb(255, 255, 255);
+  margin: 2%;
 }
 
 p.goal-name{
@@ -36,11 +41,16 @@ p.goal-name{
   margin: 0;
   place-self: end start;
   margin-bottom: 3%;
+  padding-left: 5%;
+  font-weight: bold;
+  font-size: large;
 }
 
 .savings-icon{
   place-self: end start;
-  color: rgb(196, 196, 196);
+  color: rgb(173, 173, 173);
+  margin-bottom: 5%;
+
 }
 
 .amount-container{
@@ -49,22 +59,32 @@ p.goal-name{
   grid-template-columns: 50% 50%;
   place-items: center start;
   padding-bottom: 6%;
-  border-bottom: 1px solid rgb(233, 233, 233);
+  padding-left: 4%;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  margin-top: 4%;
 }
 
 .goal-amount{
   grid-column: 2 / 3;
+  display: flex;
+  padding-bottom: 5%;
+  text-align: center;
+  margin: 0;
 }
 
 .goal-current-amount{
+  display: flex;
   grid-column: 1 / 2;
+  padding-bottom: 5%;
+  text-align: center;
+  margin: 0;
 }
 
 .edit-goal-link-container{
   grid-area: 4 / 1 / 5 / 3;
   text-decoration: none;
   place-self: center;
-  padding-top: 6%;
+  padding-top: 5%;
 }
 
 .edit-goal-link{
@@ -75,15 +95,15 @@ p.goal-name{
 
 .add-goal-link{
   text-decoration: none;
-  grid-row: 1;
-  margin-top: 5%;
-  margin-bottom: 6%;
+  color: #287148;
+  padding-top: 2%;
+  font-size: small;
 }
 
 .add-goal-link-container{
   display: grid;
   place-items: end;
-  margin-right: 5%;
+  margin-right: 6%;
 }
 
 .goal-progress-container{
@@ -93,10 +113,26 @@ p.goal-name{
 }
 
 .saved{
-  color: royalblue;
+  color: seagreen;
 }
 
 .to-save{
-  color: #a8caed;
+  color: rgb(183,224,189)
 }
 
+
+@media only screen and (min-width: 500px) {
+  .add-goal-link{
+    margin-top: 0;
+  }
+
+  .add-goal-link-container{
+    margin-right: 50%;
+  }
+
+  .goal-container {
+    height: 10%;
+    padding: 1%;
+  }
+
+}

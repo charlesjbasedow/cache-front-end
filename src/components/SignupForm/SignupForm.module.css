@@ -3,7 +3,6 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
 }
 
 .label,
@@ -14,3 +13,20 @@
 .inputContainer {
   margin-bottom: 1rem;
 }
+
+input{
+  border: 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 6%;
+}
+
+.signupBtn, .cancelBtn {
+  border-radius: 5px;
+  background-color: #3abd75;
+  border: 0;
+  padding: 6%;
+  width: 60px;
+  color: white;
+}
+

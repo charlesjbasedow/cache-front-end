@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import '../AddIncome/AddIncome&Expense.css'
 
 function AddGoal(props) {
   const formElement = useRef()
@@ -19,21 +20,18 @@ function AddGoal(props) {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-		// const goalFormData = new FormData()
-    // goalFormData.append('name', formData.name)
-    // goalFormData.append('amount', formData.amount)
     props.handleAddGoal(formData)
   }
 
   return (
     <>
-      <h1>Add Goal</h1>
+      <h2 className = "category-title">Add a New Savings Goal</h2>
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="name-input" className="form-label">
-						Goals's Name (required)
 					</label>
 					<input 
+					placeholder="Goal Name"
 						type="text"
 						className="form-control"
 						id="name-input"
@@ -43,9 +41,9 @@ function AddGoal(props) {
 						required
 					/>
 				</div>
-				<div className="form-group mb-3">
+				<div className="container">
 					<label htmlFor="amount-input" className="form-label">
-						Goal Amount (required)
+						$
 					</label>
 					<input 
 						type="number"
@@ -56,12 +54,11 @@ function AddGoal(props) {
             onChange={handleChange}
 						required
 					/>
-				</div>
-				
-				<div className="d-grid">
+				</div>				
+				<div>
 					<button
 						type="submit"
-						className="btn btn-primary btn-fluid"
+						className="add-btn"
             disabled={!validForm}
 					>
 						Add Goal

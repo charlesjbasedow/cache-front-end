@@ -63,6 +63,7 @@ Click [here](https://cachefrontend.herokuapp.com/) to view the app.
 # Next Steps
 
 - [ ] Users can view summaries of their previous monthly budgets
+- [ ] Format date with momentjs
 - [ ] Users can create recurring incomes and expenses which are automatically added according to the specified time period
 - [ ] Import previous budget data into next months budget
 - [ ] Sorting transactions by date - most recent at the top
